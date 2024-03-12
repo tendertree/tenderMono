@@ -1,7 +1,7 @@
 {
   "name": "@repo/domains",
 	"exports": {
-	    "./src/entities/hi": "./src/kim.tsx"
+		    "./entities/*": "./entities/*.ts"
 },
   "version": "0.0.0",
   "private": true,
