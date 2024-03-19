@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-		"./globals.css": "./src/globals.css",
+    "./globals.css": "./src/globals.css",
     "./postcss.config": "./postcss.config.js",
     "./tailwind.config": "./tailwind.config.ts",
     "./lib/*": "./src/lib/*.ts",
     "./src/*": "./src/*.tsx",
-		"./src/code": "./src/code"
+    "./src/code": "./src/code"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -24,6 +24,7 @@
     "@types/react-dom": "^18.2.19",
     "eslint": "^8.57.0",
     "react": "^18.2.0",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   },
   "dependencies": {

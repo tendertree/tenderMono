@@ -1,5 +1,5 @@
 {
-  "name": "infrastructure",
+  "name": "3d",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,8 @@
     "lint": "echo 'Add lint script here'"
   },
   "dependencies": {
-    "prisma": "^5.11.0"
+    "@babylonjs/core": "^6.46.1",
+    "@babylonjs/gui": "^6.46.1",
+    "react-babylonjs": "^3.1.29"
   }
 }
