@@ -1,5 +1,4 @@
 {
-  "extends": "../../tsconfig.json", 
   "name": "server",
   "version": "0.0.1",
   "description": "",
@@ -7,7 +6,6 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-		 "dev": "nest start --watch",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -22,9 +20,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@nestjs/common": "^10.3.4",
-    "@nestjs/config": "^3.2.0",
-    "@nestjs/core": "^10.3.4",
+    "@nestjs/common": "^10.0.0",
+    "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1"
@@ -69,13 +66,4 @@
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
   }
-  "compilerOptions": {
- "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "es2017",
-    "sourceMap": true,
-    "outDir": "./dist",
-}
 }
