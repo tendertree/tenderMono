@@ -1,16 +1,19 @@
 {
-  "name": "3d",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "echo 'Add dev script here'",
-    "build": "echo 'Add build script here'",
-    "test": "echo 'Add test script here'",
-    "lint": "echo 'Add lint script here'"
-  },
-  "dependencies": {
-    "@babylonjs/core": "^6.46.1",
-    "@babylonjs/gui": "^6.46.1",
-    "react-babylonjs": "^3.1.29"
-  }
+	"name": "@repo/3d",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "echo 'Add dev script here'",
+		"build": "echo 'Add build script here'",
+		"test": "echo 'Add test script here'",
+		"lint": "echo 'Add lint script here'"
+	},
+	"dependencies": {
+		"@babylonjs/core": "^6.46.1",
+		"@babylonjs/gui": "^6.46.1",
+		"@babylonjs/loaders": "^6.48.1",
+		"glTF": "link:@babylonjs/loaders/glTF",
+		"react": "^18.2.0",
+		"react-babylonjs": "^3.1.29"
+	}
 }

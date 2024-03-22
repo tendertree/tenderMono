@@ -50,6 +50,8 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
+  apps/cms: {}
+
   apps/docs:
     dependencies:
       '@repo/ui':
@@ -149,6 +151,15 @@ importers:
       '@babylonjs/gui':
         specifier: ^6.46.1
         version: 6.46.1(@babylonjs/core@6.46.1)
+      '@babylonjs/loaders':
+        specifier: ^6.48.1
+        version: 6.48.1(@babylonjs/core@6.46.1)(babylonjs-gltf2interface@6.48.1)
+      glTF:
+        specifier: link:@babylonjs/loaders/glTF
+        version: link:@babylonjs/loaders/glTF
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
       react-babylonjs:
         specifier: ^3.1.29
         version: 3.1.29(@babylonjs/core@6.46.1)(@babylonjs/gui@6.46.1)(react@18.2.0)
@@ -547,6 +558,16 @@ packages:
       '@babylonjs/core': ^6.0.0
     dependencies:
       '@babylonjs/core': 6.46.1
+    dev: false
+
+  /@babylonjs/loaders@6.48.1(@babylonjs/core@6.46.1)(babylonjs-gltf2interface@6.48.1):
+    resolution: {integrity: sha512-crocqEHlbsCk/JZvJDFGFEsg+61lrgcpKG6cqb3FCJi9wsw/72mMogaVmZvJEqjYUPzX6kfqRGlEDGbVKJQUjA==}
+    peerDependencies:
+      '@babylonjs/core': ^6.0.0
+      babylonjs-gltf2interface: ^6.0.0
+    dependencies:
+      '@babylonjs/core': 6.46.1
+      babylonjs-gltf2interface: 6.48.1
     dev: false
 
   /@cspotcode/source-map-support@0.8.1:
@@ -2272,6 +2293,10 @@ packages:
     dependencies:
       core-js: 2.6.12
       regenerator-runtime: 0.11.1
+    dev: false
+
+  /babylonjs-gltf2interface@6.48.1:
+    resolution: {integrity: sha512-lrRXg7it9H6W4E10SVJILv3pBNmRP1V3du+kwRGUyGJO6tWmhaanDu0W3uZpalBp2ts+qQuEgahRgfkWrXxNaA==}
     dev: false
 
   /balanced-match@1.0.2:

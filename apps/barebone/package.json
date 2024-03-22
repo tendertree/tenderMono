@@ -2,7 +2,7 @@
   "name": "barebone",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
+ "scripts": {
     "dev:nest": "cd server && pnpm run start",
     "dev:next": "cd app && pnpm run dev",
     "dev:both": "concurrently \"npm run dev:nest\" \"npm run dev:next\"",
