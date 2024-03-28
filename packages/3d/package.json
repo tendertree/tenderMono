@@ -12,7 +12,6 @@
 		"@babylonjs/core": "^6.46.1",
 		"@babylonjs/gui": "^6.46.1",
 		"@babylonjs/loaders": "^6.48.1",
-		"glTF": "link:@babylonjs/loaders/glTF",
 		"react": "^18.2.0",
 		"react-babylonjs": "^3.1.29"
 	}
