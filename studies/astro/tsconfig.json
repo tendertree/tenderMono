@@ -1,0 +1,17 @@
+{
+	"extends": [
+		"astro/tsconfigs/strict",
+		"@repo/typescript-config/nextjs.json"
+	],
+	"compilerOptions": {
+		"strictNullChecks": true,
+		"moduleResolution": "node"
+	},
+	"include": [
+		"**/*.ts",
+		"**/*.tsx"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}
