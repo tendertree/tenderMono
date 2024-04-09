@@ -6,7 +6,8 @@
 		"dev": "turbo dev",
 		"lint": "turbo lint",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
-		"tgw": " turbo generate workspace"
+		"tgw": " turbo generate workspace",
+		"hg": "hygen astro basic"
 	},
 	"devDependencies": {
 		"@repo/eslint-config": "workspace:*",
