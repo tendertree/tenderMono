@@ -9,6 +9,12 @@
 			],
 			"@repo/ui/utils": [
 				"./src/utils.ts"
+			],
+			"@repo/ui/shadcn": [
+				"./src/shadcn/*"
+			],
+			"@repo/ui/component": [
+				"./src/component/*"
 			]
 		},
 		"jsx": "preserve",
@@ -16,7 +22,9 @@
 			{
 				"name": "next"
 			}
-		]
+		],
+		"allowJs": true,
+		"noEmit": true
 	},
 	"include": [
 		"src",
