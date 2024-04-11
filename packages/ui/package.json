@@ -5,7 +5,7 @@
 	"type": "module",
 	"exports": {
 		"./comp": "./src/comp/index.ts",
-		"tsconfig.json": "./tsconfig.json"
+		"./tsconfig.json": "./tsconfig.json"
 	},
 	"scripts": {
 		"dev": "vite",
