@@ -1,2 +1,0 @@
-# domain 
-store the entities
