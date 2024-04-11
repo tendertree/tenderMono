@@ -1,38 +1,40 @@
 {
 	"extends": "@repo/typescript-config/react-library.json",
 	"compilerOptions": {
-		"outDir": "dist",
+		"target": "ES2020",
+		"useDefineForClassFields": true,
+		"lib": [
+			"ES2020",
+			"DOM",
+			"DOM.Iterable"
+		],
+		"module": "ESNext",
+		"skipLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
-			"@repo/ui/*": [
+			"@/*": [
 				"./src/*"
-			],
-			"@repo/ui/utils": [
-				"./src/utils.ts"
-			],
-			"@repo/ui/shadcn": [
-				"./src/shadcn/*"
-			],
-			"@repo/ui/component": [
-				"./src/component/*"
 			]
 		},
-		"jsx": "preserve",
-		"plugins": [
-			{
-				"name": "next"
-			}
-		],
-		"allowJs": true,
-		"noEmit": true
+		/* Bundler mode */
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "react-jsx",
+		/* Linting */
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true
 	},
 	"include": [
-		"app",
-		"src",
-		".next/types/**/*.ts"
+		"src"
 	],
-	"exclude": [
-		"node_modules",
-		"dist"
+	"references": [
+		{
+			"path": "./tsconfig.node.json"
+		}
 	]
 }

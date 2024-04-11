@@ -9,22 +9,20 @@
 		"lint": "eslint . --max-warnings 0"
 	},
 	"dependencies": {
-		"@repo/domains": "workspace:*",
-		"@repo/ui": "workspace:*",
-		"next": "^14.1.1",
+		"@ui": "workspace:*",
+		"next": "^14.1.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
-		"@next/eslint-plugin-next": "^14.1.1",
+		"@next/eslint-plugin-next": "^14.1.4",
 		"@repo/eslint-config": "workspace:*",
 		"@repo/typescript-config": "workspace:*",
-		"@testing-library/react": "^14.2.2",
-		"@types/eslint": "^8.56.5",
-		"@types/node": "^20.11.24",
-		"@types/react": "^18.2.61",
-		"@types/react-dom": "^18.2.19",
+		"@types/eslint": "^8.56.7",
+		"@types/node": "^20.12.7",
+		"@types/react": "^18.2.75",
+		"@types/react-dom": "^18.2.24",
 		"eslint": "^8.57.0",
-		"typescript": "^5.3.3"
+		"typescript": "^5.4.5"
 	}
 }
