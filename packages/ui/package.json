@@ -1,11 +1,13 @@
 {
 	"name": "@ui",
-	"private": true,
+	"pulbic": true,
 	"version": "0.0.0",
 	"type": "module",
 	"exports": {
-		"./comp": "./src/comp/index.ts",
-		"./tsconfig.json": "./tsconfig.json"
+		"./comp/*": "./src/comp/*",
+		"./tsconfig.json": "./tsconfig.json",
+		"./shadcn/*": "./src/shadcn/*",
+		"./lib/utils": "./src/lib/utils.ts"
 	},
 	"scripts": {
 		"dev": "vite",
@@ -15,6 +17,7 @@
 		"add:ui": "pnpm dlx shadcn-ui@latest add -p src/shadcn"
 	},
 	"dependencies": {
+		"@radix-ui/react-avatar": "^1.0.4",
 		"@radix-ui/react-slot": "^1.0.2",
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.0",
@@ -38,6 +41,7 @@
 		"postcss": "^8.4.38",
 		"tailwindcss": "^3.4.3",
 		"typescript": "^5.4.5",
-		"vite": "^5.2.8"
+		"vite": "^5.2.8",
+		"@repo/tailwind-config": "workspace:*"
 	}
 }

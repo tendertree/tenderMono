@@ -4,7 +4,7 @@ import './global.css'
 function App() {
 
     return (
-        <div className='bg-red-100'>
+        <div className='bg-orange-100'>
             This is current ui labs ..
             <User></User>
         </div>
