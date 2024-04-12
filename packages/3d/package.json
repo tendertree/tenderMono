@@ -4,7 +4,7 @@
 	"version": "0.0.0",
 	"type": "module",
 	"exports": {
-		"./babylon": "./src/babylon/index.ts",
+		"./babylon/*": "./src/babylon/*",
 		"tsconfig.json": "./tsconfig.json"
 	},
 	"scripts": {
@@ -14,7 +14,11 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"@babylonjs/core": "^7.2.1",
+		"@babylonjs/gui": "^7.2.1",
+		"glTF": "link:@babylonjs/loaders/glTF",
 		"react": "^18.2.0",
+		"react-babylonjs": "^3.1.30",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
