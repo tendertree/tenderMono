@@ -146,9 +146,21 @@ importers:
 
   packages/3d:
     dependencies:
+      '@babylonjs/core':
+        specifier: ^7.2.1
+        version: 7.2.1
+      '@babylonjs/gui':
+        specifier: ^7.2.1
+        version: 7.2.1(@babylonjs/core@7.2.1)
+      glTF:
+        specifier: link:@babylonjs/loaders/glTF
+        version: link:@babylonjs/loaders/glTF
       react:
         specifier: ^18.2.0
         version: 18.2.0
+      react-babylonjs:
+        specifier: ^3.1.30
+        version: 3.1.30(@babylonjs/core@7.2.1)(@babylonjs/gui@7.2.1)(react-dom@18.2.0)(react@18.2.0)
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
@@ -518,6 +530,18 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
     dev: true
+
+  /@babylonjs/core@7.2.1:
+    resolution: {integrity: sha512-K9GfAr1Ox4/4aI5APdK75Q6DY0WTnwNxThdTfdYyRSv1XZcTA638aLQWIeU0c8FjIt6Ii8wwgHs/N6rlQG4YeA==}
+    dev: false
+
+  /@babylonjs/gui@7.2.1(@babylonjs/core@7.2.1):
+    resolution: {integrity: sha512-/SteaGXrLrj1EWA/FcvTa4Ha8/OCIoyuo1xRjmQl0iT7aVlGyinw3uusmN6S74N0uYIniUthRBfHoE00CoAQcg==}
+    peerDependencies:
+      '@babylonjs/core': ^7.0.0
+    dependencies:
+      '@babylonjs/core': 7.2.1
+    dev: false
 
   /@esbuild/aix-ppc64@0.20.2:
     resolution: {integrity: sha512-D+EBOJHXdNZcLJRBkhENNG8Wji2kgc9AZ9KiPr1JuZjsNtyHzrsfLRrY0tk2H2aoFu6RANO1y1iPPUCDYWkb5g==}
@@ -4474,6 +4498,25 @@ packages:
   /queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
+  /react-babylonjs@3.1.30(@babylonjs/core@7.2.1)(@babylonjs/gui@7.2.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-qALWc/2AjxxIvWreDEoXYMwc/gycttOa6PvmrFVhSX5bG40hOT/jnOjg0VfZ8tDdd/iNI2r6GFS9YynUug4WHg==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      '@babylonjs/core': 5.x || 6.x || 7.x
+      '@babylonjs/gui': 5.x || 6.x || 7.x
+      react: '>=18'
+      react-dom: '>=18'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+    dependencies:
+      '@babylonjs/core': 7.2.1
+      '@babylonjs/gui': 7.2.1(@babylonjs/core@7.2.1)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-reconciler: 0.27.0(react@18.2.0)
+    dev: false
+
   /react-dom@18.2.0(react@18.2.0):
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
@@ -4487,6 +4530,17 @@ packages:
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
+
+  /react-reconciler@0.27.0(react@18.2.0):
+    resolution: {integrity: sha512-HmMDKciQjYmBRGuuhIaKA1ba/7a+UsM5FzOZsMO2JYHt9Jh8reCb7j1eDC95NOyUlKM9KRyvdx0flBuDvYSBoA==}
+    engines: {node: '>=0.10.0'}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
+      loose-envify: 1.4.0
+      react: 18.2.0
+      scheduler: 0.21.0
+    dev: false
 
   /react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
@@ -4658,6 +4712,12 @@ packages:
       get-intrinsic: 1.2.2
       is-regex: 1.1.4
     dev: true
+
+  /scheduler@0.21.0:
+    resolution: {integrity: sha512-1r87x5fz9MXqswA2ERLo0EbOAU74DpIUO090gIasYTqlVoJeMcl+Z1Rg7WHz+qtPujhS/hGIt9kxZOYBV3faRQ==}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: false
 
   /scheduler@0.23.0:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
