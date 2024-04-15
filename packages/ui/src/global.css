@@ -65,6 +65,9 @@
 		--ring: 212.7 26.8% 83.9%;
 	}
 
+	body {
+		@apply relative h-full font-sans antialiased;
+	}
 
 	section {
 		@apply py-20 mx-auto text-center flex flex-col items-center max-w-3xl;
