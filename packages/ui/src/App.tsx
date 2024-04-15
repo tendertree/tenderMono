@@ -3,7 +3,10 @@ import './global.css'
 function App() {
 
     return (
-        <div className=''>
+        <div>
+            <section>
+                hi!This is section
+            </section>
         </div>
     )
 }
