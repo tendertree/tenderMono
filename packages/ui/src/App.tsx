@@ -1,3 +1,4 @@
+import { Masonry } from './feature/layout/masonry'
 import './global.css'
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
     return (
         <div>
             <section>
-                hi!This is section
+                <Masonry></Masonry>
             </section>
         </div>
     )
