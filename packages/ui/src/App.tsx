@@ -1,12 +1,10 @@
-import { Masonry } from './feature/layout/masonry'
 import './global.css'
 
 function App() {
 
     return (
-        <div>
+        <div className='bg-red-100'>
             <section>
-                <Masonry></Masonry>
             </section>
         </div>
     )
