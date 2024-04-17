@@ -5,10 +5,12 @@ import {
 } from 'react-babylonjs'
 import { Vector3 } from '@babylonjs/core'
 
-export function BasicScene(name: string) {
+export function BasicScene() {
     return (
         <Engine antialias adaptToDeviceRatio canvasId="babylonJS">
-            <Scene>
+            <Scene
+                autoClear={false}
+            >
                 <arcRotateCamera
                     name="camera1"
                     target={Vector3.Zero()}
