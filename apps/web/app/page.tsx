@@ -1,14 +1,14 @@
 'use client';
 import "./globals.css"
 import { Profile } from "@ui/src/comp";
-import { SceneBasic } from "@3d/babylon/scene/sceneBasic"
+import { BasicScene } from "@3d/three/scene/basic";
 export default function Page(): JSX.Element {
     return (
         <main>
-            <div className="bg-red-50 ">
+            <div className="bg-red-100">
                 This is the main scene?
                 <Profile></Profile>
-                <SceneBasic name={"hi"}></SceneBasic>
+                <BasicScene></BasicScene>
             </div>
         </main>
     );

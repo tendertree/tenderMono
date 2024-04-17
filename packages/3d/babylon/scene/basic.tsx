@@ -5,7 +5,7 @@ import {
 } from 'react-babylonjs'
 import { Vector3 } from '@babylonjs/core'
 
-export function SceneBasic(name: string) {
+export function BasicScene(name: string) {
     return (
         <Engine antialias adaptToDeviceRatio canvasId="babylonJS">
             <Scene>

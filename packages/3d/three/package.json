@@ -1,5 +1,5 @@
 {
-	"name": "@3d/babylon",
+	"name": "@3d/three",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.ts",
@@ -16,15 +16,14 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"@babylonjs/core": "^7.2.2",
-		"@babylonjs/loaders": "^7.2.2",
+		"@react-three/fiber": "^8.16.2",
 		"@types/node": "^20.12.7",
 		"@types/react": "^18.2.79",
 		"@types/react-dom": "^18.2.24",
-		"glTF": "link:@babylonjs/loaders/glTF",
+		"@types/three": "^0.163.0",
 		"react": "^18.2.0",
-		"react-babylonjs": "^3.1.30",
 		"react-dom": "^18.2.0",
+		"three": "^0.163.0",
 		"typescript": "^5.4.5"
 	},
 	"devDependencies": {
