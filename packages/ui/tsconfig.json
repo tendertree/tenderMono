@@ -10,10 +10,16 @@
 		],
 		"module": "ESNext",
 		"skipLibCheck": true,
-		"baseUrl": ".",
+		"baseUrl": "./src", // Change this line
 		"paths": {
 			"@ui/*": [
-				"./src/*"
+				"/*"
+			],
+			"@form/*": [
+				"feature/form/*"
+			],
+			"@a/*": [
+				"a/*"
 			]
 		},
 		/* Bundler mode */
@@ -27,10 +33,11 @@
 		"strict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"noFallthroughCasesInSwitch": true
+		"noFallthroughCasesInSwitch": true,
+		"traceResolution": true
 	},
 	"include": [
-		"src"
+		"src/**/*"
 	],
 	"references": [
 		{
