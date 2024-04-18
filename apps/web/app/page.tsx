@@ -8,7 +8,7 @@ export default function Page(): JSX.Element {
         <main>
             <div className="bg-red-100">
                 This is the main scene?..mh..
-                <ThreeScene></ThreeScene>
+                <BabylonScene></BabylonScene>
             </div>
         </main>
     );

@@ -8,10 +8,10 @@ import anime from 'animejs'
 
 export function BasicScene() {
     const boxRef = useRef<Mesh>(null);
-    const boxMove = () => {
-        if (boxRef.current != null) {
+    const boxMove = (boxRef: Mesh) => {
+        if (boxRef != null) {
             anime({
-                targets: [boxRef.current!.rotation],
+                targets: [boxRef.rotation],
                 y: 1, x: 2, z: 3,
                 easing: "easeInOutSine",
                 duration: 5000,
@@ -46,7 +46,7 @@ export function BasicScene() {
 
                 <box
                     name="box"
-                    ref={boxRef}
+                    ref={(boxRef) => boxMove(boxRef)}
                     size={2}
                     position={Vector3.Zero()}
                     onReady={boxMove}
