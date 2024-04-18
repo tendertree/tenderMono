@@ -1,16 +1,13 @@
 'use client';
 import "./globals.css"
-import { Profile } from "@ui/src/comp";
+import { Profile, Me } from "@ui/src/comp";
 import { BasicScene as ThreeScene } from "@3d/three/scene/basic";
 import { BasicScene as BabylonScene } from "@3d/babylon/scene/basic";
 export default function Page(): JSX.Element {
     return (
         <main>
             <div className="bg-red-100">
-                This is the main scene?
-                <Profile></Profile>
-                <ThreeScene></ThreeScene>
-                <BabylonScene></BabylonScene>
+                This is the main scene?..mh..
             </div>
         </main>
     );

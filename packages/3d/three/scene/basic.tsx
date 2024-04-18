@@ -1,10 +1,30 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Mesh } from 'three'
+import anime from 'animejs/lib/anime.es.js';
+
+
+anime({
+    targets: '.css-selector-demo .el',
+    translateX: 250
+});
+
 
 function BoxMoving() {
     const meshRef = useRef<Mesh>(null!)
-    useFrame((state, delta) => (meshRef.current.rotation.x += delta))
+    //   useFrame((state, delta) => (meshRef.current.rotation.x += delta))
+    useEffect(() => {
+        anime({
+            targets: [meshRef.current.rotation],
+            y: 1, x: 2, z: 3,
+            easing: "easeInOutSine",
+            duration: 5000,
+            direction: "alternate",
+            loop: true
+        });
+
+    }, [])
+
 
     return (
         <mesh
@@ -18,7 +38,9 @@ function BoxMoving() {
 
 
 export function BasicScene() {
+    useEffect(() => {
 
+    })
     return (
 
         <Canvas>
