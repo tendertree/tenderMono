@@ -1,9 +1,9 @@
 {
 	"name": "tender-home",
 	"private": true,
-	"packageManager": "pnpm@*",
+	"packageManager": "pnpm",
 	"scripts": {
-		"build": "turbo build",
+		"build": "turbo build lint --graph=graph.png",
 		"dev": "turbo dev",
 		"lint": "turbo lint",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
@@ -22,5 +22,8 @@
 	},
 	"dependencies": {
 		"concurrency": "^0.1.4"
+	},
+	"pnpm": {
+		"package-manager-strict": false
 	}
 }

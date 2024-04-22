@@ -10,7 +10,8 @@
 		"./base/*": "./base/*",
 		"./comp/*": "./comp/*",
 		"./tsconfig.json": "./tsconfig.json",
-		"./utils": "./utils.ts"
+		"./utils": "./utils.ts",
+		"./styles/*": "./styles/*"
 	},
 	"dependencies": {
 		"@radix-ui/react-avatar": "^1.0.4",
