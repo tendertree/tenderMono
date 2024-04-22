@@ -1,9 +1,21 @@
-export function Navbar() {
+type NavbarProps = {
+    items: { name: string, link: string }[];
+}
+
+export function Navbar({
+    items
+}: React.PropsWithChildren<NavbarProps>): JSX.Element {
     return (
-        <div className="flex bg-red-100">
+        <div className="flex align-middle justify-between">
             <div className="bg-blue-200">sns</div>
-            <div>logo</div>
-            <div>link</div>
+            <div className="flex-1 text-center text-xl font-bold">logo</div>
+            <div className="flex gap-20 flex-1 text-md justify-center ">
+                {items.map((item, index) => (
+                    <div key={index} className="">
+                        <a href={item.link}>{item.name}</a>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }

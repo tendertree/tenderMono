@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Drawer from "@ui/shadcn/comp/menu/drawer"
 import { Navbar } from "@ui/shadcn/comp/menu/navbar"
 import "./global.css"
 const inter = Inter({ subsets: ["latin"] });
@@ -9,6 +8,12 @@ export const metadata: Metadata = {
     title: "tenderMono",
     description: "monorepo introduce page",
 };
+
+const items = [
+    { name: 'home', link: '/home' },
+    { name: 'blog', link: '/blog' },
+    { name: 'tutorial', link: '/tutorial' }
+];
 
 export default function RootLayout({
     children,
@@ -19,8 +24,8 @@ export default function RootLayout({
         <html lang="en">
             <body className={inter.className}>
                 <div className="content">
-                    <Navbar></Navbar>
                     <div className="wrapper">
+                        <Navbar items={items} > </Navbar>
                         {children}
                     </div>
                 </div>
