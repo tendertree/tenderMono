@@ -7,7 +7,8 @@ module.exports = {
         './components/**/*.{ts,tsx,astro,md,mdx}',
         './app/**/*.{ts,tsx,astro,md,mdx}',
         './src/**/*.{ts,tsx,astro,md,mdx}',
-        '../../packages/ui/src/**/*.{ts,tsx,astro,md,mdx}',
+        '../../packages/ui/shadcn/base/**/*.{ts,tsx,astro,md,mdx}',
+        '../../packages/ui/shadcn/comp/**/*.{ts,tsx,astro,md,mdx}',
     ],
     prefix: "",
     theme: {

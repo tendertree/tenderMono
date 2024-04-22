@@ -1,6 +1,7 @@
 {
 	"name": "tender-home",
 	"private": true,
+	"packageManager": "pnpm@*",
 	"scripts": {
 		"build": "turbo build",
 		"dev": "turbo dev",
@@ -16,7 +17,6 @@
 		"prettier": "^3.2.5",
 		"turbo": "latest"
 	},
-	"packageManager": "pnpm@8.9.0",
 	"engines": {
 		"node": ">=18"
 	},
