@@ -3,6 +3,7 @@ packages:
   - "apps/projects/*"
   - "packages/*"
   - "packages/configs/*"
+  - "packages/server/*"
   - "packages/ui/*"
   - "packages/3d/*"
   - "studies/*"

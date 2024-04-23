@@ -1,4 +1,4 @@
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import React, { useEffect, useRef, useState } from 'react'
 import { Mesh } from 'three'
 import anime from 'animejs/lib/anime.es.js';
