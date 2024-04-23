@@ -1,9 +1,11 @@
 type NavbarProps = {
     items: { name: string, link: string }[];
+
 }
 
 export function Navbar({
-    items
+    items,
+    children
 }: React.PropsWithChildren<NavbarProps>): JSX.Element {
     return (
         <div className="flex align-middle justify-between">
@@ -15,7 +17,12 @@ export function Navbar({
                         <a href={item.link}>{item.name}</a>
                     </div>
                 ))}
+                {children ? <div className="flex-1">{children}</div> : null}
             </div>
+
+
+
+
         </div>
     )
 }
