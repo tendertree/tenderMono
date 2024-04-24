@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./global.css"
 import { ThemeProvider } from 'next-themes'
 
-import { NavMenu } from "@/src/navmenu";
+import { NavMenu } from "@/src/comp/navmenu";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }): JSX.Element {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html suppressHydrationWarning>
             <body className={inter.className}>
                 <ThemeProvider attribute="class">
                     <div className="content">

@@ -1,15 +1,11 @@
 'use client'
-import { Navbar, LoginBtn, ToggleTheme } from "@ui/shadcn/comp/menu/index"
+import { ToggleTheme } from '@ui/shadcn/comp/menu';
 import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react';
 
-const items = [
-    { name: 'home', link: '/home' },
-    { name: 'blog', link: '/blog' },
-    { name: 'tutorial', link: '/tutorial' }
-];
-
-export function NavMenu() {
+export function ToggleThemeBtn() {
     const { theme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
     const toggleThemes = () => {
         if (theme == "light") {
             setTheme("dark");
@@ -18,14 +14,23 @@ export function NavMenu() {
         }
 
     }
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) {
+        return null;
+    }
+
+
     return (
-        <Navbar items={items} >
-            <LoginBtn />
+        <div>
             <ToggleTheme
                 isLight={theme === "light"}
                 lightOn={toggleThemes}
             />
-        </Navbar>
 
+        </div>
     )
 }
