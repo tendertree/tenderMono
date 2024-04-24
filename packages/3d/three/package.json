@@ -17,6 +17,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"@react-three/drei": "^9.105.4",
 		"@react-three/fiber": "^8.16.2",
 		"@types/animejs": "^3.1.12",
 		"@types/node": "^20.12.7",
