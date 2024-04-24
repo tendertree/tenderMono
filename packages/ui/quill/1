@@ -1,7 +1,7 @@
 import Quill from 'quill';
 
 const options = {
-    debug: 'info' as 'info',
+    debug: 'info',
     modules: {
         toolbar: true,
     },
@@ -9,8 +9,9 @@ const options = {
     theme: 'snow'
 };
 
+const quill = new Quill('#editor', options);
 export function Editor() {
-    const quill = new Quill('#editor', options);
+    const quill = new Quill('#editor');
     return (
         <div id="editor">This is quill Editor </div>
     )
