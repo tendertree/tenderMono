@@ -4,9 +4,6 @@ import { Mesh } from 'three'
 import anime from 'animejs/lib/anime.es.js';
 import { PerspectiveCamera } from "@react-three/drei";
 
-
-
-
 function BoxMoving() {
     const meshRef = useRef<Mesh>(null!)
     const boxAnimationRef = useRef<any>(null);
