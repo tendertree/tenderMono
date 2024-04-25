@@ -1,28 +1,22 @@
 'use client'
 import { ToggleTheme } from '@ui/shadcn/comp/menu';
 import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 export default function ToggleThemeBtn() {
     const { theme, setTheme } = useTheme();
     const toggleThemes = () => {
-        if (theme == "light") {
-            setTheme("dark");
+        if (theme == "dark") {
+            setTheme("Light");
         } else {
-            setTheme("light");
+            setTheme("dark");
         }
 
     }
-    //
-    // useEffect(() => {
-    //     setMounted(true);
-    // }, []);
-    //
-    // if (!mounted) {
-    //     return null;
-    // }
+    useEffect(() => {
 
 
+    }, [])
     return (
         <div>
             <ToggleTheme

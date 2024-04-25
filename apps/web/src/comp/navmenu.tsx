@@ -3,7 +3,7 @@ import React, { Suspense } from "react";
 
 const items = [
     { name: 'home', link: '/home' },
-    { name: 'blog', link: '/blog' },
+    { name: 'feature', link: '/feature' },
     { name: 'tutorial', link: '/tutorial' }
 ];
 const ToggleTheme = React.lazy(() => import('./toggleThemeBtn'));
