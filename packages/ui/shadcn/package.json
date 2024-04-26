@@ -9,6 +9,7 @@
 	"exports": {
 		"./base/*": "./base/*",
 		"./comp/*": "./comp/*",
+		"./motion/*": "./motion/*",
 		"./comp/menu/*": "./comp/menu/*",
 		"./comp/section/*": "./comp/section/*",
 		"./tsconfig.json": "./tsconfig.json",

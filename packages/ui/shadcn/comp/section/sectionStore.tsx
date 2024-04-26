@@ -1,4 +1,4 @@
-import create from 'zustand';
+import { create } from 'zustand';
 import { SectionDataType } from './type';
 
 export type SectionContextType = {
