@@ -1,6 +1,5 @@
 'use client'
 import City from "@3d/three/section/city"
-import Envmap from "@3d/three/examples/envmap"
 import { Separator } from "@ui/shadcn/base/separator"
 export default function Page(): JSX.Element {
     return (
