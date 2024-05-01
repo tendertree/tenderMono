@@ -11,7 +11,9 @@
 		"./ground/*": "./ground/*",
 		"./section/*": "./section/*",
 		"./scene/*": "./scene/*",
-		"./object/*": "./object/*"
+		"./objects/*": "./objects/*",
+		"./notes/*": "./notes/*",
+		"./glsl/*": "./glsl/*"
 	},
 	"type": "module",
 	"module": "esnext",

@@ -1,43 +1,12 @@
 import { Canvas } from "@react-three/fiber";
-import React, { useEffect, useRef, useState } from 'react'
-import { Mesh } from 'three'
-import anime from 'animejs/lib/anime.es.js';
+import React, { useEffect } from 'react'
+import MovingBox from "../objects/movingBox";
 
-
-anime({
-    targets: '.css-selector-demo .el',
-    translateX: 250
-});
-
-
-function BoxMoving() {
-    const meshRef = useRef<Mesh>(null!)
-    //   useFrame((state, delta) => (meshRef.current.rotation.x += delta))
-    useEffect(() => {
-        anime({
-            targets: [meshRef.current.rotation],
-            y: 1, x: 2, z: 3,
-            easing: "easeInOutSine",
-            duration: 5000,
-            direction: "alternate",
-            loop: true
-        });
-
-    }, [])
-
-
-    return (
-        <mesh
-            ref={meshRef}
-        >
-            <boxGeometry args={[1, 1, 1]} />
-            <meshStandardMaterial color={'hotpink'} />
-        </mesh>
-    );
+interface SceneProps {
+    children: React.ReactNode;
 }
 
-
-export function BasicScene() {
+export function Scene({ children }: SceneProps) {
     useEffect(() => {
 
     })
@@ -47,8 +16,7 @@ export function BasicScene() {
             <ambientLight intensity={Math.PI / 2} />
             <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
             <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
-            <BoxMoving></BoxMoving>
-
+            {children}
         </Canvas >
     )
 

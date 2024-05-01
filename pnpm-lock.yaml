@@ -283,6 +283,9 @@ importers:
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.3
+      ts-shader-loader:
+        specifier: ^2.0.2
+        version: 2.0.2
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -9475,6 +9478,11 @@ packages:
     engines: {node: '>=6.11.5'}
     dev: true
 
+  /loader-utils@3.2.1:
+    resolution: {integrity: sha512-ZvFw1KWS3GVyYBYb7qkmRM/WwL2TQQBxgCK62rlvm4WpVQ23Nb4tYjApUlfjrEGvOs7KHEsmyUn75OHZrJMWPw==}
+    engines: {node: '>= 12.13.0'}
+    dev: true
+
   /locate-path@3.0.0:
     resolution: {integrity: sha512-7AO748wWnIhNqAuaty2ZWHkQHRSNfPVIsPIfwEOWO22AmaoVrWavlOcMR5nzTLNYvp36X220/maaRsrec1G65A==}
     engines: {node: '>=6'}
@@ -12611,6 +12619,12 @@ packages:
       typescript: 5.4.5
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
+    dev: true
+
+  /ts-shader-loader@2.0.2:
+    resolution: {integrity: sha512-PMdxdDQoS9D3O+UZ4y8Ul4AwXjTdvBiZHOLRnjkUbgNJyA1p0c4U2YXggqIGw7apCyoBP80QJz2Y+YcZMFHoVg==}
+    dependencies:
+      loader-utils: 3.2.1
     dev: true
 
   /tsconfck@3.0.3(typescript@5.4.5):
