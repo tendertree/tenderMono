@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from 'react'
-import { useThree, useFrame } from '@react-three/fiber'
+import React, { useRef, useEffect, useState } from 'react'
+import { useThree, useFrame, Camera } from '@react-three/fiber'
 import { Box, OrbitControls, OrthographicCamera, PerspectiveCamera } from '@react-three/drei'
 import * as THREE from 'three'
-const Perspective = () => {
+
+export function Perspective() {
 
     return (
         <>
@@ -17,6 +18,77 @@ const Perspective = () => {
         </>
     )
 }
+export function FollowMouse() {
+    const cameraRef = useRef(null);
+    const [mousePosition, setMousePosition] = useState(new THREE.Vector3(0, 0, 0));
+    const [smoothedPosition, setSmoothedPosition] = useState(new THREE.Vector3(0, 0, 0));
 
-export default Perspective
+    useEffect(() => {
+        const handleMouseMove = (event: MouseEvent) => {
+            const { clientX, clientY } = event;
+            const aspect = window.innerWidth / window.innerHeight;
+            const x = (clientX / window.innerWidth) * 2 - 1;
+            const y = -(clientY / window.innerHeight) * 2 + 1;
+            const z = 1;
+            const newMousePosition = new THREE.Vector3(x, y, z).unproject(cameraRef.current);
+            setMousePosition(newMousePosition);
+            console.log("position updated");
 
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
+    useFrame((state) => {
+        const smoothingFactor = 0.1;
+        const newPosition = smoothedPosition.lerp(mousePosition, smoothingFactor);
+        setSmoothedPosition(newPosition);
+        state.camera.lookAt(newPosition);
+
+    });
+
+    return <perspectiveCamera ref={cameraRef} />;
+}
+
+export function FollowMouseBasic() {
+    const cameraRef = useRef<THREE.PerspectiveCamera>(null);
+    const [mousePosition, setMousePosition] = useState(new THREE.Vector3(0, 0, 0));
+    const [smoothedPosition, setSmoothedPosition] = useState(new THREE.Vector3(0, 0, 0));
+
+    useEffect(() => {
+        const handleMouseMove = (event: MouseEvent) => {
+            const { clientX, clientY } = event;
+            const aspect = window.innerWidth / window.innerHeight;
+            const x = (clientX / window.innerWidth) * 2 - 1;
+            const y = -(clientY / window.innerHeight) * 2 + 1;
+            const z = 1;
+            const newMousePosition = new THREE.Vector3(x, y, z).unproject(cameraRef.current);
+            setMousePosition(newMousePosition);
+            if (cameraRef.current) {
+
+
+                const smoothingFactor = 0.1;
+                const newPosition = smoothedPosition.lerp(mousePosition, smoothingFactor);
+
+                cameraRef.current.lookAt(newPosition);
+                console.log(cameraRef.current);
+
+                setSmoothedPosition(newPosition);
+            }
+        };
+
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+        };
+    }, []);
+
+
+
+    return <perspectiveCamera ref={cameraRef} />;
+}
+
+export default FollowMouse;

@@ -13,7 +13,8 @@
 		"./scene/*": "./scene/*",
 		"./objects/*": "./objects/*",
 		"./notes/*": "./notes/*",
-		"./glsl/*": "./glsl/*"
+		"./glsl/*": "./glsl/*",
+		"./camera/*": "./camera/*"
 	},
 	"type": "module",
 	"module": "esnext",
