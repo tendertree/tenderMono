@@ -18,9 +18,11 @@ const data = [
         },
     },
 ]
+interface guideProps {
+    children: React.ReactNode;
+}
 
-
-export default function Sign() {
+export default function guide() {
     const camera = useThree(state => state.camera)
     const clickEvent = () => {
         //camera.position.set(10, 40, 20)
@@ -34,12 +36,10 @@ export default function Sign() {
             loop: false,
             autoplay: false,
         }).play();
-
     }
     return (
         <>
             {
-
                 data.map((a, i) => {
                     return (
                         <Html key={i} position={[a.lookAt.x, a.lookAt.y, a.lookAt.z]}>
