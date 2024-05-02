@@ -1,17 +1,9 @@
 import { Mesh } from 'three'
 import anime from 'animejs/lib/anime.es.js';
 import React, { useEffect, useRef, useState } from 'react'
-
-
-anime({
-    targets: '.css-selector-demo .el',
-    translateX: 250
-});
-
-
-export default function MovingBox() {
+import { } from '@react-three/fiber'
+export default function MovingBox(): JSX.Element {
     const meshRef = useRef<Mesh>(null!)
-    //   useFrame((state, delta) => (meshRef.current.rotation.x += delta))
     useEffect(() => {
         anime({
             targets: [meshRef.current.rotation],

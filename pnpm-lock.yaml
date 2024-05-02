@@ -336,7 +336,7 @@ importers:
   packages/3d/three:
     dependencies:
       '@react-three/drei':
-        specifier: ^9.105.4
+        specifier: ^9.105.5
         version: 9.105.5(@react-three/fiber@8.16.2)(@types/react@18.3.1)(@types/three@0.163.0)(react-dom@18.3.1)(react@18.3.1)(three@0.163.0)
       '@react-three/fiber':
         specifier: ^8.16.2
