@@ -14,8 +14,10 @@
 		"./objects/*": "./objects/*",
 		"./notes/*": "./notes/*",
 		"./glsl/*": "./glsl/*",
-		"./camera/*": "./camera/*"
+		"./camera/*": "./camera/*",
+		"./types/*": "./types/*"
 	},
+	"types": ".types/types.d.ts",
 	"type": "module",
 	"module": "esnext",
 	"keywords": [],

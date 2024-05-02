@@ -53,42 +53,14 @@ export function FollowMouse() {
     return <perspectiveCamera ref={cameraRef} />;
 }
 
-export function FollowMouseBasic() {
-    const cameraRef = useRef<THREE.PerspectiveCamera>(null);
-    const [mousePosition, setMousePosition] = useState(new THREE.Vector3(0, 0, 0));
-    const [smoothedPosition, setSmoothedPosition] = useState(new THREE.Vector3(0, 0, 0));
-
-    useEffect(() => {
-        const handleMouseMove = (event: MouseEvent) => {
-            const { clientX, clientY } = event;
-            const aspect = window.innerWidth / window.innerHeight;
-            const x = (clientX / window.innerWidth) * 2 - 1;
-            const y = -(clientY / window.innerHeight) * 2 + 1;
-            const z = 1;
-            const newMousePosition = new THREE.Vector3(x, y, z).unproject(cameraRef.current);
-            setMousePosition(newMousePosition);
-            if (cameraRef.current) {
-
-
-                const smoothingFactor = 0.1;
-                const newPosition = smoothedPosition.lerp(mousePosition, smoothingFactor);
-
-                cameraRef.current.lookAt(newPosition);
-                console.log(cameraRef.current);
-
-                setSmoothedPosition(newPosition);
-            }
-        };
-
-        window.addEventListener('mousemove', handleMouseMove);
-        return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, []);
-
-
-
-    return <perspectiveCamera ref={cameraRef} />;
+export function ObitControlBasic() {
+    const cameraRef = useRef(null);
+    return (
+        <>
+            <perspectiveCamera ref={cameraRef} />
+            <OrbitControls enableDamping={false} />
+        </>
+    )
 }
 
 export default FollowMouse;

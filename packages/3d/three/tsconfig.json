@@ -9,5 +9,8 @@
 		"target": "es6",
 		"moduleResolution": "node"
 	},
-	"strict": true
+	"strict": true,
+	"include": [
+		"types/**/*.ts" // Include custom types directory
+	]
 }

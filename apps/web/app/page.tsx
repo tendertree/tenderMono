@@ -1,8 +1,11 @@
 'use client'
 import { Separator } from "@ui/shadcn/base/separator"
-import { FollowMouse } from "@3d/three/camera/perspective"
+import { ObitControlBasic } from "@3d/three/camera/perspective"
+import fragmentShader from '@3d/three/glsl/basicFragment.glsl'
+import vertexShader from '@3d/three/glsl/basicVertex.glsl'
+
 import { Scene } from "@3d/three/scene/basic"
-import MovingBox from "@3d/three/objects/movingBox";
+import GlslBox from "@3d/three/objects/glslbox";
 export default function Page(): JSX.Element {
     return (
         <main className="h-full w-full">
@@ -17,8 +20,8 @@ export default function Page(): JSX.Element {
                 </div>
                 <div className="w-screen h-screen ">
                     <Scene>
-                        <MovingBox></MovingBox>
-                        <FollowMouse />
+                        <GlslBox fragment={fragmentShader} vertex={vertexShader} />
+                        <ObitControlBasic />
                     </Scene>
                 </div>
             </div>
