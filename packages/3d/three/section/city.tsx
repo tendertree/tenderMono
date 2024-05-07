@@ -45,7 +45,7 @@ export default function City() {
     })
     return (
 
-        <Canvas>
+        <Canvas shadows>
             <Perspective />
             <ambientLight intensity={Math.PI / 2} />
             <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />

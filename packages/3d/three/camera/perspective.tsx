@@ -30,8 +30,10 @@ export function FollowMouse() {
             const x = (clientX / window.innerWidth) * 2 - 1;
             const y = -(clientY / window.innerHeight) * 2 + 1;
             const z = 1;
+			if(cameraRef.current !=null){
             const newMousePosition = new THREE.Vector3(x, y, z).unproject(cameraRef.current);
             setMousePosition(newMousePosition);
+			}
             console.log("position updated");
 
         };
