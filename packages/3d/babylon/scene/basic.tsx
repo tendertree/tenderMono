@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import {
     Engine,
     Scene,
 } from 'react-babylonjs'
-import { AbstractMesh, Color3, Mesh, Nullable, Vector3 } from '@babylonjs/core'
+import { Color3, Mesh, Vector3 } from '@babylonjs/core'
 import anime from 'animejs'
 
 export function BasicScene() {
@@ -46,10 +46,9 @@ export function BasicScene() {
 
                 <box
                     name="box"
-                    ref={(boxRef) => boxMove(boxRef)}
+                    ref={(boxRef) => boxMove(boxRef!)}
                     size={2}
                     position={Vector3.Zero()}
-                    onReady={boxMove}
                 >
                     <standardMaterial
                         name="box-mat"
