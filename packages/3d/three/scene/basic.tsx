@@ -1,6 +1,7 @@
+import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { useEffect } from 'react'
-
+import * as THREE from 'three'
 interface SceneProps {
     children: React.ReactNode;
 }
@@ -19,3 +20,23 @@ export function Scene({ children }: SceneProps) {
     )
 
 }
+/*
+ * scene with 3d spear env map
+ */
+
+export function withEnvmap({children}: SceneProps) {
+	<>
+	<ambientLight intensity={0.5} />
+	<Environment preset="sunset" />
+	<OrbitControls/>
+		<mesh>
+			<sphereGeometry args={[5, 64, 64]} />
+			//to load image, set the map property!
+			<meshStandardMaterial side={THREE.BackSide} />
+		</mesh>
+	</>
+}
+
+
+
+
