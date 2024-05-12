@@ -5,6 +5,7 @@ import { useFrame } from '@react-three/fiber';
 interface GlslBoxProps {
     fragment: string;
     vertex: string;
+    mesh?: Mesh | null;
 }
 
 export default function GlslBox({ fragment, vertex }: GlslBoxProps) {
@@ -35,6 +36,13 @@ export default function GlslBox({ fragment, vertex }: GlslBoxProps) {
                 uniforms={uniforms}
             />
         </mesh>
+    );
+}
+
+export function GlslOutliner({ fragment, vertex, mesh }: GlslBoxProps) {
+    const geometry = mesh!.geometry
+    return (
+     
     );
 }
 

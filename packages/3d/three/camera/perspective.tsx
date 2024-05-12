@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { useThree, useFrame, Camera } from '@react-three/fiber'
-import { Box, OrbitControls, OrthographicCamera, PerspectiveCamera } from '@react-three/drei'
+import { Box, CameraControls, OrbitControls, OrthographicCamera, PerspectiveCamera } from '@react-three/drei'
 import * as THREE from 'three'
 
 export function Perspective() {
@@ -64,5 +64,14 @@ export function ObitControlBasic() {
         </>
     )
 }
-
+export function PolarLimit() {
+    const cameraRef = useRef(null);
+    return (
+        <>
+			<CameraControls ref={cameraRef} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 6}>
+				<perspectiveCamera ref={cameraRef} />
+			</CameraControls>
+        </>
+    )
+}
 export default FollowMouse;
