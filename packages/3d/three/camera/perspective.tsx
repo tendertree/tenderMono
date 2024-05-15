@@ -3,7 +3,7 @@ import { useThree, useFrame, Camera } from '@react-three/fiber'
 import { Box, CameraControls, OrbitControls, OrthographicCamera, PerspectiveCamera } from '@react-three/drei'
 import * as THREE from 'three'
 
-export function Perspective() {
+export function WithMouseControl() {
 
     return (
         <>
@@ -30,10 +30,10 @@ export function FollowMouse() {
             const x = (clientX / window.innerWidth) * 2 - 1;
             const y = -(clientY / window.innerHeight) * 2 + 1;
             const z = 1;
-			if(cameraRef.current !=null){
-            const newMousePosition = new THREE.Vector3(x, y, z).unproject(cameraRef.current);
-            setMousePosition(newMousePosition);
-			}
+            if (cameraRef.current != null) {
+                const newMousePosition = new THREE.Vector3(x, y, z).unproject(cameraRef.current);
+                setMousePosition(newMousePosition);
+            }
             console.log("position updated");
 
         };
@@ -54,7 +54,9 @@ export function FollowMouse() {
 
     return <perspectiveCamera ref={cameraRef} />;
 }
-
+/*
+ * baisc Orbit Control
+ */
 export function ObitControlBasic() {
     const cameraRef = useRef(null);
     return (
@@ -68,10 +70,10 @@ export function PolarLimit() {
     const cameraRef = useRef(null);
     return (
         <>
-			<CameraControls ref={cameraRef} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 6}>
-				<perspectiveCamera ref={cameraRef} />
-			</CameraControls>
+            <CameraControls ref={cameraRef} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 6}>
+                <perspectiveCamera ref={cameraRef} />
+            </CameraControls>
         </>
     )
 }
-export default FollowMouse;
+export default WithMouseControl;

@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Mesh } from 'three'
 import anime from 'animejs/lib/anime.es.js';
 import Ground from "../objects/ground";
-import Perspective from "../camera/perspective";
+import { WithMouseControl } from "../camera/perspective";
 
 function BoxMoving() {
     const meshRef = useRef<Mesh>(null!)
@@ -46,7 +46,7 @@ export default function City() {
     return (
 
         <Canvas shadows>
-            <Perspective />
+            <WithMouseControl />
             <ambientLight intensity={Math.PI / 2} />
             <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
             <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />

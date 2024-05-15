@@ -21,7 +21,9 @@ const data = [
 interface guideProps {
     children: React.ReactNode;
 }
-
+/*
+ * add guide icon using html
+ */
 export default function guide() {
     const camera = useThree(state => state.camera)
     const clickEvent = () => {
