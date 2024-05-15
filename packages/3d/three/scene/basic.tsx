@@ -1,9 +1,47 @@
 import { Environment, OrbitControls, SoftShadows } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import React, { useEffect } from 'react'
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import React, { useEffect, useRef, useState } from 'react'
 import * as THREE from 'three'
 interface SceneProps {
     children: React.ReactNode;
+}
+
+export const Raycaster = () => {
+    const { gl, scene, camera } = useThree()
+    const [selectedObject, setSelectedObject] = useState<THREE.Object3D | null>(null)
+    const raycaster = useRef(new THREE.Raycaster())
+    const mouse = useRef(new THREE.Vector2())
+
+    const handleMouseMove = (event) => {
+        mouse.current.x = (event.clientX / window.innerWidth) * 2 - 0.5
+        mouse.current.y = -(event.clientY / window.innerHeight) * 2 + 0.5
+    }
+
+    useEffect(() => {
+        window.addEventListener('mousemove', handleMouseMove)
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove)
+        }
+    }, [])
+
+    useFrame(() => {
+        raycaster.current.setFromCamera(mouse.current, camera)
+        const intersects = raycaster.current.intersectObjects(scene.children)
+
+        if (intersects.length > 0) {
+            setSelectedObject(intersects[0].object)//selecetd object 
+        } else {
+            setSelectedObject(null)
+        }
+    })
+
+    useEffect(() => {
+        if (selectedObject) {
+            console.log('Selected object:', selectedObject)
+        }
+    }, [selectedObject])
+
+    return null
 }
 
 export function Scene({ children }: SceneProps) {

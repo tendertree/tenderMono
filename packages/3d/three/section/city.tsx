@@ -1,12 +1,12 @@
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import React, { useEffect, useRef, useState } from 'react'
-import { Mesh } from 'three'
+import * as THREE from 'three'
 import anime from 'animejs/lib/anime.es.js';
 import Ground from "../objects/ground";
 import { WithMouseControl } from "../camera/perspective";
 
 function BoxMoving() {
-    const meshRef = useRef<Mesh>(null!)
+    const meshRef = useRef<THREE.Mesh>(null!)
     const boxAnimationRef = useRef<any>(null);
     useEffect(() => {
         if (meshRef.current) {
@@ -40,9 +40,11 @@ function BoxMoving() {
 
 
 export default function City() {
-    useEffect(() => {
 
+    useEffect(() => {
     })
+
+
     return (
 
         <Canvas shadows>
