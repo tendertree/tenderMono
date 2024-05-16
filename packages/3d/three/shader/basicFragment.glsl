@@ -17,7 +17,7 @@ vec3 fade(vec3 t) {
 void main() {
  // gl_FragColor = vec4(0.0, 0.3, 1.0, 1.0);
 
- vec2 normalizedPixel = gl_FragCoord.xy/600.0;
+vec2 normalizedPixel = gl_FragCoord.xy/600.0;
 vec3 color = mix(colorA, colorB, normalizedPixel.x);
 
   gl_FragColor = vec4(color,1.0);
