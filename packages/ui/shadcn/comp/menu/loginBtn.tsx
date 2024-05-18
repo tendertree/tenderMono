@@ -1,13 +1,16 @@
-export function LoginBtn() {
-    const auth = true;
+import { ReactNode } from "react";
+
+interface LoginBtnProps {
+    loggedInComponent: ReactNode;
+    loggedOutComponent: ReactNode;
+}
+export function LoginBtn(
+    { loggedInComponent,
+        loggedOutComponent }: LoginBtnProps): JSX.Element {
+    const isAuth = true;
     return (
         <>
-            {auth == true ? (
-                <div>login</div>
-            ) : (
-                <div>logout</div>
-            )
-            }
+            {isAuth ? loggedInComponent : loggedOutComponent}
         </>
-    )
+    );
 }

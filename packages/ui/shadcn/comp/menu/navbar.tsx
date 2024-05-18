@@ -12,6 +12,9 @@ export function Navbar({
             <div className="bg-blue-200">sns</div>
             <div className="flex-1 text-center text-xl font-bold">logo</div>
             <div className="flex gap-20 flex-1 text-md justify-center ">
+				/*
+                * put the menu items
+                */
                 {items.map((item, index) => (
                     <div key={index} className="">
                         <a href={item.link}>{item.name}</a>
