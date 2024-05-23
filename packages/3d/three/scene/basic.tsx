@@ -77,5 +77,8 @@ export function withEnvmap({ children }: SceneProps) {
 }
 
 
-
-
+export default function basicGallery(): JSX.Element {
+    return (
+        <div>data</div>
+    )
+}
