@@ -5,7 +5,9 @@ import * as THREE from 'three'
 interface SceneProps {
     children: React.ReactNode;
 }
-
+/*
+ * detect the mouse hover 
+ */
 export const Raycaster = () => {
     const { gl, scene, camera } = useThree()
     const [selectedObject, setSelectedObject] = useState<THREE.Object3D | null>(null)
@@ -60,7 +62,7 @@ export function Scene({ children }: SceneProps) {
 
 }
 /*
- * scene with 3d spear env map
+ * scene with 3d sphere env map
  */
 
 export function withEnvmap({ children }: SceneProps) {
