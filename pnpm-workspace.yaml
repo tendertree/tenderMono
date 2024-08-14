@@ -1,9 +1,7 @@
 packages:
   - "apps/*"
-  - "apps/projects/*"
+  - "apps/work/*"
+  - "apps/landing/*"
   - "packages/*"
-  - "packages/configs/*"
-  - "packages/server/*"
+  - "packages/config/*"
   - "packages/ui/*"
-  - "packages/3d/*"
-  - "studies/*"

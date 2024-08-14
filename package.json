@@ -1,26 +1,19 @@
 {
-	"name": "tender-home",
-	"private": true,
-	"scripts": {
-		"build": "turbo build lint --graph=graph.png",
-		"dev": "turbo dev",
-		"lint": "turbo lint",
-		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
-		"tgw": " turbo generate workspace",
-		"tgc": "turbo gen workspace --copy",
-		"hg": "hygen astro basic"
-	},
-	"devDependencies": {
-		"@repo/eslint-config": "workspace:*",
-		"@repo/typescript-config": "workspace:*",
-		"dotenv-cli": "^7.4.1",
-		"prettier": "^3.2.5",
-		"turbo": "latest"
-	},
-	"engines": {
-		"node": ">=18"
-	},
-	"dependencies": {
-		"concurrency": "^0.1.4"
-	}
+  "name": "myHome",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "turbo": "^2.0.12",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": ">=18"
+  }
 }

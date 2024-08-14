@@ -1,8 +1,1 @@
-const sharedConfig = require('@repo/tailwind-config/tailwind-shadcn.config.js');
-
-
-module.exports = {
-    ...sharedConfig,
-    darkMode: 'class'
-
-}
+module.exports = require("@config/tailwind-config/tailwind-shadcn");
