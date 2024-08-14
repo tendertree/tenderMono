@@ -5,3 +5,4 @@ packages:
   - "packages/*"
   - "packages/config/*"
   - "packages/ui/*"
+  - "packages/3d/*"
