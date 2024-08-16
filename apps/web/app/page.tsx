@@ -3,12 +3,13 @@ import Circle from "@ui/shadcn/base/circle";
 export default function Home() {
     return (
         <div >
+            <header>this is header</header>
             <main>
-                <Button appName={"btn"}>this is button</Button>
+                <Button appName={"btn"}>this is  main button</Button>
                 <div className="bg-blue-100"> this is tailwind</div>
                 <Circle></Circle>
             </main>
-            <footer></footer>
+            <footer>this is footer</footer>
         </div>
     );
 }
