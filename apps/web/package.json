@@ -5,7 +5,7 @@
 	"scripts": {
 		"dev": "next dev --turbo",
 		"build": "next build",
-		"start": "node ../../apps/api/dist/main.js & next start",
+		"start": "next start",
 		"lint": "next lint",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
