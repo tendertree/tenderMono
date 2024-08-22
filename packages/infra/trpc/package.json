@@ -8,10 +8,7 @@
 		"test": "echo 'Add test script here'",
 		"lint": "echo 'Add lint script here'"
 	},
-	"dependencies": {
-		"@trpc/client": "11.0.0-rc.351",
-		"@trpc/server": "11.0.0-rc.351"
-	},
+	"dependencies": {},
 	"exports": {
 		"./router/*": "./router/*"
 	}
