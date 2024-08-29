@@ -7,4 +7,11 @@ module.exports = {
         project: "./tsconfig.lint.json",
         tsconfigRootDir: __dirname,
     },
+	 "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": ["tsconfig.json", "packages/*/tsconfig.json"]
+      }
+    }
+  }
 };

@@ -12,3 +12,4 @@ packages:
   - "packages/infra/trpc"
   - "packages/ui/custom"
   - "packages/ui/shadcn"
+  - "packages/ui/content"

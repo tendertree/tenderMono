@@ -4,11 +4,7 @@
 		"outDir": "dist"
 	},
 	"include": [
-		"src/**/*",
-		"footer/**/*",
-		"header/**/*",
-		"popup/**/*",
-		"basic/**/*"
+		"quiz"
 	],
 	"exclude": [
 		"node_modules",

@@ -4,8 +4,11 @@
 		"outDir": "dist"
 	},
 	"include": [
-		"src",
-		"turbo"
+		"src/**/*",
+		"footer/**/*",
+		"header/**/*",
+		"popup/**/*",
+		"basic/**/*"
 	],
 	"exclude": [
 		"node_modules",

@@ -1,14 +1,9 @@
 {
-	"name": "@ui/custom",
+	"name": "@ui/quiz",
 	"version": "0.0.0",
 	"private": true,
 	"exports": {
-		"./src/*": "./src/*",
-		"./basic/*": "./basic/*",
-		"./content/*": "./content/*",
-		"./header/*": "./header/*",
-		"./footer/*": "./footer/*",
-		"./popup/*": "./popup/*"
+		"./src/*": "./src/*"
 	},
 	"scripts": {
 		"lint": "eslint . --max-warnings 0",
