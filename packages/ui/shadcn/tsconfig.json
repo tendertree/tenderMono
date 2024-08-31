@@ -8,7 +8,8 @@
 		"base",
 		"comp",
 		"style",
-		"feature"
+		"feature",
+		"icons"
 	],
 	"exclude": [
 		"node_modules",

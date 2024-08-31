@@ -1,4 +1,5 @@
 import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export type LinkComponentProps = {
     href: string | { pathname: string; query?: Record<string, string> };
@@ -16,12 +17,11 @@ export type LinkComponentType =
 
 export interface MenuItemProps {
     name: string;
-    link: string;
+    link: any;
     onClick?: () => void;
     LinkComponent?: LinkComponentType;
 
 }
-
 const MenuItem: React.FC<MenuItemProps> = ({
     name,
     link,
@@ -30,12 +30,14 @@ const MenuItem: React.FC<MenuItemProps> = ({
 }) => {
     const linkProps: LinkComponentProps = {
         href: link,
-        className: "text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white",
+        className: twMerge(
+            "text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white",
+            "transition-all duration-300 ease-in-out" // Added for tween effect
+        ),
         onClick: onClick
     };
-
     return (
-        <li>
+        <li className="group flex flex-1 list-none items-center justify-center space-x-1 hover:bg-amber-100 transition-all duration-300 ease-in-out bg-amber-100	">
             {React.createElement(
                 LinkComponent,
                 linkProps,

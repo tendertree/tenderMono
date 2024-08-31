@@ -1,3 +1,4 @@
+/* eslint-disable no-redeclare */
 import React, { ReactNode } from 'react';
 
 export interface LogoProps {
