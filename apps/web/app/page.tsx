@@ -1,7 +1,7 @@
 "use client";
 import Logo from "@ui/custom/basic/Logo";
 import Link from "next/link";
-import HeaderBasic from "@ui/custom/header/HeaderBasic";
+import NavigationBasic from "@ui/custom/header/NavigationBasic";
 import { Menu, X } from 'lucide-react';
 
 import dynamic from 'next/dynamic';
@@ -18,7 +18,7 @@ export default function Home() {
     return (
         <div >
 
-            <HeaderBasic
+            <NavigationBasic
                 MenuData={menuData}
                 MenuItem={MenuItem}
                 Logo={<Logo />}

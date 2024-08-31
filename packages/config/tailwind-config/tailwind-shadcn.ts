@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 const config: Config = {
     content: [
+        '../../packages/ui/**/*.{ts,tsx,astro,md,mdx}',
         './index.html',
         './pages/**/*.{ts,tsx,astro,md,mdx}',
         './components/**/*.{ts,tsx,astro,md,mdx}',

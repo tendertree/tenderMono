@@ -11,7 +11,7 @@
 	"scripts": {
 		"lint": "eslint . --max-warnings 0",
 		"generate:component": "turbo gen react-component",
-		"add:ui": "pnpm dlx shadcn-ui@latest add -p base"
+		"add:ui": "pnpm dlx shadcn@latest add -p base"
 	},
 	"devDependencies": {
 		"@config/eslint-config": "workspace:*",
@@ -28,6 +28,7 @@
 		"@radix-ui/react-avatar": "^1.1.0",
 		"@radix-ui/react-dialog": "^1.1.1",
 		"@radix-ui/react-label": "^2.1.0",
+		"@radix-ui/react-navigation-menu": "^1.2.0",
 		"@radix-ui/react-slot": "^1.1.0",
 		"@radix-ui/react-switch": "^1.1.0",
 		"class-variance-authority": "^0.7.0",
