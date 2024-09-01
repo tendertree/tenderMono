@@ -37,7 +37,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
         onClick: onClick
     };
     return (
-        <li className="group flex flex-1 list-none items-center justify-center space-x-1 hover:bg-amber-100 transition-all duration-300 ease-in-out bg-amber-100	">
+        <li className="group flex flex-1 list-none items-center justify-center space-x-1 hover:bg-amber-100 transition-all duration-300 ease-in-out 	">
             {React.createElement(
                 LinkComponent,
                 linkProps,

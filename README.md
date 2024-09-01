@@ -1,3 +1,3 @@
 # tenedrMono
-personal monorepo 
+personal monorepo collectino 
 

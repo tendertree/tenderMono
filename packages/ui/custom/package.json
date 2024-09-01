@@ -8,7 +8,8 @@
 		"./content/*": "./content/*",
 		"./header/*": "./header/*",
 		"./footer/*": "./footer/*",
-		"./popup/*": "./popup/*"
+		"./popup/*": "./popup/*",
+		"./section/*": "./section/*"
 	},
 	"scripts": {
 		"lint": "eslint . --max-warnings 0",

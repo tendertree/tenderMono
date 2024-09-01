@@ -15,6 +15,9 @@ module.exports = {
                 side: {
                     100: '#c1ecf5',
                 },
+                white: {
+                    100: '#F3F4F6'
+                }
             },
         },
     },

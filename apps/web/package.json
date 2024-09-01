@@ -12,6 +12,8 @@
 		"test": "vitest"
 	},
 	"dependencies": {
+		"@feature/quill": "workspace:*",
+		"@types/quill": "^2.0.14",
 		"@ui/custom": "workspace:*",
 		"@ui/shadcn": "workspace:*",
 		"lucide-react": "^0.427.0",

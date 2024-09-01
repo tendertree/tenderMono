@@ -26,6 +26,12 @@
 			],
 			"@ui/shadcn/*": [
 				"../../ui/shadcn/*"
+			],
+			"@feature/quill/*": [
+				"../../feature/quill/*"
+			],
+			"@feature/three/*": [
+				"../../feature/three/*"
 			]
 		}
 	}

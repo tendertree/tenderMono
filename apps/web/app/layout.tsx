@@ -1,7 +1,9 @@
+import Footer from '@ui/custom/footer/footer';
 import './globals.css'
 import type { Metadata } from 'next'
 
 import { Noto_Sans, Nanum_Gothic } from 'next/font/google'
+import { Navigation } from './Navigation';
 
 
 const noto = Noto_Sans({
@@ -33,6 +35,7 @@ export const metadata: Metadata = {
     },
 
 };
+
 export default function RootLayout({
     children,
 }: Readonly<{
@@ -42,8 +45,11 @@ export default function RootLayout({
         <html
             lang="en"
             suppressHydrationWarning>
-            <body>
+            <body className='bg-white-100'>
+                <Navigation />
                 {children}
+                <Footer></Footer>
+
             </body>
         </html>
     );
