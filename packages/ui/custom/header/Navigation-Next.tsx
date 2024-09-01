@@ -38,7 +38,7 @@ export const NavigationNext: React.FC<NavigationNextProps> = ({
 
     return (
         <nav className='relative'>
-            <div className='flex justify-between items-center md:mx-10'>
+            <div className='flex justify-between items-center md:px-24'>
                 {/* Logo */}
                 <Logo Link={Link} {...logoProps} />
                 {/* Desktop Navigation */}
