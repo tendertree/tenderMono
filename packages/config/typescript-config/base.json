@@ -32,7 +32,10 @@
 			],
 			"@feature/three/*": [
 				"../../feature/three/*"
-			]
+			],
+			"@infra/trpc/*": [
+				"../../infra/trpc/*"
+			],
 		}
 	}
 }

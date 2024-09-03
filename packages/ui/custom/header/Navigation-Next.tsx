@@ -58,10 +58,11 @@ export const NavigationNext: React.FC<NavigationNextProps> = ({
                             />
                         ))}
                     </ul>
-
-                    {children}
+                    <div className='relative right-20  md:right-0 bg-red-100'>
+                        {children}
+                    </div>
                     {/* Mobile Menu Toggle */}
-                    <div className="md:hidden">
+                    <div className="md:hidden pt-2 px-2">
                         <button
                             className="text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white"
                             onClick={toggleMenu}
@@ -76,7 +77,7 @@ export const NavigationNext: React.FC<NavigationNextProps> = ({
 
                 {/* Mobile Navigation */}
                 {isMenuOpen && (
-                    <div className="md:hidden absolute left-0 right-0 top-full bg-white dark:bg-gray-800 shadow-lg">
+                    <div className="md:hidden absolute left-0 right-0 top-full bg-white-100 dark:bg-gray-800 shadow-lg">
                         <ul className="flex flex-col w-full">
                             {MenuData.map((item) => (
                                 <li key={item.name} className="w-full">

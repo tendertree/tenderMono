@@ -1,12 +1,19 @@
-'use client' // Next.js 13 이상을 사용하는 경우 필요합니다.
+'use client'
 
 import React, { useEffect, useRef } from 'react';
 import Quill from 'quill';
-import 'quill/dist/quill.snow.css'; // Quill의 스타일시트를 import
+import 'quill/dist/quill.snow.css';
 
 export default function Editor(): JSX.Element {
     const editorRef = useRef<HTMLDivElement>(null);
+    const imageHandler = () => {
+        const input = document.createElement('input');
 
+        input.setAttribute('type', 'file');
+        input.setAttribute('accept', 'image/*');
+
+        input.click();
+    };
     useEffect(() => {
         if (editorRef.current) {
             const quill = new Quill(editorRef.current, {
@@ -16,7 +23,7 @@ export default function Editor(): JSX.Element {
                     toolbar: [
                         ['bold', 'italic', 'underline', 'strike'],
                         ['blockquote', 'code-block'],
-                        [{ 'header': 1 }, { 'header': 2 }],
+                        [{ 'header': 1 }],
                         [{ 'list': 'ordered' }, { 'list': 'bullet' }],
                         [{ 'script': 'sub' }, { 'script': 'super' }],
                         [{ 'indent': '-1' }, { 'indent': '+1' }],
@@ -26,18 +33,21 @@ export default function Editor(): JSX.Element {
                         [{ 'color': [] }, { 'background': [] }],
                         [{ 'font': [] }],
                         [{ 'align': [] }],
-                        ['clean']
-                    ]
+                        ['clean'],
+
+
+                    ],
+                    handlers: {
+                        image: imageHandler // 이미지 tool 사용에 대한 핸들러 설정
+                    }
+
                 }
             });
 
-            // 컴포넌트가 언마운트될 때 Quill 인스턴스를 정리합니다.
             return () => {
-                // quill.destroy();  // Quill이 destroy 메서드를 제공한다면 사용하세요.
-                //
             };
         }
-    }, []); // 빈 의존성 배열은 이 효과가 마운트와 언마운트 시에만 실행됨을 의미합니다.
+    }, []);
 
     return (
         <div className="h-full  flex flex-col">

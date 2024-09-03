@@ -13,14 +13,24 @@
 	},
 	"dependencies": {
 		"@feature/quill": "workspace:*",
+		"@infra/trpc": "workspace:*",
+		"@tanstack/react-query": "^5.53.3",
+		"@trpc/client": "11.0.0-rc.498",
+		"@trpc/next": "11.0.0-rc.498",
+		"@trpc/react-query": "11.0.0-rc.498",
+		"@trpc/server": "11.0.0-rc.498",
 		"@types/quill": "^2.0.14",
 		"@ui/custom": "workspace:*",
 		"@ui/shadcn": "workspace:*",
+		"client-only": "^0.0.1",
 		"lucide-react": "^0.427.0",
-		"next": "15.0.0-rc.0",
+		"next": "14.2.7",
 		"next-themes": "^0.3.0",
 		"react": "19.0.0-rc-f994737d14-20240522",
-		"react-dom": "19.0.0-rc-f994737d14-20240522"
+		"react-dom": "19.0.0-rc-f994737d14-20240522",
+		"server-only": "^0.0.1",
+		"superjson": "^2.2.1",
+		"zod": "^3.23.8"
 	},
 	"devDependencies": {
 		"@chromatic-com/storybook": "^1.6.1",
