@@ -1,9 +1,9 @@
 import Footer from '@ui/custom/footer/footer';
 import './globals.css'
 import type { Metadata } from 'next'
-
 import { Noto_Sans, Nanum_Gothic } from 'next/font/google'
 import { Navigation } from './Navigation';
+// import TrpcProvider from '../src/server/provider'; //서버에서 사용 시불러오기 위함 
 
 
 const noto = Noto_Sans({
@@ -47,9 +47,10 @@ export default function RootLayout({
             suppressHydrationWarning>
             <body className='bg-white-100'>
                 <Navigation />
-                {children}
-                <Footer></Footer>
-
+                <TrpcProvider>
+                    {children}
+                    <Footer />
+                </TrpcProvider>
             </body>
         </html>
     );
