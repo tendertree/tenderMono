@@ -12,5 +12,8 @@
 	"dependencies": {
 		"@supabase/supabase-js": "^2.45.3",
 		"uuid": "^10.0.0"
+	},
+	"exports": {
+		"./client": "./client.ts"
 	}
 }
