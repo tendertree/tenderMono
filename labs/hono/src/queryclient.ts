@@ -1,3 +1,4 @@
+import { QueryClient } from "@tanstack/react-query";
 import { Query, defaultShouldDehydrateQuery } from "@tanstack/react-query";
 
 const queryClientOptions = {
@@ -9,12 +10,23 @@ const queryClientOptions = {
             refetchOnWindowFocus: false,
         },
         dehydrate: {
-            // per default, only successful Queries are included,
-            // this includes pending Queries as well
             shouldDehydrateQuery: (query: Query) =>
                 defaultShouldDehydrateQuery(query) || query.state.status === "pending",
         },
     },
 };
 
-export default queryClientOptions;
+
+function makeQueryClient() {
+    return new QueryClient(queryClientOptions);
+}
+
+let browserQueryClient: QueryClient | undefined = undefined;
+export default function getQueryClient() {
+    if (typeof window === "undefined") {
+        return makeQueryClient();
+    } else {
+        if (!browserQueryClient) browserQueryClient = makeQueryClient();
+        return browserQueryClient;
+    }
+}
