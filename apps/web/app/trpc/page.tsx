@@ -1,11 +1,10 @@
 "use client"
 
-import { trpc } from "@infra/trpc/clients/next";
 
-// import { trpc } from "../../src/server/client";
+import { trpc } from "../../src/trpc/client";
 
 export default function Home() {
-    const getUser = trpc.getUser.useQuery();
+    const getUser = trpc.userRouter.getUser.useQuery();
 
     if (getUser.isLoading) {
         return <main>Loading...</main>

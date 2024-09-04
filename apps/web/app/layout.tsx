@@ -3,8 +3,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Noto_Sans, Nanum_Gothic } from 'next/font/google'
 import { Navigation } from './Navigation';
-// import TrpcProvider from '../src/server/provider'; //서버에서 사용 시불러오기 위함 
-
+import TrpcProvider from '../src/trpc/provider';
+// import TrpcProvider from "@infra/trpc/provider"
 
 const noto = Noto_Sans({
     subsets: ['latin'],

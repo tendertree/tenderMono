@@ -1,23 +1,17 @@
-import { z } from "zod";
-import { router, publicProcedure } from '../trpc';
-
+import { z } from 'zod';
+import { procedure, router } from '../trpc';
 export const userRouter = router({
-    getUser: publicProcedure.query(() => {
+    getUser: procedure.query(() => {
         return [{
-            name: 'kim', race: "man"
-        },
-        {
-            name: 'choi', race: "man"
+            name: "home", grade: "first"
+        }, {
+            name: "kim", grade: "second"
         }]
     }),
-    addUser: publicProcedure
-        .input(z.object({ name: z.string(), race: z.string() }))
+    addUser: procedure.input(z.object(
+        { name: z.string(), grade: z.string() }))
         .mutation((opts) => {
             const { input } = opts;
-            return {
-                name: input.name
-            }
         })
 });
-
 

@@ -20,6 +20,8 @@
 	"exports": {
 		"./routers/*": "./routers/*",
 		"./clients/*": "./clients/*",
-		"./index": "./routers/index.ts"
+		"./index": "./routers/index.ts",
+		"./trpc": "./trpc.ts",
+		"./provider": "./provider.ts"
 	}
 }

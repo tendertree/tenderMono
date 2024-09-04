@@ -1,5 +1,5 @@
 packages:
-  - "labs/board"
+  - "labs/*"
   - "apps/web"
   - "apps/api"
   - "packages/ai/*"
