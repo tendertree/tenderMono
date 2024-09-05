@@ -1,7 +1,9 @@
+import "./checkbox.css"
+
 /*
  * using checkbox and css, it make dropdown menu
  */
-import "./checkbox.css"
+
 export default function Checkbox(): JSX.Element {
     return (
         <>

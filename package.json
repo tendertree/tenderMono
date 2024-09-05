@@ -1,5 +1,5 @@
 {
-	"name": "myHome",
+	"name": "tenderMono",
 	"private": true,
 	"scripts": {
 		"build": "turbo build",

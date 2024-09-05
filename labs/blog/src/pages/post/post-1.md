@@ -1,7 +1,6 @@
 ---
-title :"My first blog"
-author : "me"
+title: "Your Post Title"
+date: 2023-04-01
 ---
 
-# First 
-Something about us
+Your content here...

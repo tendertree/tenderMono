@@ -1,3 +1,18 @@
+:root {
+	counter-reset: headings;
+}
+
+h2 {
+	counter-increment: headings;
+}
+
+h2::before {
+	content: counter(headings) " ";
+	background-color: #F3F4F6;
+
+}
+
+
 h1 {
 	background: linear-gradient(to right, red, blue);
 	background-clip: text;

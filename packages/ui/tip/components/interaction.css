@@ -1,0 +1,21 @@
+.wrapper {
+	display: flex;
+	gap: 20px;
+	width: 300px;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+}
+
+.card {
+	box-sizing: border-box;
+	width: 300px;
+	padding: 20px 30px;
+	border-radius: 14px;
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	flex-shrink: 0;
+	scroll-snap-align: center;
+}
