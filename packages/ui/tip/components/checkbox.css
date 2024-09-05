@@ -1,0 +1,7 @@
+.containers {
+	display: none;
+}
+
+#mycheckbox:checked~.containers {
+	display: block;
+}

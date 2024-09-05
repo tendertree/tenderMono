@@ -8,13 +8,14 @@ const app = new Hono().basePath('/api')
 // 메모 관련 라우트
 app.get('/memos', async (c) => {
     try {
-        const { data, error } = await supabase
+        const { data: memo, error } = await supabase
             .from('memo')
             .select('*')
 
+
         if (error) throw error
 
-        return c.json(data)
+        return c.json(memo)
     } catch (error) {
         console.error('Error fetching memos:', error)
         return c.json({ error: 'Failed to fetch memos' }, 500)
