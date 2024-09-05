@@ -18,6 +18,7 @@
 		"noUncheckedIndexedAccess": true,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
+		"preserveSymlinks": true,
 		"strict": true,
 		"target": "ES2022",
 		"paths": {
