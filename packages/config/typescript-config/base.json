@@ -36,6 +36,9 @@
 			"@infra/trpc/*": [
 				"../../infra/trpc/*"
 			],
+			"@entity/memo/*": [
+				"../../entity/memo/*"
+			],
 		}
 	}
 }

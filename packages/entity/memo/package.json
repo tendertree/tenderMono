@@ -2,12 +2,7 @@
 	"name": "@entity/memo",
 	"version": "0.1.0",
 	"private": true,
-	"scripts": {
-		"dev": "dotenvx run -- next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
-	},
+	"scripts": {},
 	"dependencies": {
 		"hono": "^4.4.2",
 		"next": "14.2.7",
