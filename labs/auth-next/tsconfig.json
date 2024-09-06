@@ -11,6 +11,9 @@
 		"paths": {
 			"@src/*": [
 				"src/*"
+			],
+			"@ui/shadcn/*": [
+				"../../packages/ui/shadcn/*"
 			]
 		},
 		"preserveSymlinks": false
