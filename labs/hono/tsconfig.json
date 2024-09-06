@@ -12,7 +12,8 @@
 			"@src/*": [
 				"src/*"
 			]
-		}
+		},
+		"preserveSymlinks": false
 	},
 	"include": [
 		"next-env.d.ts",

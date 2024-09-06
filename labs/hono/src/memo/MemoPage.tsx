@@ -18,7 +18,6 @@ export default async function MemosPage() {
     async function revalidateMemos() {
         'use server';
         revalidateTag("MEMOS");
-        // 여기서 새로운 데이터를 반환하지 않습니다.
     }
 
     return (

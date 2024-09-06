@@ -9,20 +9,27 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@auth/supabase-adapter": "^1.4.2",
 		"@entity/memo": "workspace:*",
+		"@hono/auth-js": "^1.0.10",
+		"@hookform/resolvers": "^3.9.0",
 		"@infra/supabase": "workspace:*",
+		"@supabase/ssr": "^0.5.1",
 		"@supabase/supabase-js": "^2.45.3",
 		"@tanstack/react-query": "^5.53.3",
 		"@tanstack/react-query-devtools": "^5.54.1",
+		"@types/jsonwebtoken": "^9.0.6",
 		"@types/next-auth": "^3.15.0",
 		"@types/uuid": "^10.0.0",
 		"hono": "^4.4.2",
+		"jsonwebtoken": "^9.0.2",
 		"next": "14.2.7",
 		"next-auth": "5.0.0-beta.20",
 		"react": "^18",
 		"react-dom": "^18",
+		"react-hook-form": "^7.53.0",
+		"react-hot-toast": "^2.4.1",
 		"uuid": "^10.0.0",
+		"zod": "link:@hookform/resolvers/zod",
 		"zustand": "^4.5.5"
 	},
 	"devDependencies": {
