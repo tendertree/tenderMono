@@ -1,0 +1,31 @@
+.section {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #99948c;
+}
+
+.container {
+	overflow: hidden;
+	background: #171512;
+	cursor: ew-resize;
+	white-space: nowrap;
+	padding: 10vh 0;
+
+}
+
+.title {
+	font-family: "Roboto Mono", monospace;
+	font-size: 12vh;
+	position: relative;
+	color: #99948c;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	will-change: transform;
+	white-space: nowrap;
+	text-align: center;
+}

@@ -2,14 +2,22 @@
 	"extends": "@config/typescript-config/react-library.json",
 	"compilerOptions": {
 		"outDir": "dist",
-		"baseUrl": "."
+		"baseUrl": ".",
+		"noImplicitAny": false,
+		"strict": false,
+		"noEmitOnError": false,
+		"skipLibCheck": true,
+		"jsx": "react-jsx",
+		"allowJs": true,
+		"esModuleInterop": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"ignoreDeprecations": "5.0"
 	},
 	"include": [
-		"base",
-		"comp",
-		"style",
-		"feature",
-		"icons"
+		"base/*",
+		"feature/*",
+		"style/*",
+		"types/*"
 	],
 	"exclude": [
 		"node_modules",

@@ -4,7 +4,7 @@
 	"private": true,
 	"exports": {
 		"./base/*": "./base/*",
-		"./feature/*": "./feature/*",
+		"./feature/*": "./feature/*.tsx",
 		"./comp/*": "./comp/*",
 		"./utils": "./utils.ts"
 	},
