@@ -10,10 +10,12 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"@supabase/ssr": "^0.5.1",
 		"@supabase/supabase-js": "^2.45.3",
+		"next": "^14.2.8",
 		"uuid": "^10.0.0"
 	},
 	"exports": {
-		"./client": "./client.ts"
+		"./src/*": "./src/*.ts"
 	}
 }

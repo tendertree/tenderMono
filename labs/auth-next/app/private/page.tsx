@@ -1,4 +1,4 @@
-import { createClient } from '@/src/server/supabase-server'
+import createClient from '@infra/supabase/src/server'
 import { redirect } from 'next/navigation'
 
 

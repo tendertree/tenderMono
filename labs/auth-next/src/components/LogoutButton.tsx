@@ -1,5 +1,7 @@
 "use client"
-import { signout } from "@/src/actions/actions";
+
+import { signout } from "@entity/user/actions/userAction";
+
 
 export default function LogoutButton(): JSX.Element {
     const handleClick = () => {
