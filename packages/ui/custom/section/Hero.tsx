@@ -1,13 +1,13 @@
 "use client"
-import Button from "./Button"
 import { motion, MotionStyle, useScroll, useTransform } from "framer-motion";
+import Button from "../button/roundButton";
 
 type HeroProps = {
     title: string;
     desc: string;
 }
 
-export default function Hero<HeroProps>(title, desc): JSX.Element {
+export default function Hero({ title, desc }: HeroProps): JSX.Element {
     const { scrollY } = useScroll();
     const imgTopPosition = useTransform(scrollY, [0, 400] as const, ["480px", "140px"]);
     const imgScale = useTransform(scrollY, [0, 200, 1300] as const, [1, 1.4, 1]);
@@ -24,8 +24,8 @@ export default function Hero<HeroProps>(title, desc): JSX.Element {
                     opacity: textOpacity,
                     scale: textScale,
                 }}>
-                    <h1 className="text-[60px] font-bold tracking-[-0.5px] leading-none max-w-[800px] xl:max-w-max">{titile}</h1>
-                    <p className="max-w-[680px] text-[20px] text-white/80 font-light px-8 xl:px-0 mb-2">StreamLion and manage your time effortslessy with our poweful , intutitve, all in one productivy plaftorim</p>
+                    <h1 className="text-[60px] font-bold tracking-[-0.5px] leading-none max-w-[800px] xl:max-w-max">{title}</h1>
+                    <p className="max-w-[680px] text-[20px] text-dark/80 font-light px-8 xl:px-0 mb-2">{desc}</p>
                     <Button text="Click me" />
                 </motion.div>
                 {/*image*/}

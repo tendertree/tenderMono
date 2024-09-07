@@ -6,7 +6,7 @@ function Trial() {
         <section className='xl:mb-32 w-full'
         >
             <div className="py-24 w-full xl:max-w-[1140px] mx-auto min-h-[300px]
-				bg-gradient-to-r from-accent via-accent_secondary to-accent h-full flex items-center xl:rounded-2xl">
+				bg-gradient-to-r from-dark via-light to-dark h-full flex items-center xl:rounded-2xl">
                 <div className='flex flex-col xl:flex-row items-center justify-between w-full xl:px-24'>
                     <div>
                         <div className='text-center mb-12 xl:mb-0 xl:text-left'>
