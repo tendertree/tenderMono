@@ -9,8 +9,10 @@
 		"./button/*": "./button/*",
 		"./header/*": "./header/*",
 		"./footer/*": "./footer/*",
-		"./popup/*": "./popup/*",
-		"./section/*": "./section/*"
+		"./info/*": "./info/*",
+		"./section/*": "./section/*",
+		"./carousel/*": "./carousel/*",
+		"./utils/*": "./utils/*"
 	},
 	"scripts": {
 		"lint": "eslint . --max-warnings 0",

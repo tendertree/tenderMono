@@ -10,7 +10,8 @@
 		"button/**/*",
 		"popup/**/*",
 		"basic/**/*.tsx",
-		"section/*.tsx"
+		"section/**/*.tsx",
+		"utils/*.ts"
 	],
 	"exclude": [
 		"node_modules",

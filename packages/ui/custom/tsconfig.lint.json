@@ -7,8 +7,11 @@
 		"src/**/*",
 		"footer/**/*",
 		"header/**/*",
-		"popup/**/*",
-		"basic/**/*"
+		"info/**/*",
+		"basic/**/*",
+		"utils/**/*",
+		"section/**/*",
+		"carousel/**/*"
 	],
 	"exclude": [
 		"node_modules",
