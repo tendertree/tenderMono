@@ -1,3 +1,6 @@
+/*
+ * Recommendation user 
+ */
 import { fadeInOnScroll } from '@src/utlis/motionVariatns';
 import { motion } from 'framer-motion';
 import React from 'react';

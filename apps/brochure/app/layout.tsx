@@ -2,7 +2,7 @@ import Footer from '@ui/custom/footer/footer';
 import './globals.css'
 import type { Metadata } from 'next'
 import { Noto_Sans, Nanum_Gothic } from 'next/font/google'
-import Header from '@src/components/Header';
+import Header from '@ui/custom/header/blurheader';
 const noto = Noto_Sans({
     subsets: ['latin'],
     display: 'swap',
