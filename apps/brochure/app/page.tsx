@@ -2,7 +2,6 @@
 import Brands from '@src/components/Brands'
 import Feature from '@src/components/Feature'
 import Header from '@src/components/Header'
-import Hero from '@ui/custom/section/Hero'
 import Testimonial from '@src/components/Testimonial'
 import Intergration from '@src/components/Integration'
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
@@ -15,10 +14,6 @@ export default function Page() {
         <div>
             <ReactLenis root>
                 <ColorPresetList />
-                <Hero
-                    title="Boost your Productivity Instatntly"
-                    desc="StreamLion and manage your time effortslessy with our poweful , intutitve, all in one productivy plaftorim"
-                />
                 <Brands />
                 <Feature />
                 <Intergration />
