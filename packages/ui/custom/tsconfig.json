@@ -9,8 +9,8 @@
 		"header/**/*",
 		"button/**/*",
 		"popup/**/*",
-		"basic/**/*",
-		"section/**/*"
+		"basic/**/*.tsx",
+		"section/*.tsx"
 	],
 	"exclude": [
 		"node_modules",
