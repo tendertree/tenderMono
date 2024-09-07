@@ -7,9 +7,13 @@
 			}
 		],
 		"jsx": "preserve",
+		"baseUrl": ".",
 		"paths": {
 			"@src/*": [
 				"src/*"
+			],
+			"@ui/custom/*": [
+				"../../packages/ui/custom/*"
 			]
 		}
 	},

@@ -18,6 +18,12 @@ const config: Config = {
         },
         extend: {
             colors: {
+                //custom colors
+                //
+                white: {
+                    100: '#F3F4F6'
+                },
+
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",

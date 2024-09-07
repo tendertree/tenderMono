@@ -2,7 +2,7 @@ import Footer from '@ui/custom/footer/footer';
 import './globals.css'
 import type { Metadata } from 'next'
 import { Noto_Sans, Nanum_Gothic } from 'next/font/google'
-
+import Header from '@src/components/Header';
 const noto = Noto_Sans({
     subsets: ['latin'],
     display: 'swap',
@@ -42,7 +42,8 @@ export default function RootLayout({
         <html
             lang="en"
             suppressHydrationWarning>
-            <body className={'${noto.className} bg-cover bg-no-repeat bg-white-100'}>
+            <body className='bg-white-100'>
+                <Header />
                 {children}
                 <Footer />
             </body>
