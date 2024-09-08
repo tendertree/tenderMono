@@ -1,3 +1,6 @@
+/*
+ * header with bluered background
+ */
 import Logo from "../basic/Logo";
 import Button from "../button/roundButton";
 

@@ -1,5 +1,5 @@
 /*
- *  left on image,  right desc
+ *  left on image,  right desc (feature)
  */
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react';

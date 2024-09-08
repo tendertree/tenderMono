@@ -13,7 +13,9 @@
 		"@auth/drizzle-adapter": "^1.1.0",
 		"@neondatabase/serverless": "^0.9.1",
 		"dotenv": "^16.4.5",
-		"drizzle-orm": "^0.30.9"
+		"drizzle-orm": "^0.30.9",
+		"postgre": "^0.1.8",
+		"postgres": "^3.4.4"
 	},
 	"devDependencies": {
 		"drizzle-kit": "^0.21.2"

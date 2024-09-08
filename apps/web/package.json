@@ -30,6 +30,7 @@
 		"@config/eslint-config": "workspace:*",
 		"@config/tailwind-config": "workspace:*",
 		"@config/typescript-config": "workspace:*",
+		"@feature/three": "workspace:*",
 		"@storybook/addon-essentials": "^8.2.9",
 		"@storybook/addon-interactions": "^8.2.9",
 		"@storybook/addon-links": "^8.2.9",

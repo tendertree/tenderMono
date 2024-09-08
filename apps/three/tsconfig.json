@@ -1,0 +1,30 @@
+{
+	"extends": "@config/typescript-config/nextjs.json",
+	"compilerOptions": {
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"jsx": "preserve",
+		"baseUrl": ".",
+		"paths": {
+			"@src/*": [
+				"src/*"
+			],
+			"@ui/custom/*": [
+				"../../packages/ui/custom/*"
+			]
+		}
+	},
+	"include": [
+		"next-env.d.ts",
+		"next.config.mjs",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}
