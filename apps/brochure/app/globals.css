@@ -1,13 +1,17 @@
 @import '@config/tailwind-config/style/shadcn.css';
 
-body {
-	@apply: text-white-100;
+@layer base {
+	body {
+		@apply font-primary;
+	}
 }
 
-.h2 {
-	@apply text-5xl font-semibold;
-}
+@layer components {
+	.h2 {
+		@apply text-5xl font-semibold;
+	}
 
-.lead {
-	@apply text-lg font-light;
+	.lead {
+		@apply text-lg font-light;
+	}
 }

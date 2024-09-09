@@ -17,10 +17,10 @@ module.exports = {
                 accent_secondary: "#8728e1",
 
                 bg: "#FFFDFA",
-                strong: "#D94F04",
-                mid: "#F29325",
-                light: "#F4E2DE",
-                dark: "#025259",
+                strong: "#BB8493",
+                mid: "#704264",
+                light: "#DBAFA0",
+                dark: "#49243E",
                 neutral: "#007172",
 
 

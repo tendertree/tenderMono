@@ -2,7 +2,7 @@ packages:
   - "labs/*"
   - "apps/web"
   - "apps/api"
-  - "apps/brochure"
+  - "apps/about"
   - "packages/ai/*"
   - "packages/config/*"
   - "packages/infra/*"
