@@ -2,6 +2,7 @@
 import { Canvas } from '@react-three/fiber'
 import { ScrollControls } from '@react-three/drei'
 import ObjectMoveByCurveLine from './scenes/ObjectMovebyCurveLine'
+import Experience from './scenes/Experience'
 
 
 export default function MainScene() {
@@ -15,7 +16,7 @@ export default function MainScene() {
 
                 <color attach="background" args={['#eceece']} />
                 <ScrollControls pages={5} damping={0.3} >
-
+                    <Experience />
                 </ScrollControls>
             </Canvas>
         </>
