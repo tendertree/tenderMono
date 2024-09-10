@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
+//
 "use client"
 import { motion } from 'framer-motion';
-import { Award, BriefcaseBusiness, GraduationCap, LucideIcon } from 'lucide-react'
+import { Award, BriefcaseBusiness, GraduationCap } from 'lucide-react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@ui/shadcn/base/tabs'
+import { ScrollArea } from "@ui/shadcn/base/scroll-area"
 import React from 'react'
 interface IExperience {
     icon: React.ReactElement;
@@ -124,6 +126,25 @@ function page() {
                             <TabsTrigger value="about" {...({} as any)}>about me</TabsTrigger>                        </TabsList>
                         <div className='min-h-[70vh] w-full'>
                             <TabsContent value="experience" className="w-full" {...({} as any)}>
+                                <div className='flex flex-col gap-[160px] text-center xl:text-left'>
+                                    <h1 className='text-4xl font-bold'> {WorkExperience.title}</h1>
+                                    <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>
+                                        {WorkExperience.description}
+                                    </p>
+                                    <ScrollArea className="h-[400px]">
+                                        this is scroll forthe first time
+                                    </ScrollArea>
+
+
+                                </div>
+                            </TabsContent>
+                            <TabsContent value="education" className="w-full" {...({} as any)}>
+                                content
+                            </TabsContent>
+                            <TabsContent value="skills" className="w-full" {...({} as any)}>
+                                content
+                            </TabsContent>
+                            <TabsContent value="about" className="w-full" {...({} as any)}>
                                 content
                             </TabsContent>
                         </div>
