@@ -23,7 +23,6 @@
 		"@types/react-dom": "^18.2.24",
 		"@types/three": "^0.163.0",
 		"@ui/custom": "workspace:*",
-		"@ui/shadcn": "workspace:*",
 		"animejs": "^3.2.2",
 		"client-only": "^0.0.1",
 		"framer-motion": "^11.5.4",

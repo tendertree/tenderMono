@@ -4,19 +4,17 @@ import * as React from "react"
 import * as SelectPrimitive from "@radix-ui/react-select"
 import { Check, ChevronDown, ChevronUp } from "lucide-react"
 
-import { cn } from "@ui/shadcn/utils"
+import { cn } from "../lib/utils"
 
 const Select = SelectPrimitive.Root
 
 const SelectGroup = SelectPrimitive.Group
-type SelectTriggerProps = React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger> & {
-    children?: React.ReactNode;
-    className?: string;
-};
+
+const SelectValue = SelectPrimitive.Value
 
 const SelectTrigger = React.forwardRef<
     React.ElementRef<typeof SelectPrimitive.Trigger>,
-    SelectTriggerProps
+    React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
     <SelectPrimitive.Trigger
         ref={ref}
