@@ -2,22 +2,22 @@
 
 import * as React from "react"
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area"
-
 import { cn } from "@ui/shadcn/utils"
 
+// Extend ScrollAreaPrimitiveProps to include HTMLAttributes
 type ScrollAreaPrimitiveProps = React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>;
 
-interface ScrollAreaProps extends Omit<ScrollAreaPrimitiveProps, 'children'> {
+interface ScrollAreaProps extends ScrollAreaPrimitiveProps {
     children: React.ReactNode;
+    className?: string;  // Explicitly include className
 }
-
 const ScrollArea = React.forwardRef<
-    React.ElementRef<typeof ScrollAreaPrimitive.Root>,
+    HTMLDivElement,
     ScrollAreaProps
->(({ className, children, ...props }, ref) => (
+>(({ className, children, ...props }, ref) => (        // ... component implementation
     <ScrollAreaPrimitive.Root
         ref={ref}
-        className={cn("relative overflow-hidden", className)}
+        className={cn("relative overflow-hidden")}
         {...props}
     >
         <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
@@ -25,7 +25,7 @@ const ScrollArea = React.forwardRef<
         </ScrollAreaPrimitive.Viewport>
         <ScrollBar />
         <ScrollAreaPrimitive.Corner />
-    </ScrollAreaPrimitive.Root>
+    </ScrollAreaPrimitive.Root >
 ))
 ScrollArea.displayName = ScrollAreaPrimitive.Root.displayName
 
