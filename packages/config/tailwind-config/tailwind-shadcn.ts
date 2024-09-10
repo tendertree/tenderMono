@@ -7,7 +7,8 @@ const config: Config = {
         './components/**/*.{ts,tsx,astro,md,mdx}',
         './app/**/*.{ts,tsx,astro,md,mdx}',
         './src/**/*.{ts,tsx,astro,md,mdx}',
-        '../../packages/ui/shadcn/**/*.{ts,tsx,astro,md,mdx}',
+        '../../packages/ui/shadcn/**/*.{ts,tsx}',
+        '../../packages/ui/shadcn/utils.ts',
     ], theme: {
         container: {
             center: true,

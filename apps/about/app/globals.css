@@ -16,6 +16,13 @@ body {
 	@apply text-[20px] xl:text-[80px] leading-[1.1] font-semibold;
 }
 
+.text-outline {
+	-webkit-text-stroke: 1px #ffffff;
+}
+
+.text-outline-hover {
+	-webkit-text-stroke: 1px red;
+}
 
 
 

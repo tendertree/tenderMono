@@ -1,5 +1,6 @@
 import Photo from '@src/components/Photo'
 import Social from '@src/components/Social'
+import Stats from '@src/components/Stats'
 import { Button } from '@ui/shadcn/base/button'
 import { FileDown } from 'lucide-react'
 import React from 'react'
@@ -34,6 +35,7 @@ function Home() {
                     </div>
                 </div>
             </div >
+            <Stats />
         </section >
     )
 }

@@ -3,15 +3,22 @@
 	"compilerOptions": {
 		"outDir": "dist",
 		"baseUrl": ".",
-		"noImplicitAny": false,
-		"strict": false,
 		"noEmitOnError": false,
-		"skipLibCheck": true,
-		"jsx": "react-jsx",
 		"allowJs": true,
-		"esModuleInterop": true,
 		"suppressImplicitAnyIndexErrors": true,
-		"ignoreDeprecations": "5.0"
+		"ignoreDeprecations": "5.0",
+		"skipLibCheck": true,
+		"noImplicitAny": false,
+		"strictNullChecks": false,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"incremental": true
 	},
 	"include": [
 		"base/*",

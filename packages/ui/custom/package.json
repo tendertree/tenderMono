@@ -12,6 +12,7 @@
 		"./info/*": "./info/*",
 		"./section/*": "./section/*",
 		"./carousel/*": "./carousel/*",
+		"./widget/*": "./carousel/*",
 		"./utils/*": "./utils/*"
 	},
 	"scripts": {
