@@ -4,7 +4,21 @@ module.exports = {
     extends: ["@config/eslint-config/next.js", "plugin:storybook/recommended"],
     parser: "@typescript-eslint/parser",
     parserOptions: {
-        project: true,
+        project: ["./tsconfig.json"], // Specify the path to your tsconfig.json
+        tsconfigRootDir: __dirname,
     },
-    ignorePatterns: ['tailwind.config.js', 'postcss.config.js'],
-};;
+    ignorePatterns: [
+        'tailwind.config.js',
+        'postcss.config.js',
+        '**/node_modules/**',
+        '**/dist/**',
+        '**/.next/**',
+    ],
+    settings: {
+        "import/resolver": {
+            typescript: {
+                project: ["./tsconfig.json"], // Specify the path to your tsconfig.json
+            },
+        },
+    },
+}

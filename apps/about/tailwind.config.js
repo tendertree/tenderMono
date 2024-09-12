@@ -33,7 +33,10 @@ module.exports = {
 
                 bacgroundImage: {
                     body: "url('/bg.png')",
-                }
+                },
+				     white: {
+                    100: '#FAF9F6', // 요청하신 대로 변경됨
+                },
             },
         },
     },

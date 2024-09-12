@@ -1,6 +1,6 @@
 {
-	"name": "web",
-	"version": "0.1.0",
+	"name": "about",
+	"version": "0.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "next dev --turbo",
@@ -12,6 +12,7 @@
 		"test": "vitest"
 	},
 	"dependencies": {
+		"@ui/shadcn": "workspace:*",
 		"@feature/quill": "workspace:*",
 		"@react-three/drei": "^9.105.5",
 		"@react-three/fiber": "^8.16.2",

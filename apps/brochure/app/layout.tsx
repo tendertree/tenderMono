@@ -1,4 +1,3 @@
-import Footer from '@ui/custom/footer/footer';
 import './globals.css'
 import type { Metadata } from 'next'
 import { Noto_Sans, Nanum_Gothic } from 'next/font/google'

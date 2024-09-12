@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.h2 {
+		@apply text-5xl font-semibold;
+	}
+
+	.lead {
+		@apply text-lg font-light;
+	}
+}
+
 @layer base {
 	:root {
 		--background: 0 0% 100%;
@@ -71,7 +81,15 @@
 
 
 	body {
+		@apply font-primary;
 		@apply bg-background text-foreground;
 		font-feature-settings: "rlig" 1, "calt" 1;
+	}
+
+}
+
+@layer utilities {
+	.text-white-100 {
+		color: "#FAF9F6";
 	}
 }

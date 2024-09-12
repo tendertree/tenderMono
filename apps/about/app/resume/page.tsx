@@ -100,6 +100,23 @@ const SkillExperience: IExperience = {
         },
     ]
 }
+
+const SkillListExperience: IExperience = {
+    icon: <BriefcaseBusiness />,
+    title: "Currently I Can",
+    description: "my exp",
+    items: [
+        {
+
+            description: "arst",
+            name: "full stack"
+        },
+        {
+            name: "team sola",
+            description: "full stack"
+        },
+    ]
+}
 function page() {
     const ab = about;
     return (
