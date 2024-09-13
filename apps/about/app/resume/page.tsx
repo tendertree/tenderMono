@@ -1,23 +1,16 @@
-/* eslint-disable no-unused-vars */
-//
+/* formatter: off */
 "use client"
+import TechStack from "@ui/custom/icons/stack"
 import { motion } from 'framer-motion';
 import { Award, BriefcaseBusiness, GraduationCap } from 'lucide-react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@ui/shadcn/base/tabs'
-import { ScrollArea } from "@ui/shadcn/base/scroll-area"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@ui/shadcn/base/tabs-forPortflio'
+import WorkExperienceList, { IExperience } from "@ui/shadcn/lists/WorkExperienceList"
 import React from 'react'
-interface IExperience {
-    icon: React.ReactElement;
-    title: string;
-    description: string;
-    items: (IExperienceItem | ISkillItem)[];
-}
-
-interface IExperienceItem {
-    name: string;
-    description: string;
-}
-
+import { FaReact, FaCss3, FaHtml5, FaJs, } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss } from "react-icons/si"
+import Product from "@ui/shadcn/cards/Product"
+import Feature from "@ui/custom/cards/Feature"
+import StarRating from "@ui/custom/icons/StarRating";
 interface ISkillItem {
     icon: React.ReactElement;
     description: string;
@@ -61,13 +54,16 @@ const WorkExperience: IExperience = {
     description: "my exp",
     items: [
         {
-            name: "team sola",
-            description: "full stack"
+            name: "home",
+            duration: "2040-2323",
+            desc: "my home and play game"
         },
         {
-            name: "team sola",
-            description: "full stack"
+            name: "kong",
+            duration: "2040-2323",
+            desc: "my home and play game"
         },
+
     ]
 }
 const EducationExperience: IExperience = {
@@ -76,13 +72,17 @@ const EducationExperience: IExperience = {
     description: "my exp",
     items: [
         {
-            name: "kim University",
-            description: "full stack"
+            name: "home",
+            duration: "2040-2323",
+            desc: "Study in the home"
         },
         {
             name: "team sola",
-            description: "full stack"
+            duration: "full stack",
+            desc: "follow your hearct"
         },
+
+
     ]
 }
 const SkillExperience: IExperience = {
@@ -90,38 +90,51 @@ const SkillExperience: IExperience = {
     title: "my exp",
     description: "my exp",
     items: [
-        {
-            name: "team sola",
-            description: "full stack"
-        },
-        {
-            name: "team sola",
-            description: "full stack"
-        },
     ]
 }
 
-const SkillListExperience: IExperience = {
+const PossibleList: IExperience = {
     icon: <BriefcaseBusiness />,
     title: "Currently I Can",
     description: "my exp",
     items: [
-        {
-
-            description: "arst",
-            name: "full stack"
-        },
-        {
-            name: "team sola",
-            description: "full stack"
-        },
     ]
 }
-function page() {
-    const ab = about;
-    return (
 
-        <div>
+const SkillList = [
+    {
+        icon: <FaReact />,
+        name: "React"
+    },
+    {
+        icon: <FaHtml5 />,
+        name: "Html5"
+    },
+    {
+        icon: <FaCss3 />,
+        name: "CSS"
+    },
+    {
+        icon: <FaJs />,
+        name: "Javascripts"
+    },
+    {
+        icon: <SiNextdotjs />,
+        name: "Nextjs"
+    },
+    {
+        icon: <SiTailwindcss />,
+        name: "Tailwind"
+    },
+
+]
+
+
+function page() {
+    return (
+        <>
+            <StarRating max={5} rank={3} filledColor={"#E44C94"} emptyColor={"#E44C94"} />
+            <Product />
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{
@@ -131,9 +144,7 @@ function page() {
                         duration: 0.4,
                         ease: 'easeIn'
                     },
-                }}
-                className='min-h-[80v] flex items-center justify-center py-12 xl:py-0'>
-                rstarst
+                }} className='min-h-[80v] flex items-center justify-center py-12 xl:py-0'>
                 <div className='container mx-auto'>
                     <Tabs {...({} as any)} defaultValue='experience' className='flex flex-col xl:flex-row gap-[60px]'>
                         <TabsList {...({} as any)} className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0-gap-6">
@@ -143,20 +154,12 @@ function page() {
                             <TabsTrigger value="about" {...({} as any)}>about me</TabsTrigger>                        </TabsList>
                         <div className='min-h-[70vh] w-full'>
                             <TabsContent value="experience" className="w-full" {...({} as any)}>
-                                <div className='flex flex-col gap-[160px] text-center xl:text-left'>
-                                    <h1 className='text-4xl font-bold'> {WorkExperience.title}</h1>
-                                    <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>
-                                        {WorkExperience.description}
-                                    </p>
-                                    <ScrollArea className="h-[400px]">
-                                        this is scroll forthe first time
-                                    </ScrollArea>
+                                <WorkExperienceList icon={"rst"} title={"kim"} description={"rstarst"} items={WorkExperience.items} />
 
-
-                                </div>
                             </TabsContent>
                             <TabsContent value="education" className="w-full" {...({} as any)}>
-                                content
+                                content...!
+                                <Feature icon={FaHtml5} title={"home"} description={"school is bad"} />
                             </TabsContent>
                             <TabsContent value="skills" className="w-full" {...({} as any)}>
                                 content
@@ -167,11 +170,10 @@ function page() {
                         </div>
                     </Tabs>
                 </div>
-            </motion.div >
+            </motion.div>
+        </>
 
 
-
-        </div >
     )
 }
 

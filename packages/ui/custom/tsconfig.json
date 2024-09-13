@@ -5,6 +5,7 @@
 	},
 	"include": [
 		"src/**/*",
+		"cards/**/*",
 		"footer/**/*",
 		"header/**/*",
 		"button/**/*",
@@ -12,6 +13,7 @@
 		"popup/**/*",
 		"basic/**/*.tsx",
 		"section/**/*.tsx",
+		"icons/**/*.tsx",
 		"utils/*.ts"
 	],
 	"exclude": [

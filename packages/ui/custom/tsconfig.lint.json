@@ -5,13 +5,15 @@
 	},
 	"include": [
 		"src/**/*",
+		"cards/**/*",
 		"footer/**/*",
 		"header/**/*",
 		"info/**/*",
 		"basic/**/*",
 		"utils/**/*",
 		"section/**/*",
-		"carousel/**/*"
+		"carousel/**/*",
+		"icons/**/*"
 	],
 	"exclude": [
 		"node_modules",

@@ -20,9 +20,11 @@ module.exports = {
                 strong: "#BB8493",
                 mid: "#704264",
                 light: "#DBAFA0",
-                dark: "#49243E",
                 neutral: "#007172",
-
+                dark: "#49243E",
+				darkWeak: "#613955",
+				textWhite:"#f6f6f6",
+				textDark: '#3A3035',
 
                 main: {
                     100: '#4287f5',
