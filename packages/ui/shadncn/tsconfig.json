@@ -2,9 +2,11 @@
 	"extends": "@config/typescript-config/shadcn.json",
 	"compilerOptions": {
 		"outDir": "dist",
-		 "paths": {
-      "@ui/custom/*": ["../../packages/ui/custom/*"]
-    }
+		"paths": {
+			"@ui/custom/*": [
+				"../../packages/ui/custom/**/*.tsx"
+			]
+		}
 	},
 	"include": [
 		"cards/**/*",

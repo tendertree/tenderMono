@@ -1,6 +1,4 @@
-/* formatter: off */
 "use client"
-import TechStack from "@ui/custom/icons/stack"
 import { motion } from 'framer-motion';
 import { Award, BriefcaseBusiness, GraduationCap } from 'lucide-react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@ui/shadcn/base/tabs-forPortflio'
@@ -133,7 +131,7 @@ const SkillList = [
 function page() {
     return (
         <>
-            <StarRating max={5} rank={3} filledColor={"#E44C94"} emptyColor={"#E44C94"} />
+			<Profile/>
             <Product />
             <motion.div
                 initial={{ opacity: 0 }}
