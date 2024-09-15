@@ -16,7 +16,7 @@
 		"./widget/*": "./widget/*",
 		"./icons/*": "./icons/*",
 		"./utils/*": "./utils/*",
-		"./gallery/*": "./gallery/*"
+				"gallery/**/*": "./gallery/**/*"
 	},
 	"scripts": {
 		"lint": "eslint . --max-warnings 0",

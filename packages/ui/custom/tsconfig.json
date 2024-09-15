@@ -14,7 +14,8 @@
 		"basic/**/*.tsx",
 		"section/**/*.tsx",
 		"icons/**/*.tsx",
-		"utils/*.ts"
+		"utils/*.ts",
+		"gallery/**/*"
 	],
 	"exclude": [
 		"node_modules",

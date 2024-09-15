@@ -13,7 +13,8 @@
 		"utils/**/*",
 		"section/**/*",
 		"carousel/**/*",
-		"icons/**/*"
+		"icons/**/*",
+		"gallery/**/*"
 	],
 	"exclude": [
 		"node_modules",
