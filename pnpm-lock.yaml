@@ -23,6 +23,9 @@ importers:
       '@feature/quill':
         specifier: workspace:*
         version: link:../../packages/feature/quill
+      '@feature/three':
+        specifier: workspace:*
+        version: link:../../packages/feature/three
       '@react-three/drei':
         specifier: ^9.105.5
         version: 9.111.4(@react-three/fiber@8.17.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0))(@types/react@18.3.4)(@types/three@0.163.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0)

@@ -12,6 +12,7 @@
 		"test": "vitest"
 	},
 	"dependencies": {
+		"@feature/three": "workspace:*",
 		"@ui/custom": "workspace:*",
 		"@ui/shadcn": "workspace:*",
 		"@feature/quill": "workspace:*",

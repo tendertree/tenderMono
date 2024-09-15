@@ -1,0 +1,20 @@
+	/*
+            <RoundedBox args={[2, 3, 0.1]}>
+                <planeGeometry args={[2, 3]} />
+                <MeshPortalMaterial side={THREE.DoubleSide}>
+                    <ambientLight intensity={1} />
+                    <Environment preset="sunset" />
+                    <Cosmetic />
+                    <mesh scale={[2, 2, 2]}>
+                        <sphereGeometry args={[1, 32, 32]} />
+                        <meshStandardMaterial map={map} side={THREE.BackSide} />
+                    </mesh>
+
+
+                </MeshPortalMaterial>
+            </RoundedBox>
+			*/
+
+
+			import { Portal } from '@src/components/MeshPotalCard'
+

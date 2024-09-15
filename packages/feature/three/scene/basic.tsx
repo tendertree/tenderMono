@@ -1,3 +1,4 @@
+"use client"
 import { Environment, OrbitControls, SoftShadows } from "@react-three/drei";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import React, { useEffect, useRef, useState } from 'react'
@@ -60,6 +61,15 @@ export function Scene({ children }: SceneProps) {
         </Canvas >
     )
 
+}
+export function BasicScene({ children }: { children: React.ReactNode }) {
+	return (
+	<Canvas shadows camera={{position:[3,3,5],fov:30}}>
+			<color args={["#ececec"]} attach="background" />
+			{children}
+		</Canvas>
+	)
+	
 }
 /*
  * scene with 3d sphere env map

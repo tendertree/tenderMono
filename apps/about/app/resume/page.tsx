@@ -4,6 +4,7 @@ import { Award, BriefcaseBusiness, GraduationCap } from 'lucide-react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@ui/shadcn/base/tabs-forPortflio'
 import WorkExperienceList, { IExperience } from "@ui/shadcn/lists/WorkExperienceList"
 import React from 'react'
+import Profile from "@ui/custom/cards/Profile"
 import { FaReact, FaCss3, FaHtml5, FaJs, } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss } from "react-icons/si"
 import Product from "@ui/shadcn/cards/Product"
@@ -131,8 +132,8 @@ const SkillList = [
 function page() {
     return (
         <>
-			<Profile/>
             <Product />
+
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{
