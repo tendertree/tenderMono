@@ -1,5 +1,5 @@
 {
-	"name": "origin",
+	"name": "blog",
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
@@ -9,35 +9,40 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"react": "^18",
-		"react-dom": "^18",
-		"next": "14.2.11",
-		"@feature/three": "workspace:*",
-		"@ui/custom": "workspace:*",
-		"@ui/shadcn": "workspace:*",
 		"@feature/quill": "workspace:*",
+		"@feature/three": "workspace:*",
 		"@react-three/drei": "^9.105.5",
 		"@react-three/fiber": "^8.16.2",
 		"@studio-freight/react-lenis": "^0.0.47",
 		"@tanstack/react-query": "^5.53.3",
+		"@ui/custom": "workspace:*",
+		"@ui/shadcn": "workspace:*",
+		"blog": "link:",
+		"framer": "^2.4.1",
 		"framer-motion": "^11.5.4",
 		"lucide-react": "^0.427.0",
-		"next-themes": "^0.3.0"
+		"next": "14.2.11",
+		"next-themes": "^0.3.0",
+		"react": "^18",
+		"react-dom": "^18"
 	},
 	"devDependencies": {
-		"typescript": "^5",
-		"@types/node": "^20",
-		"@types/react": "^18",
-		"@types/react-dom": "^18",
+		"@config/eslint-config": "workspace:*",
+		"@config/tailwind-config": "workspace:*",
+		"@config/typescript-config": "workspace:*",
 		"@feature/three": "workspace:*",
 		"@studio-freight/react-lenis": "^0.0.47",
 		"@tanstack/react-query": "^5.53.3",
+		"@types/node": "^20",
 		"@types/quill": "^2.0.14",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
 		"@types/three": "^0.163.0",
+		"eslint": "^8",
+		"eslint-config-next": "14.2.11",
 		"lucide-react": "^0.427.0",
 		"postcss": "^8",
 		"tailwindcss": "^3.4.1",
-		"eslint": "^8",
-		"eslint-config-next": "14.2.11"
+		"typescript": "^5"
 	}
 }

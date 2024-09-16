@@ -1,4 +1,4 @@
-import { Sheet, SheetContent, SheetTrigger } from 'base/sheet'
+import { Sheet, SheetContent, SheetTrigger } from '../base/sheet'
 import { Menu } from 'lucide-react'
 import React from 'react'
 

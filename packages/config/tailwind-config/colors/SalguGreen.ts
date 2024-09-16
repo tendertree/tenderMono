@@ -5,6 +5,6 @@ module.exports = {
     mid: "#007172",
     dim: "#025259",
     whiteT: "#f6f6f6",
-    dartT: '#3A3035',
+    darktT: '#3A3035',
 }
 

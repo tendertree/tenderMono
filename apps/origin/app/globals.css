@@ -1,27 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import '@config/tailwind-config/style/shadcn.css';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+.h1 {
+	@apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.h2 {
+	@apply text-[36px] xl:text-[80px] leading-[1.1] font-semibold;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.h3 {
+	@apply text-[20px] xl:text-[80px] leading-[1.1] font-semibold;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.text-outline {
+	-webkit-text-stroke: 1px #ffffff;
+}
+
+.text-outline-hover {
+	-webkit-text-stroke: 1px red;
+}
+
+
+
+.lead {
+	@apply text-lg font-light;
 }

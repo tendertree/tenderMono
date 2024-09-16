@@ -16,6 +16,7 @@
 		"icons/**/*",
 		"style/**/*",
 		"types/**/*",
+		"menu/**/*",
 		"lib/*.ts"
 	],
 	"exclude": [

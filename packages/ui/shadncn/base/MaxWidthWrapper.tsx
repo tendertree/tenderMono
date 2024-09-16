@@ -8,7 +8,7 @@ interface Props {
 }
 function MaxWidthWrapper({ className, children }: Props) {
     return (
-        <div className={cn('mx-auto max-w-screen-xl w-full my-12 flex ',className)}>
+        <div className={cn('mx-auto max-w-screen-xl w-full my-12 flex flex-col',className)}>
             {children}
         </div>
     )

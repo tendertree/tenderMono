@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import MaxWidthWrapper from "@ui/shadcn/base/MaxWidthWrapper"
 import { Noto_Sans, Nanum_Gothic } from 'next/font/google'
+import NavBar from "@src/components/NavBar";
+import { useTheme } from "next-themes";
+import { ThemeProvider } from "@ui/shadcn/base/ThemeToggle";
+import Nav_Simple from "@ui/shadcn/menu/Nav_Simple";
 const noto = Noto_Sans({
     subsets: ['latin'],
     display: 'swap',
@@ -25,13 +29,21 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <body
-                className={' antialiased min-h-screen  '}
+                className={' antialiased min-h-screen dark:bg-red-100'}
             >
-                <MaxWidthWrapper>
-						{children}
-                </MaxWidthWrapper>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <MaxWidthWrapper>
+                        <Nav_Simple/>
+                        {children}
+                    </MaxWidthWrapper>
+                </ThemeProvider>
             </body>
         </html>
     );

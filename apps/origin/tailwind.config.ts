@@ -11,6 +11,13 @@ module.exports = {
             ...baseConfig.theme.extend,
             colors: {
                 ...baseConfig.theme.extend.colors,
+                batang: "#F4E2DE",
+                strong: "#D94F04",
+                shine: "#F29325",
+                mid: "#007172",
+                dim: "#025259",
+                whiteT: "#f6f6f6",
+                dartT: '#3A3035',
                 accent: "#FFFDFA",
                 accent_secondary: "#8728e1",
                 main: {
@@ -23,7 +30,7 @@ module.exports = {
                 bacgroundImage: {
                     body: "url('/bg.png')",
                 },
-				     white: {
+                white: {
                     100: '#FAF9F6',
                 },
             },
