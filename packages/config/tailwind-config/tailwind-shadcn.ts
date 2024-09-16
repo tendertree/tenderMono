@@ -24,28 +24,13 @@ const config: Config = {
 
         extend: {
             colors: {
-                accent: "#FFFDFA",
-                accent_secondary: "#8728e1",
-
-                bg: "#FFFDFA",
+                batang: "#FFFDFA",
                 strong: "#BB8493",
+                shine: "#DBAFA0",
                 mid: "#704264",
-                light: "#DBAFA0",
-                dark: "#49243E",
-                darkWeak: "#613955",
-                neutral: "#007172",
-
+                dim: "#49243E",
                 whiteT: "#f6f6f6",
                 dartT: '#3A3035',
-
-
-                main: {
-                    100: '#4287f5',
-                },
-                side: {
-                    100: '#c1ecf5',
-                },
-
                 bacgroundImage: {
                     body: "url('/bg.png')",
                 },
