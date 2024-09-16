@@ -1,5 +1,5 @@
 /**
- * @module background image gallery with tiny image box follow mouse
+ * image gallery with tiny image box follow mouse
  */
 
 import React from 'react'

@@ -21,7 +21,9 @@
 	-webkit-text-stroke: 1px red;
 }
 
-
+.quill > .ql-toolbar:first-child {
+  display: none !important;
+}
 
 .lead {
 	@apply text-lg font-light;

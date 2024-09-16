@@ -17,7 +17,8 @@
 		"style/**/*",
 		"types/**/*",
 		"menu/**/*",
-		"lib/*.ts"
+		"lib/*.ts",
+		"sections/**/*"
 	],
 	"exclude": [
 		"node_modules",

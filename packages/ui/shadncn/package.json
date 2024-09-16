@@ -11,7 +11,8 @@
 		"./comp/*": "./comp/*",
 		"./lists/*": "./lists/*",
 		"./utils": "./utils.ts",
-		"./menu/*": "./menu/*"
+		"./menu/*": "./menu/*",
+		"./sections/*": "./sections/*"
 	},
 	"scripts": {
 		"lint": "eslint . --max-warnings 0",
