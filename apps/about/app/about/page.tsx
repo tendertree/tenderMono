@@ -13,9 +13,8 @@ function Scene() {
 	const map=useTexture('/background/sky.jpg')
     return (
         <>
-            <color args={["#ececec"]} attach="background" />
             <ambientLight intensity={0.5} />
-            <OrbitControls />
+			 <OrbitControls  enableZoom={false}/>
 			<Portal textureUrl={map} name={'mi'}>
                 <Cosmetic/>
 			</Portal>
@@ -27,9 +26,9 @@ function Scene() {
 
 export default function Page() {
     return (
-        <div className='bg-red-100 h-screen'>
+        <div className=' h-screen'>
 			<Suspense fallback={null}>
-            <Canvas shadows camera={{ position: [0, 0, 10], fov: 30 }}>
+            <Canvas shadows camera={{ position: [0, 0, 10], fov: 30 }} className='bg-transparent top-[50px] absolute pointer-events-none'>
                 <Scene />
             </Canvas>
 			</Suspense>

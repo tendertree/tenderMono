@@ -6,7 +6,8 @@ export default function TechStack() {
 
         <div>data
             <FaHtml5 />
-
+            <SiTailwindcss />
+            <SiNextdotjs />
         </div>
     )
 }

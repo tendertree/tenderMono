@@ -1,5 +1,5 @@
 import React, { useMemo, useRef } from 'react'
-import Background from './Background'
+import Background from '../Background'
 import { Box, Float, OrbitControls, PerspectiveCamera, useScroll } from "@react-three/drei";
 import { useFrame } from '@react-three/fiber'
 import { Rocket } from '@src/models/Rocket';

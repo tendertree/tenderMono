@@ -1,8 +1,6 @@
 packages:
   - "labs/*"
-  - "apps/web"
-  - "apps/api"
-  - "apps/about"
+  - "apps/*"
   - "packages/ai/*"
   - "packages/config/*"
   - "packages/infra/*"

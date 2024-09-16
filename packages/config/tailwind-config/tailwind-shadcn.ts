@@ -24,8 +24,6 @@ const config: Config = {
 
         extend: {
             colors: {
-                //custom colors
-                //
                 accent: "#FFFDFA",
                 accent_secondary: "#8728e1",
 
