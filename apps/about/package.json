@@ -15,7 +15,6 @@
 		"@feature/three": "workspace:*",
 		"@ui/custom": "workspace:*",
 		"@ui/shadcn": "workspace:*",
-		"@feature/quill": "workspace:*",
 		"@react-three/drei": "^9.105.5",
 		"@react-three/fiber": "^8.16.2",
 		"@studio-freight/react-lenis": "^0.0.47",

@@ -1,23 +1,30 @@
+import PostLoader from '@feature/editor/post/PostLoader'
+import Outline from "@ui/shadcn/menu/Outline"
+import BlogPost from '@feature/editor/post/BlogPostLocalMd'
 import React from 'react'
-
-
+import { ReactLenis, useLenis } from '@src/react-lenis'
 
 type Props = {
-  params: { slug: string, title: string, description: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+    params: { slug: string, title: string, description: string }
 }
 
 
 
-export default function Page({ params }: { params: { slug: string } }) {
-    const content = `
-     <div> I'm your energy</div>
-	`
+
+export default async function Page({ params }: { params: { slug: string } }) {
+    const { postContent, data } = await PostLoader({ filepath: 'public', file: 'temp.md' });
     return (
-        <div className='flex flex-col mx-auto justify-between'>
-            <h1 className='text-lg font-bold'>Title</h1>
-            <div dangerouslySetInnerHTML={{ __html: content }} />
-            {params.slug}
+        <div className='flex'>
+            <div className='px-16'>
+                <BlogPost params={{
+                    slug: 'rst',
+                    title: 'rst',
+                    description: 'rstrst'
+                }} content={postContent} meta={data} searchParams={{}} />
+            </div>
+            <div className='fixed right-2 bottom-12  border-l-2 border-l-shine p-4 '>
+                <Outline htmlContent={postContent} className={'text-sm'} />
+            </div>
         </div>
     )
 }

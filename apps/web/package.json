@@ -12,7 +12,7 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@feature/quill": "workspace:*",
+		"@feature/editor": "workspace:*",
 		"@tanstack/react-query": "^5.53.3",
 		"@types/quill": "^2.0.14",
 		"client-only": "^0.0.1",

@@ -9,7 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@feature/quill": "workspace:*",
+		"@feature/editor": "workspace:*",
 		"@feature/three": "workspace:*",
 		"@infra/supabase": "workspace:*",
 		"@react-three/drei": "^9.105.5",
@@ -25,6 +25,7 @@
 		"blog": "link:",
 		"framer": "^2.4.1",
 		"framer-motion": "^11.5.4",
+		"fs": "0.0.1-security",
 		"gray-matter": "^4.0.3",
 		"lucide-react": "^0.427.0",
 		"next": "14.2.11",
@@ -53,6 +54,7 @@
 		"@config/tailwind-config": "workspace:*",
 		"@config/typescript-config": "workspace:*",
 		"@studio-freight/react-lenis": "^0.0.47",
+		"@tailwindcss/typography": "^0.5.15",
 		"@tanstack/react-query": "^5.53.3",
 		"@types/node": "^20",
 		"@types/quill": "^2.0.14",

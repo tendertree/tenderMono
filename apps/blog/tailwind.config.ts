@@ -6,7 +6,7 @@ module.exports = {
         fontFamily: {
             primary: "var(--font-noto)",
             secondary: "var(--font-nanum)",
-        },
+         },
         extend: {
             ...baseConfig.theme.extend,
             colors: {
@@ -36,4 +36,8 @@ module.exports = {
             },
         },
     },
-};
+	plugins:[
+		require("@tailwindcss/typography")
+	]
+} ;
+

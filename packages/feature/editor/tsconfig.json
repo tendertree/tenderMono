@@ -1,0 +1,14 @@
+{
+	"extends": "@config/typescript-config/shadcn.json",
+	"compilerOptions": {
+		"outDir": "dist"
+	},
+	"include": [
+		"post/**/*",
+		"src/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+}

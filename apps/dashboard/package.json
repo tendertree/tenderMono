@@ -13,7 +13,6 @@
 	},
 	"dependencies": {
 		"@feature/three": "workspace:*",
-		"@feature/quill": "workspace:*",
 		"@tanstack/react-query": "^5.53.3",
 		"@types/quill": "^2.0.14",
 		"@ui/shadcn": "workspace:*",

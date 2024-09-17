@@ -16,6 +16,7 @@
 		"uuid": "^10.0.0"
 	},
 	"exports": {
-		"./src/*": "./src/*.ts"
+		"./src/*": "./src/*.ts",
+		"./actions/*": "./actions/*.ts"
 	}
 }

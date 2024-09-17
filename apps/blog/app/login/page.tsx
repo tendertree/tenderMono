@@ -1,4 +1,4 @@
-import { login, signup } from './action'
+import { login, signup } from '@infra/supabase/actions/user'
 
 export default function LoginPage() {
   return (

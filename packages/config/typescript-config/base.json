@@ -28,8 +28,8 @@
 			"@ui/shadcn/*": [
 				"../../ui/shadcn/*"
 			],
-			"@feature/quill/*": [
-				"../../feature/quill/*"
+			"@feature/editor/*": [
+				"../../feature/editor/*"
 			],
 			"@feature/three/*": [
 				"../../feature/three/*"
