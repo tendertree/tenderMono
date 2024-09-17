@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import MaxWidthWrapper from "@ui/shadcn/base/MaxWidthWrapper"
 import { Noto_Sans, Nanum_Gothic } from 'next/font/google'
-import NavBar from "@src/components/NavBar";
-import { useTheme } from "next-themes";
 import { ThemeProvider } from "@ui/shadcn/base/ThemeToggle";
 import Nav_Simple from "@ui/shadcn/menu/Nav_Simple";
 import QueryProvider from "@src/QueryProvider";

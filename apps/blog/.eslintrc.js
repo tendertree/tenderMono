@@ -7,4 +7,13 @@ module.exports = {
         project: true,
     },
     ignorePatterns: ['tailwind.config.js', 'postcss.config.js'],
+	overrides: [
+
+    {
+      files: ['*.ts', '*.tsx'], // Path to your server-side code
+      rules: {
+        'import/no-unused-modules': 'off', // Turn off export enforcement for server functions
+      },
+    },
+  ],
 };
