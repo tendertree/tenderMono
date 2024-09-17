@@ -30,13 +30,18 @@ export default function Editor(): JSX.Element {
                     ],
                 }
             });
+            const quillEditor = document.getElementsByClassName('ql-editor')[0] as HTMLElement;
+            quillEditor.style.height = '50rem';
         }
         isMounted.current = true;
     }, []);
 
+
+
+
     return (
         <div className="h-full flex flex-col">
-            <div ref={ref} className="flex-grow"></div>
+            <div ref={ref} className="flex-grow min-h-52" ></div>
         </div>
     );
 }

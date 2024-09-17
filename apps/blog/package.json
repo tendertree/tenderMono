@@ -18,9 +18,11 @@
 		"@tanstack/react-query-devtools": "^5.54.1",
 		"@ui/custom": "workspace:*",
 		"@ui/shadcn": "workspace:*",
+		"@vercel/postgres": "^0.10.0",
 		"blog": "link:",
 		"framer": "^2.4.1",
 		"framer-motion": "^11.5.4",
+		"gray-matter": "^4.0.3",
 		"lucide-react": "^0.427.0",
 		"next": "14.2.11",
 		"next-themes": "^0.3.0",
@@ -40,8 +42,7 @@
 		"tailwind-merge": "^2.5.2",
 		"tailwindcss-animate": "^1.0.7",
 		"typed.js": "^2.1.0",
-		"unified": "^11.0.5",
-		"gray-matter": "^4.0.3"
+		"unified": "^11.0.5"
 	},
 	"devDependencies": {
 		"@config/eslint-config": "workspace:*",
