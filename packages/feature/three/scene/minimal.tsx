@@ -1,24 +1,46 @@
 "use client"
-import React, { ReactNode } from 'react'
+import React, { ReactNode, Suspense, useEffect, useRef, useState } from 'react'
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { getProject } from '@theatre/core';
-import studio from '@theatre/studio'
-import { SheetProvider } from '@theatre/r3f'
+import { CubeCamera, Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei';
 
 
-interface BasicSceneProps {
+export interface BasicSceneProps {
     children: ReactNode;
+    screenWidth?: number;
 }
 
 export default function MinimalScene({ children }: BasicSceneProps) {
     return (
-        <Canvas shadows camera={{ position: [0, 0, 10], fov: 30 }}>
+        <Suspense>
+            <Canvas shadows camera={{ position: [0, 0, 10], fov: 30 }}>
                 <color args={["#ececec"]} attach="background" />
                 {children}
-        </Canvas>
+            </Canvas>
+        </Suspense>
 
     )
 }
+
+export function StageScene({ children, screenWidth }: BasicSceneProps): React.ReactElement {
+
+    const { camera, size } = useThree();
+    useEffect(() => {
+
+        console.log(screenWidth);
+
+    }, [sceenWidth])
+    return (
+        <>
+            <Suspense fallback={null} >
+                <Canvas shadows >
+                    {children}
+                </Canvas>
+            </Suspense>
+        </>
+    );
+}
+
+
 
 export function TransparentScene({ children }: BasicSceneProps) {
     return (
@@ -28,4 +50,33 @@ export function TransparentScene({ children }: BasicSceneProps) {
         </Canvas>
 
     )
+}
+
+
+
+
+export function useScrollWidth() {
+    const [scrollWidth, setScrollWidth] = useState(0);
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        if (!containerRef.current) return;
+
+        const resizeObserver = new ResizeObserver(entries => {
+            for (let entry of entries) {
+                const { scrollWidth } = entry.target;
+                setScrollWidth(scrollWidth);
+            }
+        });
+
+        resizeObserver.observe(containerRef.current);
+
+        return () => {
+            if (containerRef.current) {
+                resizeObserver.unobserve(containerRef.current);
+            }
+        };
+    }, []);
+
+    return { scrollWidth, containerRef };
 }
