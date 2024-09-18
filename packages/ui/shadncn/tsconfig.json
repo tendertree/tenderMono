@@ -1,6 +1,8 @@
 {
 	"extends": "@config/typescript-config/shadcn.json",
 	"compilerOptions": {
+		"skipLibCheck": true,
+		    "suppressImplicitAnyIndexErrors": true,
 		"outDir": "dist",
 		"paths": {
 			"@ui/custom/*": [

@@ -1,75 +1,66 @@
----
-title : 여행가고 싶은 사람 
-slug: travel
-description: about story 
-content:
----
-# 여행 계획을 짜는 법: 완벽한 여행을 위한 단계별 가이드..!
+## 1. 폰트
+`ipm plex mono`를 설치한다.
+``` 
+yay -S nerd-fonts-ibm-plex-mono
+```
+## 2. 필요 패키지 
+```lua 
+use 'tjdevries/colorbuddy.vim' -- 색상 변경 
 
-여행은 우리 삶에 새로운 경험과 추억을 선사합니다. 하지만 좋은 여행을 위해서는 철저한 계획이 필요합니다. 이 글에서는 효과적인 여행 계획을 세우는 방법을 단계별로 살펴보겠습니다.
+use 'mhinz/vim-startify' -- 시작 화면 
+use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }} --상태창 
+```
+## 3. 컬러셋
+이전 까지는 [gruvbox](https://github.com/morhetz/gruvbox)를 썼다,
+### 1. gruvbox
+```lua
+use  { "ellisonleao/gruvbox.nvim" } -- 컬러 테마 
+```
+<img src="https://camo.githubusercontent.com/a05028ef4dae5865098c508fc9f686b211f510198f07e6a5636734dbac618b30/687474703a2f2f692e696d6775722e636f6d2f476b496c38466e2e706e67">
 
-## 목차
-1. [목적지 선정](#목적지-선정)
-2. [여행 일정 결정](#여행-일정-결정)
-3. [예산 책정](#예산-책정)
-4. [교통편 예약](#교통편-예약)
-5. [숙소 예약](#숙소-예약)
-6. [필수품 준비](#필수품-준비)
+### 2. everforest
+ `210216` 부터 [everforest]([everforest](https://github.com/sainnhe/everforest) 을 사용하도록 한다 
+ ```lua
+use {'sainnhe/everforest'}
 
-## 목적지 선정
-여행의 첫 단계는 목적지를 선정하는 것입니다. 다음 요소들을 고려해보세요:
+vim.cmd('colorscheme everforest')
+ vim.g["everforest_background"] = 'hard'     ■ Undefined global `vim`.
+ vim.o.background="dark"
+```
+### 3. rose-pine
+`230106` 부터는 [rosepine](https://github.com/rose-pine/neovim/wiki#supported-plugins) 을 사용하도록 한다 
+```lua
+use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+})
+```
+설정 후 `lualine` 같은 테마를 따로 변경해준다 
+```lua
+config = function()
+        vim.cmd('colorscheme rose-pine')
+    end
+```
+`light` 모드의 경우는 `background`를 변경하면 된다 
+```lua
+vim.o.background="light"
+```
+### 4. zen-bone
+ [zen-bone](https://github.com/mcchrish/zenbones.nvim) 대비가 강한 테마다.
+### 5. melange-nvim
+1. [melange](https://github.com/savq/melange-nvim)현재 사용하고 있는 버젼이다. 
+2. 다 좋은데 `comment` 가 `italic`이 적용이 되어있어서 화면상 짤리는 일이 발생한다.  그래서 다음처럼 설정을 추가한다
+```bash
+vim.api.nvim_set_hl(0, 'Comment', { fg = '#a8a491' })
+vim.api.nvim_set_hl(0, 'String', { fg = '#465AA4' })
+vim.api.nvim_set_hl(0,'DiagnosticHint',{fg='#acbfb0'})
+```
+## 4. 탭 
+[barbar.nvim](https://github.com/romgrk/barbar.nvim)을 사용한다
+```lua
+use {
+  'romgrk/barbar.nvim',
+  requires = {'kyazdani42/nvim-web-devicons'}
+}
+```
 
-- 여행의 목적 (휴식, 모험, 문화체험 등)
-- 계절과 날씨
-- 예산
-- 여행 기간
-
-> "목적지는 결코 한 장소가 아니라, 사물을 바라보는 새로운 시각이다." - Henry Miller
-
-## 여행 일정 결정
-목적지가 정해졌다면, 구체적인 일정을 계획합니다:
-
-1. 여행 기간 확정
-2. 주요 관광지 리스트 작성
-3. 일별 활동 계획 수립
-4. 여유 시간 확보
-
-## 예산 책정
-여행에서 예산은 매우 중요합니다. 다음 항목들을 고려하여 예산을 책정하세요:
-
-- 교통비 (항공권, 현지 교통 등)
-- 숙박비
-- 식비
-- 관광 및 액티비티 비용
-- 쇼핑 및 기타 경비
-
-## 교통편 예약
-목적지까지의 교통편과 현지에서의 이동 수단을 계획합니다:
-
-- 항공권 예약
-- 기차 또는 버스 티켓 구매
-- 렌터카 예약 (필요시)
-
-## 숙소 예약
-편안한 휴식을 위해 적절한 숙소를 선택하세요:
-
-- 호텔
-- 에어비앤비
-- 호스텔
-- 펜션 또는 리조트
-
-## 필수품 준비
-여행에 필요한 물품들을 준비합니다. 다음은 기본적인 체크리스트입니다:
-
-- [ ] 여권 및 비자
-- [ ] 의류 (날씨에 맞는)
-- [ ] 세면도구
-- [ ] 의약품
-- [ ] 전자기기 및 충전기
-- [ ] 여행 가이드북 또는 지도
-
----
-
-여행 준비는 때로는 복잡하고 스트레스를 줄 수 있지만, 철저한 계획은 더욱 즐거운 여행 경험을 만들어줍니다. 이 가이드를 참고하여 여러분만의 특별한 여행을 계획해보세요!
-
-**행복한 여행되세요! 🌍✈️**
