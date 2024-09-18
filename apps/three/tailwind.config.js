@@ -1,25 +1,25 @@
-
 const baseConfig = require("@config/tailwind-config/tailwind-shadcn");
-
 module.exports = {
     ...baseConfig,
     theme: {
         ...baseConfig.theme,
+        fontFamily: {
+            primary: "var(--font-noto)",
+            secondary: "var(--font-nanum)",
+         },
         extend: {
             ...baseConfig.theme.extend,
             colors: {
                 ...baseConfig.theme.extend.colors,
+                batang: "#F4E2DE",
+                strong: "#D94F04",
+                shine: "#F29325",
+                mid: "#007172",
+                dim: "#025259",
+                whiteT: "#f6f6f6",
+                dartT: '#3A3035',
                 accent: "#FFFDFA",
                 accent_secondary: "#8728e1",
-
-                bg: "#FFFDFA",
-                strong: "#D94F04",
-                mid: "#F29325",
-                light: "#F4E2DE",
-                dark: "#025259",
-                neutral: "#007172",
-
-
                 main: {
                     100: '#4287f5',
                 },
@@ -29,8 +29,12 @@ module.exports = {
 
                 bacgroundImage: {
                     body: "url('/bg.png')",
-                }
+                },
+                white: {
+                    100: '#FAF9F6',
+                },
             },
         },
     },
-};
+} ;
+

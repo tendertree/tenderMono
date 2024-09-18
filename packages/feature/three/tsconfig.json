@@ -1,0 +1,28 @@
+{
+	"extends": "@config/typescript-config/shadcn.json",
+	"compilerOptions": {
+		"skipLibCheck": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"outDir": "dist",
+		"paths": {
+			"@ui/custom/*": [
+				"../../packages/ui/custom/**/*.tsx"
+			]
+		}
+	},
+	"include": [
+		"camera/**/*",
+		"light/**/*",
+		"scene/**/*",
+		"objects/**/*",
+		"shader/**/*",
+		"texture/**/*",
+		"theater/**/*",
+		"types/**/*",
+		"utils/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+}

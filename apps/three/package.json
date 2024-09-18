@@ -12,6 +12,8 @@
 		"test": "vitest"
 	},
 	"dependencies": {
+		"@feature/editor": "workspace:*",
+		"@feature/three": "workspace:*",
 		"@react-three/drei": "^9.111.4",
 		"@react-three/fiber": "^8.16.2",
 		"@studio-freight/react-lenis": "^0.0.47",

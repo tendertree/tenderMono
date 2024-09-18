@@ -12,12 +12,10 @@ export default async function PrivatePage() {
         redirect('/login')
     }
 
-    return (<div>
-
+    return (<div className='bg-batang'>
         Hello {data.user.email}
 		<Config/>
         <Blog tag={'mal'} day={'24.2.2'} title={'what is yur himo'} description={'rstrest'} image={'img.src.hi.jpg'} />
-        <ImageWithButton />
         <section className="text-gray-600 dark:text-gray-50 body-font">
             <div className="container px-5 py-24 mx-auto">
                 <h2 className="text-4xl pb-8 mb-4 font-bold  text-center">About Our Services</h2>

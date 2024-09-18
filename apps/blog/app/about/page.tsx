@@ -1,10 +1,10 @@
 import React from 'react'
-import { Bottle } from '@src/models/Bottle'
 import TheaterBasicScene from "@feature/three/theater/basic"
+import { Bottle } from '@src/model/Bottle'
 function page() {
     return (
         <div className='h-screen bg-red-100'>
-			  <TheaterBasicScene projectName="shine">
+            <TheaterBasicScene projectName="Demo Project!">
 				<Bottle/>
             </TheaterBasicScene>
         </div >

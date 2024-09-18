@@ -62,7 +62,8 @@ export default function Config() {
                             <p className="text-sm text-muted-foreground">Select your preferred theme</p>
                         </div>
                         <Select defaultValue="system">
-                            <SelectTrigger className="w-[180px]">
+							<div className='w-[180px]'>
+                            <SelectTrigger>
                                 <SelectValue placeholder="Select a theme" />
                             </SelectTrigger>
                             <SelectContent>
@@ -70,6 +71,7 @@ export default function Config() {
                                 <SelectItem value="dark">Dark</SelectItem>
                                 <SelectItem value="system">System</SelectItem>
                             </SelectContent>
+							</div>
                         </Select>
                     </div>
                 </CardContent>

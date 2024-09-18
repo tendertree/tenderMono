@@ -615,6 +615,12 @@ importers:
 
   apps/three:
     dependencies:
+      '@feature/editor':
+        specifier: workspace:*
+        version: link:../../packages/feature/editor
+      '@feature/three':
+        specifier: workspace:*
+        version: link:../../packages/feature/three
       '@react-three/drei':
         specifier: ^9.111.4
         version: 9.112.0(@react-three/fiber@8.17.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0))(@types/react@18.3.7)(@types/three@0.163.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0)
@@ -1291,6 +1297,15 @@ importers:
       '@react-three/fiber':
         specifier: ^8.16.2
         version: 8.17.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0)
+      '@theatre/core':
+        specifier: '0.5'
+        version: 0.5.1
+      '@theatre/r3f':
+        specifier: '0.5'
+        version: 0.5.1(@react-three/fiber@8.17.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0))(@theatre/core@0.5.1)(@theatre/studio@0.5.1(@theatre/core@0.5.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0)
+      '@theatre/studio':
+        specifier: '0.5'
+        version: 0.5.1(@theatre/core@0.5.1)
       '@types/animejs':
         specifier: ^3.1.12
         version: 3.1.12
@@ -5004,6 +5019,27 @@ packages:
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
+
+  '@theatre/core@0.5.1':
+    resolution: {integrity: sha512-LV3LwHPWVm62bR6DUQ55t4kCaI1KGrz+rPLoA6pMJ57x+6vBpoSCI0b11gJPdA1mCXebcNWN+U5M3PP6jJaSSg==}
+
+  '@theatre/dataverse@0.5.1':
+    resolution: {integrity: sha512-oTjR8fNDbY11GSp7kw8quuOE9IC/5qzTe++OjFgn5enHKcFSaSPAZ8SIyOs+Im9bYgjcJFg/AYgU3Xi/MENgwQ==}
+
+  '@theatre/r3f@0.5.1':
+    resolution: {integrity: sha512-y42yxafM2kjk1iQImZPp7+qe21OviZhSY9h1Lh07YZWWSeMRoK1rASqtY+DQvawh8IqOT4ySBUX/zMBPoaRvPQ==}
+    peerDependencies:
+      '@react-three/fiber': '>=7.0.6'
+      '@theatre/core': '*'
+      '@theatre/studio': '*'
+      react: '>=17.0.2'
+      react-dom: '>=17.0.2'
+      three: '>=0.131.3'
+
+  '@theatre/studio@0.5.1':
+    resolution: {integrity: sha512-6r8JjSdUhL8JXMLlnhOLLFc/Br5Ddcq4EQmwUSCEBbFuJZcyb++GxV23p5W7a0DiB7NgtKdORj77n5NBt0WEpA==}
+    peerDependencies:
+      '@theatre/core': '*'
 
   '@tootallnate/quickjs-emscripten@0.23.0':
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
@@ -16065,6 +16101,28 @@ snapshots:
     dependencies:
       '@testing-library/dom': 10.4.0
 
+  '@theatre/core@0.5.1':
+    dependencies:
+      '@theatre/dataverse': 0.5.1
+
+  '@theatre/dataverse@0.5.1':
+    dependencies:
+      lodash-es: 4.17.21
+
+  '@theatre/r3f@0.5.1(@react-three/fiber@8.17.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0))(@theatre/core@0.5.1)(@theatre/studio@0.5.1(@theatre/core@0.5.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0)':
+    dependencies:
+      '@react-three/fiber': 8.17.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0)
+      '@theatre/core': 0.5.1
+      '@theatre/studio': 0.5.1(@theatre/core@0.5.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      three: 0.163.0
+
+  '@theatre/studio@0.5.1(@theatre/core@0.5.1)':
+    dependencies:
+      '@theatre/core': 0.5.1
+      '@theatre/dataverse': 0.5.1
+
   '@tootallnate/quickjs-emscripten@0.23.0': {}
 
   '@trpc/client@11.0.0-rc.498(@trpc/server@11.0.0-rc.498)':
@@ -18667,7 +18725,7 @@ snapshots:
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(eslint@8.57.1))(eslint@8.57.1)
-      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
+      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
       eslint-plugin-jsx-a11y: 6.10.0(eslint@8.57.1)
       eslint-plugin-react: 7.36.1(eslint@8.57.1)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.1)
@@ -18770,7 +18828,7 @@ snapshots:
       is-bun-module: 1.2.1
       is-glob: 4.0.3
     optionalDependencies:
-      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
+      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
       - eslint-import-resolver-node
@@ -18868,6 +18926,34 @@ snapshots:
       tsconfig-paths: 3.15.0
     optionalDependencies:
       '@typescript-eslint/parser': 7.18.0(eslint@8.57.1)(typescript@5.6.2)
+    transitivePeerDependencies:
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
+
+  eslint-plugin-import@2.30.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1):
+    dependencies:
+      '@rtsao/scc': 1.1.0
+      array-includes: 3.1.8
+      array.prototype.findlastindex: 1.2.5
+      array.prototype.flat: 1.3.2
+      array.prototype.flatmap: 1.3.2
+      debug: 3.2.7
+      doctrine: 2.1.0
+      eslint: 8.57.1
+      eslint-import-resolver-node: 0.3.9
+      eslint-module-utils: 2.11.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+      hasown: 2.0.2
+      is-core-module: 2.15.1
+      is-glob: 4.0.3
+      minimatch: 3.1.2
+      object.fromentries: 2.0.8
+      object.groupby: 1.0.3
+      object.values: 1.2.0
+      semver: 6.3.1
+      tsconfig-paths: 3.15.0
+    optionalDependencies:
+      '@typescript-eslint/parser': 7.2.0(eslint@8.57.1)(typescript@5.6.2)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
