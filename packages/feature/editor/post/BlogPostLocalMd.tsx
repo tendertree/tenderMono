@@ -1,14 +1,5 @@
 import React, { useEffect } from 'react'
-import remarkParse from 'remark-parse'
-import remarkRehype from 'remark-rehype'
-import { unified } from 'unified'
-import rehypeStringify from 'rehype-stringify'
-import matter from 'gray-matter'
-import fs from "fs"
-import path from 'path'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypeSlug from 'rehype-slug'
-import { GetStaticProps } from 'next';
+
 /*
  * MD to html
  * load md file from /public folder 

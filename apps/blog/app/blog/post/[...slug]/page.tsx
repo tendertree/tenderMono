@@ -8,9 +8,6 @@ type Props = {
     params: { slug: string, title: string, description: string }
 }
 
-
-
-
 export default async function Page({ params }: { params: { slug: string } }) {
     const { postContent, data } = await PostLoader({ filepath: 'public', file: 'temp.md' });
     return (
@@ -20,7 +17,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                     slug: 'rst',
                     title: 'rst',
                     description: 'rstrst'
-                }} content={postContent} meta={data} searchParams={{}} />
+                }} content={postContent} meta={data}  />
             </div>
             <div className='fixed right-2 bottom-12  border-l-2 border-l-shine p-4 '>
                 <Outline htmlContent={postContent} className={'text-sm'} />

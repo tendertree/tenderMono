@@ -14,8 +14,11 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"@feature/editor": "link:",
+		"@rehype-pretty/transformers": "^0.13.2",
 		"@types/node": "^20.12.7",
 		"@types/react": "^18.2.79",
+		"@ui/shadcn": "workspace:*",
 		"gray-matter": "^4.0.3",
 		"next": "^14.2.11",
 		"quill": "2.0.2",

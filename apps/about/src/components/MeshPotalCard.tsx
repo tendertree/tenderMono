@@ -4,7 +4,7 @@ import { Text, ContactShadows, Environment, OrbitControls, useTexture, RoundedBo
 import { Canvas } from '@react-three/fiber'
 import { Texture } from 'three';
 /*
- *  외부 패키지에서 전달시, hooks cna only be used within the cnavas componet가 뜬다.
+ *  외부 패키지에서 전달시, hooks can only be used within the canvas componet가 뜬다.
  */
 interface PortalProps {
     textureUrl: Texture;

@@ -9,8 +9,8 @@
 		"./cards/*": "./cards/*",
 		"./feature/*": "./feature/*",
 		"./comp/*": "./comp/*",
-		"./lists/*": "./lists/*",
-		"./utils": "./utils.ts",
+		"./lists/*":"./lists/*",
+		"./lib/*": "./lib/*",
 		"./menu/*": "./menu/*",
 		"./sections/*": "./sections/*"
 	},

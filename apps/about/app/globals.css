@@ -1,7 +1,7 @@
 @import '@config/tailwind-config/style/shadcn.css';
 
 body {
-	@apply text-white-100 font-primary bg-dark leading-loose;
+	@apply text-white-100 font-primary bg-dim leading-loose;
 }
 
 .h1 {
