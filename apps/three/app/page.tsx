@@ -1,29 +1,26 @@
 "use client"
 /* eslint-disable no-undef */
 import React, { useEffect } from 'react'
-import StageScene, { TransparentScene, useScrollWidth  ,  BasicSceneProps  } from '@feature/three/scene/minimal.tsx'
-import Resume from '@feature/three/scene/Resume.tsx'
+import StageScene, { TransparentScene, useScrollWidth, BasicSceneProps } from '@feature/three/scene/minimal.tsx'
 import Ground from '@feature/three/objects/Ground.tsx'
-
 import { CubeCamera, Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
-import { Canvas, useThree } from '@react-three/fiber'
+import { CameraRigProduct } from "@feature/three/camera/CameraRig.tsx"
 
-
-
-
-
+import { BoundingBox } from "@feature/three/objects/Box.tsx"
+import Cover_Text from "@ui/custom/resume/Cover_Text"
 export default function page() {
     const { scrollWidth, containerRef } = useScrollWidth();
     return (
-        <div className='h-screen' ref={containerRef}>
+        <div className='h-screen w-full relative' ref={containerRef}>
             <p>{scrollWidth}</p>
-            <StageScene screenWidth ={scrollWidth  as BasicSceneProps['screenWidth']} >
+            <StageScene screenWidth={scrollWidth as BasicSceneProps['screenWidth']} >
                 <color args={["#ececec"]} attach="background" />
 
                 <OrbitControls
                     target={[0, 0.35, 0]}
                     maxPolarAngle={1.45}
                     enableZoom={false}
+                    enableRotate={false}
                 />
                 <PerspectiveCamera makeDefault fov={50} position={[3, 2, 5]} />
                 <color args={[0, 0, 0]} attach="background" />
@@ -32,7 +29,7 @@ export default function page() {
                     {(texture) => (
                         <>
                             <Environment preset='city' />
-                            <Resume />
+							< BoundingBox/>
                         </>
                     )}
                 </CubeCamera>
@@ -56,7 +53,23 @@ export default function page() {
                     shadow-bias={-0.0001}
                 />
                 <Ground />
+                <CameraRigProduct />
             </StageScene>
+           <Cover_Text
+  date="08/01/21"
+  secretTitle={["SECRET", "TEACHINGS", "OF ALL AGES"]}
+  modusOperandi="MODUS OPERANDI FOR THE INVOCATION OF SPIRITS"
+  subtitle="The Invocation —"
+  invocationText={[
+    "Behold the sign and",
+    "the very Hallowed",
+    "Names of God full of",
+    "power. Obey the",
+    "power of this our",
+    "pentacle;",
+  ]}
+  footerText="The Complete Book of Magic Science"
+/>
         </div>
     )
 }

@@ -4,6 +4,7 @@
 	"private": true,
 	"exports": {
 		"./src/*": "./src/*",
+		"./resume/*": "./resume/*",
 		"./basic/*": "./basic/*",
 		"./cards/*": "./cards/*",
 		"./content/*": "./content/*",

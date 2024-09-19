@@ -12,7 +12,7 @@ export interface BasicSceneProps {
 export default function MinimalScene({ children }: BasicSceneProps) {
     return (
         <Suspense>
-            <Canvas shadows camera={{ position: [0, 0, 10], fov: 30 }}>
+            <Canvas shadows camera={{ position: [0, 0, 10], fov: 30 }} className='z-5'>
                 <color args={["#ececec"]} attach="background" />
                 {children}
             </Canvas>
@@ -24,19 +24,15 @@ export default function MinimalScene({ children }: BasicSceneProps) {
 export function StageScene({ children, screenWidth }: BasicSceneProps): React.ReactElement {
 
     const { camera, size } = useThree();
-    useEffect(() => {
-
-        console.log(screenWidth);
-
-    }, [sceenWidth])
+ 
     return (
-        <>
+        <div className='relative z-5'>
             <Suspense fallback={null} >
                 <Canvas shadows >
                     {children}
                 </Canvas>
             </Suspense>
-        </>
+        </div>
     );
 }
 
