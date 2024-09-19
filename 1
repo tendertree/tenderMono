@@ -1,66 +1,9 @@
-/**
- * @module magazine style cover text using SVG. it overlay parent div
- */
-
-import React from 'react';
-
-interface CoverProps {
-  date: string;
-  secretTitle: string[];
-  modusOperandi: string;
-  subtitle: string;
-  invocationText: string[];
-  footerText: string;
-}
-
-export default function Cover({
-  date,
-  secretTitle,
-  modusOperandi,
-  subtitle,
-  invocationText,
-  footerText,
-}: CoverProps) {
+import React from 'react'
+import Schedule from '@ui/custom/list/Schedule'
+export default function page() {
   return (
-    <div className="absolute top-0 left-0 z-10 w-full h-screen flex-1 order-1 p-4 text-3xl">
-      {/* Date */}
-      <div className="text-xs font-bold tracking-tight" style={{ position: 'absolute', top: '46px', left: '328px' }}>
-        {date}
-      </div>
-
-      {/* Secret Title */}
-      <div className="text-xs font-bold tracking-tight" style={{ position: 'absolute', top: '46px', left: '392px' }}>
-        {secretTitle.map((line, index) => (
-          <div key={index} style={{ marginTop: index === 0 ? 0 : '8px' }}>
-            {line}
-          </div>
-        ))}
-      </div>
-
-      {/* Modus Operandi */}
-      <div className="text-7xl text-shine font-medium" style={{ position: 'absolute', top: '175px', left: '40px' }}>
-        {modusOperandi}
-      </div>
-
-      {/* Subtitle */}
-      <div className="text-5xl font-bold text-yellow-500 flex" >
-        {subtitle}
-      </div>
-
-      {/* Invocation Text */}
-      <div className="text-3xl font-bold" style={{ position: 'absolute', top: '322px', left: '40px' }}>
-        {invocationText.map((line, index) => (
-          <div key={index} style={{ marginTop: index === 0 ? 0 : '10px md:20px lg:51px' }}>
-            {line}
-          </div>
-        ))}
-      </div>
-
-      {/* Footer Text */}
-      <div className="text-xs font-medium" style={{ position: 'absolute', top: '640px', left: '326px' }}>
-        {footerText}
-      </div>
-    </div>
-  );
+    <div>page
+<Schedule />
+		</div>
+  )
 }
-

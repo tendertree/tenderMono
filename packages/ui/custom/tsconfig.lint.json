@@ -4,6 +4,8 @@
 		"outDir": "dist"
 	},
 	"include": [
+		"list/**/*",
+		"scroll/**/*",
 		"src/**/*",
 		"resume/*",
 		"cards/**/*",

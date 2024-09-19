@@ -5,6 +5,7 @@
 	},
 	"include": [
 		"src/**/*",
+		"list/**/*",
 		"resume/*",
 		"cards/**/*",
 		"footer/**/*",
@@ -16,6 +17,7 @@
 		"section/**/*.tsx",
 		"icons/**/*.tsx",
 		"utils/*.ts",
+		"scroll/*.ts",
 		"gallery/**/*"
 	],
 	"exclude": [

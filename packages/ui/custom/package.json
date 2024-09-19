@@ -5,6 +5,7 @@
 	"exports": {
 		"./src/*": "./src/*",
 		"./resume/*": "./resume/*",
+		"./list/*": "./list/*",
 		"./basic/*": "./basic/*",
 		"./cards/*": "./cards/*",
 		"./content/*": "./content/*",
@@ -17,6 +18,7 @@
 		"./widget/*": "./widget/*",
 		"./icons/*": "./icons/*",
 		"./utils/*": "./utils/*",
+		"./scroll/*": "./scroll/*",
 		"./gallery/*": "./gallery/*"
 	},
 	"scripts": {
@@ -37,6 +39,7 @@
 		"typescript": "^5.3.3"
 	},
 	"dependencies": {
+		"@studio-freight/react-lenis": "^0.0.47",
 		"framer-motion": "^11.5.4",
 		"lucide-react": "^0.427.0",
 		"next": "^14.2.7",

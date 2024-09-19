@@ -22,7 +22,7 @@ export default function Cover({
     footerText,
 }: CoverProps) {
     return (
-        <div className="absolute top-0 left-0 z-10 w-full h-screen flex-1 order-1 p-4 text-3xl ">
+        <div className="relative top-0 left-0 z-10 w-full h-screen flex-1 order-1 p-4 text-3xl pointer-events-none" >
             {/* Date */}
             <div className="relative p-8 w-full mx-auto h-screen flex flex-col justify-between text-center">
                 {/* Date at the top */}

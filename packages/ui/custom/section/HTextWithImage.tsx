@@ -1,3 +1,6 @@
+/**
+ * hero section Hero Image with text 
+ */
 "use client"
 import { motion, MotionStyle, useScroll, useTransform } from "framer-motion";
 import Button from "../button/roundButton";
