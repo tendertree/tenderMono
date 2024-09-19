@@ -1,9 +1,8 @@
-import React from 'react'
-import Schedule from '@ui/custom/list/Schedule'
-export default function page() {
-  return (
-    <div>page
-<Schedule />
-		</div>
-  )
-}
+import create from 'zustand';
+
+const useCameraStore = create(set => ({
+    camera: any,
+    setCamera: (camera) => set({ camera }),
+}));
+
+export default useCameraStore;

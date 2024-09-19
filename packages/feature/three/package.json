@@ -16,7 +16,8 @@
 		"./glsl/*": "./glsl/*",
 		"./camera/*": "./camera/*",
 		"./theater/*": "./theater/*",
-		"./types/*": "./types/*"
+		"./types/*": "./types/*",
+		"./utils/*": "./utils/*"
 	},
 	"type": "module",
 	"module": "esnext",
@@ -39,7 +40,8 @@
 		"tailwindcss": ">=3.0.0 || insiders",
 		"three": "^0.163.0",
 		"three-stdlib": "^2.33.0",
-		"typescript": "^5.4.5"
+		"typescript": "^5.4.5",
+		"zustand": "^4.5.5"
 	},
 	"devDependencies": {
 		"@config/typescript-config": "workspace:*",

@@ -1,7 +1,6 @@
 import * as THREE from 'three';
-import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
-import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry';
-
+import { FontLoader } from 'three/addons/loaders/FontLoader.js';
+import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 interface BubbleTextProps {
   origin: THREE.Vector3; // 3D 공간에서의 시작 위치
   text: string;          // 보여줄 텍스트
@@ -11,8 +10,8 @@ interface BubbleTextProps {
 }
 
 export default class BubbleText {
-  private bubble: THREE.Mesh;
-  private textMesh: THREE.Mesh;
+  private bubble!: THREE.Mesh;
+  private textMesh!: THREE.Mesh;
   private camera: THREE.Camera;
 
   constructor({ origin, text, scene, fontUrl, camera }: BubbleTextProps) {
