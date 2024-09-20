@@ -1,7 +1,7 @@
 "use client"
 import React, { ReactNode, Suspense, useEffect } from 'react'
 import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera ,CubeCamera} from '@react-three/drei';
+import { OrbitControls, PerspectiveCamera, CubeCamera } from '@react-three/drei';
 import useCameraStore from '../utils/CurrentCamera';
 import { ResponsiveCameraRigAround } from '../camera/CameraRig';
 import * as THREE from 'three';
@@ -12,17 +12,19 @@ export interface BasicSceneProps {
 
 export default function MinimalScene({ children }: BasicSceneProps) {
     return (
-        <Suspense>
-            <Canvas shadows camera={{ position: [0, 0, 10], fov: 30 }} className='z-5'>
-                <color args={["#ececec"]} attach="background" />
-                {children}
-            </Canvas>
-        </Suspense>
+        <div className='relative z-5 h-full'>
+            <Suspense fallback={null}>
+                <Canvas shadows camera={{ position: [0, 0, 10], fov: 30 }} className='z-5'>
+                    <color args={["#ececec"]} attach="background" />
+                    {children}
+                </Canvas>
+            </Suspense>
+        </div>
 
     )
 }
 
-export function StageScene({ children, screenWidth }: BasicSceneProps): React.ReactElement {
+export function StageScene({ children }: BasicSceneProps): React.ReactElement {
     ;
     return (
         <div className='relative z-5 h-full'>
@@ -40,6 +42,7 @@ export function StageScene({ children, screenWidth }: BasicSceneProps): React.Re
         </div>
     );
 }
+
 
 export function ProductStageScene({ children }: BasicSceneProps): React.ReactElement {
     ;
@@ -62,7 +65,6 @@ export function ProductStageScene({ children }: BasicSceneProps): React.ReactEle
                             </>
                         )}
                     </CubeCamera>
-					<Ground/>
                     <ResponsiveCameraRigAround />
                 </Canvas>
             </Suspense>

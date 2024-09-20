@@ -7,4 +7,5 @@ packages:
   - "packages/entity/*"
   - "packages/ui/*"
   - "packages/feature/*"
+  - "packages/resource/*"
 
