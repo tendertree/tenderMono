@@ -1,10 +1,10 @@
 import React, { useMemo, useRef } from 'react'
-import Background from '../Background'
 import { Box, Float, OrbitControls, PerspectiveCamera, useScroll } from "@react-three/drei";
 import { useFrame } from '@react-three/fiber'
 import { Rocket } from '@src/models/Rocket';
 import { StarField } from '@src/models/Star';
 import * as THREE from "three"
+import Background from '../background/BGUniverse';
 
 export default function ObjectMoveByCurveLine() {
     const LINE_NB_POINTS = 2000;

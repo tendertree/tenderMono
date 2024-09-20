@@ -21,7 +21,7 @@ export default function CameraRig() {
  */
 
 
-export function CameraRigAround({ vec = new THREE.Vector3() }: { vec?: THREE.Vector3 }) {
+export function CameraRigAroundOrigin({ vec = new THREE.Vector3() }: { vec?: THREE.Vector3 }) {
     useFrame((state) => {
         state.camera.position.lerp(vec.set(1 + state.pointer.x, 0.5, 3), 0.01);
         state.camera.lookAt(0, 0, 0);
@@ -30,14 +30,51 @@ export function CameraRigAround({ vec = new THREE.Vector3() }: { vec?: THREE.Vec
     return null; 
 }
 
+/**
+ * add responsive mode, it will automatically adjust camera distance by screen size
+ */
+export function ResponsiveCameraRigAround({ vec = new THREE.Vector3() }: { vec?: THREE.Vector3 }) {
+    const { camera } = useThree();
+    const scrollWidth = typeof window !== 'undefined' ? window.innerWidth : 1920;
+    const initialPositionRef = useRef(new THREE.Vector3(1, 0.5, 3));
+    const [zoomOutFactor, setZoomOutFactor] = useState(1);
+
+    useEffect(() => {
+        // 화면 크기에 따른 줌아웃 팩터 설정
+        if (scrollWidth <= 480) {
+            setZoomOutFactor(2.5);
+        } else if (scrollWidth <= 768) {
+            setZoomOutFactor(2);
+        } else if (scrollWidth <= 1024) {
+            setZoomOutFactor(1.5);
+        } else {
+            setZoomOutFactor(Math.max(1, 1920 / scrollWidth));
+        }
+    }, [scrollWidth]);
+
+    useFrame((state) => {
+        // 줌아웃 팩터를 적용한 새로운 위치 계산
+        const targetX = 1 + state.pointer.x;
+        const targetY = 0.5;
+        const targetZ = 3 * zoomOutFactor;
+
+        // 부드러운 전환을 위해 lerp 사용
+        camera.position.lerp(vec.set(targetX, targetY, targetZ), 0.01);
+        camera.lookAt(0, 0, 0);
+    });
+    
+    return null;
+}
+
+
 
 
 /*
 * responsive camera it will chech the screen size. and modify camera position
 * not import this function but copy because it miss the canvas context when loaded other file
 */
-export function ResponsiveCamera(camera:any) {
-    // const { camera } = useThree();
+export function ResponsiveCameraInitialize() {
+     const { camera } = useThree();
     const scrollWidth = GetScrollWidth();
     const [initialPosition] = useState(() => camera.position.clone());
     

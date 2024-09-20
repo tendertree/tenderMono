@@ -1,19 +1,16 @@
 "use client"
 /* eslint-disable no-undef */
 import React, { useEffect } from 'react'
-import StageScene, { TransparentScene, useScrollWidth, BasicSceneProps } from '@feature/three/scene/minimal.tsx'
+import StageScene  from '@feature/three/scene/minimal.tsx'
 import Ground from '@feature/three/objects/Ground.tsx'
 import { CubeCamera, Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
-import { CameraRigProduct } from "@feature/three/camera/CameraRig.tsx"
 
 import { BoundingBox } from "@feature/three/objects/Box.tsx"
 import Cover_Text from "@ui/custom/resume/Cover_Text"
 export default function page() {
-    const { scrollWidth, containerRef } = useScrollWidth();
     return (
-        <div className='h-screen w-full relative' ref={containerRef}>
-            <p>{scrollWidth}</p>
-            <StageScene screenWidth={scrollWidth as BasicSceneProps['screenWidth']} >
+        <div className='h-screen w-full relative' >
+            <StageScene >
                 <color args={["#ececec"]} attach="background" />
 
                 <OrbitControls
@@ -53,7 +50,6 @@ export default function page() {
                     shadow-bias={-0.0001}
                 />
                 <Ground />
-                <CameraRigProduct />
             </StageScene>
            <Cover_Text
   date="08/01/21"
