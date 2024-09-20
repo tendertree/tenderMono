@@ -2,7 +2,7 @@ import React from 'react'
 import Career from "@ui/shadcn/cards/Career"
 const data =
 {
-    title: "Senior Software Engineer",
+    title: "자인 메디 병원",
     company: "Tech Innovations Inc.",
     duration: "2020 - Present",
     description: "Lead development of cloud-based solutions, mentored junior developers, and implemented CI/CD pipelines.",
