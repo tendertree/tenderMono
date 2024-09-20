@@ -16,26 +16,26 @@ export const ContactWithMap = () => {
 						src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=Goyang-si,+Gyeonggi-do&ie=UTF8&t=&z=14&iwloc=B&output=embed"
             style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.8)' }}
           ></iframe>
-          <div className="bg-batang relative flex flex-wrap py-6 rounded shadow-md">
+          <div className="bg-white-100 relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/2 px-6">
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
-              <p className="mt-1 text-gray-700">Silicon Valley, CA, USA</p>
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">주소</h2>
+              <p className="mt-1 text-gray-700">경기도 고양시 덕양구 중앙로 555</p>
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-              <a className="text-gray-500 leading-relaxed">example@coderblog.com</a>
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
-              <p className="leading-relaxed text-gray-700">123-456-7890</p>
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">이메일</h2>
+              <a className="text-gray-500 leading-relaxed">naroi@naver.com</a>
+              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">전화번호</h2>
+              <p className="leading-relaxed text-gray-700">010-8727-0868</p>
             </div>
           </div>
         </div>
         <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-          <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Get In Touch</h2>
+          <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">연락하기</h2>
           <p className="leading-relaxed mb-5 text-gray-600">
-            Have questions, feedback, or want to collaborate? Drop a message below!
+            메시지를 남겨주세요 
           </p>
           <div className="relative mb-4">
-            <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name</label>
+            <label htmlFor="name" className="leading-7 text-sm text-gray-600">이름</label>
             <input
               type="text"
               id="name"
@@ -44,7 +44,7 @@ export const ContactWithMap = () => {
             />
           </div>
           <div className="relative mb-4">
-            <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
+            <label htmlFor="email" className="leading-7 text-sm text-gray-600">이메일</label>
             <input
               type="email"
               id="email"
@@ -53,7 +53,7 @@ export const ContactWithMap = () => {
             />
           </div>
           <div className="relative mb-4">
-            <label htmlFor="message" className="leading-7 text-sm text-gray-600">Message</label>
+            <label htmlFor="message" className="leading-7 text-sm text-gray-600">메시지</label>
             <textarea
               id="message"
               name="message"
@@ -61,11 +61,9 @@ export const ContactWithMap = () => {
             ></textarea>
           </div>
           <Button>
-
-            Send Message
+            전달하기
           </Button> 
           <p className="text-xs text-gray-500 mt-3">
-            Your privacy is important to us. We won't share your details with anyone.
           </p>
         </div>
       </div>
