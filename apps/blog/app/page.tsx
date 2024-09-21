@@ -1,7 +1,6 @@
 import createClient from '@infra/supabase/src/server'
 import { redirect } from 'next/navigation'
 import TextInfo from '@ui/custom/cards/TextInfo'
-import ImageWithButton from "@ui/custom/section/ImageWithButton"
 import Blog from "@ui/custom/cards/blog"
 import Config from "@ui/shadcn/sections/Config"
 export default async function PrivatePage() {
