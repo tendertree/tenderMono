@@ -1,0 +1,112 @@
+[
+	{
+		"title": "Understanding React Hooks",
+		"subject": "React",
+		"imageUrl": "https://picsum.photos/seed/picsum/200/300",
+		"date": "2024-09-22",
+		"description": "An in-depth guide to using React Hooks effectively in your applications.",
+		"views": 1200,
+		"likes": 450,
+		"isNew": true,
+		"isUpdated": false
+	},
+	{
+		"title": "CSS Grid Layout Tips",
+		"subject": "CSS",
+		"imageUrl": "https://picsum.photos/seed/picsum/200/300",
+		"date": "2024-09-15",
+		"description": "Learn how to create responsive layouts with CSS Grid.",
+		"views": 800,
+		"likes": 230,
+		"isNew": false,
+		"isUpdated": true
+	},
+	{
+		"title": "Mastering TypeScript Generics",
+		"subject": "TypeScript",
+		"imageUrl": "https://picsum.photos/seed/picsum/200/300",
+		"date": "2024-09-10",
+		"description": "This article covers advanced use cases for TypeScript generics.",
+		"views": 950,
+		"likes": 310,
+		"isNew": false,
+		"isUpdated": false
+	},
+	{
+		"title": "Async Programming with JavaScript",
+		"subject": "JavaScript",
+		"imageUrl": "https://picsum.photos/seed/picsum/200/300",
+		"date": "2024-09-05",
+		"description": "A comprehensive look at asynchronous programming in JavaScript.",
+		"views": 1020,
+		"likes": 400,
+		"isNew": false,
+		"isUpdated": true
+	},
+	{
+		"title": "State Management with Zustand",
+		"subject": "React",
+		"imageUrl": "https://picsum.photos/seed/picsum/200/300",
+		"date": "2024-09-02",
+		"description": "Explore how to use Zustand for state management in React applications.",
+		"views": 750,
+		"likes": 280,
+		"isNew": true,
+		"isUpdated": false
+	},
+	{
+		"title": "Building with Next.js and Tailwind CSS",
+		"subject": "Next.js",
+		"imageUrl": "https://picsum.photos/seed/picsum/200/300",
+		"date": "2024-08-30",
+		"description": "A guide to combining Next.js and Tailwind CSS for building modern web apps.",
+		"views": 1200,
+		"likes": 460,
+		"isNew": false,
+		"isUpdated": true
+	},
+	{
+		"title": "Improving Web Performance with React",
+		"subject": "React",
+		"imageUrl": "https://picsum.photos/seed/picsum/200/300",
+		"date": "2024-08-25",
+		"description": "Learn techniques to optimize your React applications for better performance.",
+		"views": 900,
+		"likes": 320,
+		"isNew": false,
+		"isUpdated": false
+	},
+	{
+		"title": "Integrating Three.js with React",
+		"subject": "3D Graphics",
+		"imageUrl": "https://picsum.photos/seed/picsum/200/300",
+		"date": "2024-08-20",
+		"description": "A tutorial on using Three.js with React for creating interactive 3D experiences.",
+		"views": 1300,
+		"likes": 500,
+		"isNew": false,
+		"isUpdated": false
+	},
+	{
+		"title": "Dark Mode in Next.js with Tailwind CSS",
+		"subject": "Next.js",
+		"imageUrl": "https://picsum.photos/seed/picsum/200/300",
+		"date": "2024-08-15",
+		"description": "Implementing dark mode in a Next.js app using Tailwind CSS.",
+		"views": 600,
+		"likes": 210,
+		"isNew": true,
+		"isUpdated": false
+	},
+	{
+		"title": "Quill.js Rich Text Editor Tips",
+		"subject": "Web Development",
+		"imageUrl": "https://picsum.photos/seed/picsum/200/300",
+		"date": "2024-08-10",
+		"description": "Learn how to effectively integrate and customize Quill.js in your web projects.",
+		"views": 540,
+		"likes": 190,
+		"isNew": false,
+		"isUpdated": true
+	}
+]

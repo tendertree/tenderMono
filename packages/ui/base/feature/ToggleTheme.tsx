@@ -2,10 +2,10 @@
 
 import * as React from "react"
 import { Sun, Moon } from 'lucide-react'
-import { Button } from '../shadcn/button'
 import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes"
 import { type ThemeProviderProps } from "next-themes/dist/types"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { Button } from "../shadcn/button"
 
 
 export default function ThemeToggleBtn() {
@@ -26,16 +26,12 @@ export default function ThemeToggleBtn() {
     }
 
     return (
-        <button onClick={toggleTheme} aria-label="Toggle theme">
-            <div style={{ display: theme === 'dark' ? 'block' : 'none' }}>
-                <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all pt-1" /> :
-                {/* Light mode icon */}
-            </div>
-            <div style={{ display: theme === 'light' ? 'block' : 'none' }}>
-                {/* Dark mode icon */}
-                <Moon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all top-2" />
-            </div>
-        </button>
+       <Button variant="outline" size="icon" onClick={toggleTheme} className="">
+            {theme == "dark" ?
+                <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all " /> :
+                <Moon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all " />
+            }
+        </Button>
     )
 }
 

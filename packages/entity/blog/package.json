@@ -1,0 +1,21 @@
+{
+	"name": "@entity/blog",
+	"version": "1.0.0",
+	"description": "Blog entity definitions for the project",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc"
+	},
+	"exports": {
+		"./post": "./post.ts"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"typescript": "^4.5.4"
+	},
+	"peerDependencies": {},
+	"files": [
+		"dist"
+	]
+}

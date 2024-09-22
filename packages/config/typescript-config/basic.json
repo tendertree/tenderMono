@@ -33,11 +33,11 @@
 			"@/*": [
 				"./*"
 			],
-			"@ui/basic/*": [
-				"../../ui/basic/*"
+			"@ui/base/*": [
+				"../../ui/base/*"
 			],
-			"@ui/main/*": [
-				"../../ui/main/*"
+			"@ui/blog/*": [
+				"../../ui/blog/*"
 			],
 			"@feature/editor/*": [
 				"../../feature/editor/*"
@@ -54,6 +54,9 @@
 			"@entity/memo/*": [
 				"../../entity/memo/*"
 			],
+			"@entity/blog/*": [
+				"../../entity/blog/*"
+			]
 		}
 	}
 }
