@@ -14,4 +14,4 @@ export default function UpperShowTransition({ children }: { children: React.Reac
             {children}
         </motion.div >
     )
-export default function UpperShowTransition({ children }: { children: React.ReactNode }) {}
+ }
