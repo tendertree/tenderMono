@@ -1,7 +1,10 @@
 'use client'
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef,useState } from 'react';
 import Quill from 'quill';
 import 'quill/dist/quill.snow.css';
+import dynamic from 'next/dynamic';
+
+
 
 export default function Editor(): JSX.Element {
 
@@ -10,6 +13,7 @@ export default function Editor(): JSX.Element {
 
     useEffect(() => {
         if (!isMounted.current) {
+			if(ref.current == null) return
             ref.current = new Quill(ref.current, {
                 theme: 'snow',
                 modules: {
@@ -44,5 +48,30 @@ export default function Editor(): JSX.Element {
             <div ref={ref} className="flex-grow min-h-52" ></div>
         </div>
     );
+}
+
+
+//when you conflict rsc problem you should load quill editor by dynamic 
+//
+//"use client"
+// Dynamically import your Quill component to ensure it's loaded only in the client-side
+
+export function EditorClient() {
+const QuillEditor = dynamic(() => import('@feature/quill/src/Editor'), { ssr: false });
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Ensures this runs only on the client
+  }, []);
+
+  if (!isClient) {
+    return null; // Avoid rendering on the server-side
+  }
+
+  return (
+    <div>
+      <QuillEditor />
+    </div>
+  );
 }
 

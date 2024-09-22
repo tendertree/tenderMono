@@ -1,0 +1,59 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Default",
+	"compilerOptions": {
+		"lib": [
+			"es2022",
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
+		"allowJs": true,
+		"noEmit": true,
+		"jsx": "preserve",
+		"plugins": [
+			{
+				"name": "next"
+			}
+		],
+		"declarationMap": true,
+		"esModuleInterop": true,
+		"incremental": false,
+		"isolatedModules": true,
+		"module": "NodeNext",
+		"moduleDetection": "force",
+		"noUncheckedIndexedAccess": true,
+		"moduleResolution": "NodeNext",
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"preserveSymlinks": true,
+		"strict": true,
+		"target": "ES2022",
+		"paths": {
+			"@/*": [
+				"./*"
+			],
+			"@ui/basic/*": [
+				"../../ui/basic/*"
+			],
+			"@ui/main/*": [
+				"../../ui/main/*"
+			],
+			"@feature/editor/*": [
+				"../../feature/editor/*"
+			],
+			"@feature/three/*": [
+				"../../feature/three/*"
+			],
+			"@infra/trpc/*": [
+				"../../infra/trpc/*"
+			],
+			"@infra/supabase/*": [
+				"../../infra/supabase/src/*"
+			],
+			"@entity/memo/*": [
+				"../../entity/memo/*"
+			],
+		}
+	}
+}

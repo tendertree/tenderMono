@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState, useRef } from 'react'
-import {cn} from "@ui/shadcn/lib/utils.js";
+import {cn} from "@ui/basic/lib/utils.js";
 interface LinkType {
     id: string 
     text: string

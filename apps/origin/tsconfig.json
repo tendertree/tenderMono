@@ -23,11 +23,8 @@
 			"@src/*": [
 				"src/*"
 			],
-			"@ui/custom/*": [
-				"../../packages/ui/custom/*"
-			],
-			"@ui/shadcn/*": [
-				"../../packages/ui/shadcn/*"
+			"@ui/base/*": [
+				"../../packages/ui/base/*"
 			]
 		}
 	},

@@ -1,12 +1,12 @@
 {
-	"extends": "@config/typescript-config/shadcn.json",
+	"extends": "@config/typescript-config/base.json",
 	"compilerOptions": {
 		"skipLibCheck": true,
 		"suppressImplicitAnyIndexErrors": true,
 		"outDir": "dist",
 		"paths": {
-			"@ui/custom/*": [
-				"../../packages/ui/custom/**/*.tsx"
+			"@ui/basic/*": [
+				"../../packages/ui/basic/**/*.tsx"
 			]
 		}
 	},

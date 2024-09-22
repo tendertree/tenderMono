@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-
+import {ThemeProvider} from "@ui/base/menu/ThemeToggle";
+import MaxWidthWrapper from "@ui/basic/base/MaxWidthWrapper";
+import Basic from "@ui/base/nav/Basic";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -36,6 +38,29 @@ export const metadata: Metadata = {
 
 };
 
+
+
+const links = [
+    {
+        name: "Home",
+        path: "/"
+    },
+    {
+        name: "blog",
+        path: "/blog"
+    },
+    {
+        name: "about",
+        path: "/about"
+    },
+    {
+        name: "contact",
+        path: "/contact"
+    },
+]
+
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,7 +71,18 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+				<ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <MaxWidthWrapper>
+                        <Basic links={links} />
+
         {children}
+		</MaxWidthWrapper>
+		</ThemeProvider>	
       </body>
     </html>
   );

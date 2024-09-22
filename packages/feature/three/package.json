@@ -36,13 +36,15 @@
 		"@types/react": "^18.2.79",
 		"@types/react-dom": "^18.2.24",
 		"animejs": "^3.2.2",
+		"lamina": "^1.1.23",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"tailwindcss": ">=3.0.0 || insiders",
 		"three": "^0.163.0",
 		"three-stdlib": "^2.33.0",
 		"typescript": "^5.4.5",
-		"zustand": "^4.5.5"
+		"zustand": "^4.5.5",
+		"next": "14.2.7"
 	},
 	"devDependencies": {
 		"@config/typescript-config": "workspace:*",

@@ -1,0 +1,9 @@
+{
+	"name": "@feature/utils",
+	"version": "0.0.0",
+	"private": true,
+	"files": [],
+	"dependencies": {
+		"next-themes": "^0.3.0"
+	}
+}

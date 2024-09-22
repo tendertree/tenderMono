@@ -1,13 +1,15 @@
 "use client"
 import React, { ReactNode, Suspense, useEffect } from 'react'
 import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera, CubeCamera } from '@react-three/drei';
+import { OrbitControls, PerspectiveCamera, CubeCamera, ScrollControls, Scroll } from '@react-three/drei';
 import useCameraStore from '../utils/CurrentCamera';
 import { ResponsiveCameraRigAround } from '../camera/CameraRig';
 import * as THREE from 'three';
 import Ground from '../objects/Ground';
+import { Scene } from 'three';
 export interface BasicSceneProps {
     children: ReactNode;
+	Scene?:ReactNode;
 }
 
 export default function MinimalScene({ children }: BasicSceneProps) {
@@ -83,8 +85,19 @@ export function TransparentScene({ children }: BasicSceneProps) {
 
     )
 }
-
-
+export function WithHtmlSectionScene({children ,Scene}:BasicSceneProps) {
+	
+return(
+      <Canvas shadows camera={{ position: [3, 3, 3], fov: 30 }} className='bg-transparent top-[50px] absolute pointer-events-none'>
+                <ScrollControls pages={4} damping={0.3}>
+					{Scene}
+                    <Scroll html>
+						{children}
+                    </Scroll>
+                </ScrollControls>
+            </Canvas>
+	)
+}
 
 
 function CameraManager() {
