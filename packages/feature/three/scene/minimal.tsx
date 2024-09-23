@@ -2,7 +2,7 @@
 import React, { ReactNode, Suspense, useEffect } from 'react'
 import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera, CubeCamera, ScrollControls, Scroll } from '@react-three/drei';
-import useCameraStore from '../utils/CurrentCamera';
+import useCameraStore from '../util/CurrentCamera';
 import { ResponsiveCameraRigAround } from '../camera/CameraRig';
 import * as THREE from 'three';
 import Ground from '../objects/Ground';

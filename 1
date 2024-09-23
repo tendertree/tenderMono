@@ -1,0 +1,24 @@
+"use client";
+import { BlogPostCardList } from "@ui/blog/post/Post";
+import * as THREE from "three";
+import postMock from "@ui/blog/post/PostMock.json";
+import { Environment, useEnvironment } from "@react-three/drei";
+import React, { useEffect } from "react";
+import MinimalScene from "@feature/three/scene/minimal";
+import ReflectiveSphere from "@feature/three/object/ReflectiveSphere";
+import { useLoader, useThree } from "@react-three/fiber";
+import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader";
+import Envmap from "@feature/three/effector/Envmap";
+import Ring from "@feature/three/object/Ring"
+export default function Home() {
+ return (
+  <div className="h-screen ">
+   <MinimalScene>
+    <ambientLight intensity={0.5} />
+    <pointLight position={[5, 5, 5]} />
+    <Ring />
+    <Envmap />
+   </MinimalScene>
+  </div>
+ );
+}

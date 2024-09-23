@@ -6,10 +6,10 @@ const config: Config = {
         './index.html',
         './pages/**/*.{ts,tsx,astro,md,mdx}',
         './components/**/*.{ts,tsx,astro,md,mdx}',
-        './app/**/*.{ts,tsx,astro,md,mdx}',
-        './src/**/*.{ts,tsx,astro,md,mdx}',
-        '../../packages/ui/main/**/*.{ts,tsx}',
-        '../../packages/ui/main/utils.ts',
+        '../../app/**/*.{ts,tsx,astro,md,mdx}',
+        '../../app/src/**/*.{ts,tsx,astro,md,mdx}',
+        '../../packages/ui/base/**/*.{ts,tsx}',
+        '../../packages/ui/base/utils.ts',
     ], theme: {
         container: {
             center: true,

@@ -1,28 +1,25 @@
 {
-	"extends": "@config/typescript-config/base.json",
-	"compilerOptions": {
-		"skipLibCheck": true,
-		"suppressImplicitAnyIndexErrors": true,
-		"outDir": "dist",
-		"paths": {
-			"@ui/basic/*": [
-				"../../packages/ui/basic/**/*.tsx"
-			]
-		}
-	},
-	"include": [
-		"camera/**/*",
-		"light/**/*",
-		"scene/**/*",
-		"objects/**/*",
-		"shader/**/*",
-		"texture/**/*",
-		"theater/**/*",
-		"types/**/*",
-		"utils/**/*"
-	],
-	"exclude": [
-		"node_modules",
-		"dist"
-	]
+ "extends": "@config/typescript-config/base.json",
+ "compilerOptions": {
+  "jsx": "react",
+  "skipLibCheck": true,
+  "suppressImplicitAnyIndexErrors": true,
+  "esModuleInterop": true, // Add this line
+  "outDir": "dist",
+  "paths": {
+   "@ui/basic/*": ["../../packages/ui/basic/**/*.tsx"]
+  }
+ },
+ "include": [
+  "camera/**/*",
+  "light/**/*",
+  "scene/**/*",
+  "object/**/*",
+  "shader/**/*",
+  "texture/**/*",
+  "theater/**/*",
+  "types/**/*",
+  "utils/**/*"
+ ],
+ "exclude": ["node_modules", "dist"]
 }
