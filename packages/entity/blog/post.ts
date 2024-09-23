@@ -55,8 +55,7 @@ export default function PostHandler(postCRUD: PostCRUD) {
         }
     };
 }
-
-async function handleGet(query: NextApiRequest['query'], postCRUD: PostCRUD, res: NextApiResponse) {
+async function handleGet(query: NextApiRequest['query'] = {}, postCRUD: PostCRUD, res: NextApiResponse) {
     const { id, subject } = query;
 
     if (id) {
@@ -69,8 +68,23 @@ async function handleGet(query: NextApiRequest['query'], postCRUD: PostCRUD, res
         return res.status(200).json(posts);
     }
 
-    const allPosts = await postCRUD.getAllPosts();
-    return res.status(200).json(allPosts);
+     const allPosts = await postCRUD.getAllPosts();
+    // return res.status(200).json(allPosts);
+    // to test post send data it call post action 
+    //
+    // const body: Omit<PostProp, "id"> = {
+    //     title: "Example Post Title",
+    //     subject: "Example Subject",
+    //     imageUrl: "https://example.com/image.jpg",
+    //     date: new Date().toISOString(),
+    //     description: "This is an example description for the post.",
+    //     views: 0,
+    //     likes: 0,
+    //     isNew: true, // 선택적 속성
+    //     isUpdated: false // 선택적 속성
+    // };
+    // const newPost = await postCRUD.createPost(body);
+    // return res.status(201).json(newPost);
 }
 
 async function handlePost(body: NextApiRequest['body'], postCRUD: PostCRUD, res: NextApiResponse) {
