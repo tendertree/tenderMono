@@ -10,11 +10,12 @@
 	"exports": {
 		"./post": "./post.ts"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"next": "^14.2.13"
+	},
 	"devDependencies": {
 		"typescript": "^4.5.4"
 	},
-	"peerDependencies": {},
 	"files": [
 		"dist"
 	]

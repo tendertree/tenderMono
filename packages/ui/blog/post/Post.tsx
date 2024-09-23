@@ -2,10 +2,11 @@ import { Heart, Eye } from "lucide-react"
 import { Badge } from "@ui/base/shadcn/badge"
 import { Button } from "@ui/base/shadcn/button"
 import { PostProp, PostListProp } from '@entity/blog/post';
+import TruncatedText from "@ui/base/lib/TruncatedText"
 import React, { Suspense } from "react"
 import Image from 'next/image'
 import UpperShowTransition from "@ui/base/layout/effect/UpperShowTransition"
-
+import TeckStackIcon from "@ui/base/info/icons/TechStack"
 
 export function BlogPostCardSquare({
     title,
@@ -16,7 +17,8 @@ export function BlogPostCardSquare({
     views,
     likes,
     isNew,
-    isUpdated
+    isUpdated,
+	id
 }: PostProp) {
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-card">
@@ -84,17 +86,17 @@ export function BlogPostCard({
                     </div>
                 </div>
 
-                <a href="#" className="mb-3 block md:font-extrabold font-bold md:text-2xl text-xl hover:text-yellow mt-3">
-                    <h1>{title}</h1>
+                <a href="#" className="mb-3 block md:font-extrabold h-[75px] font-bold md:text-2xl text-xl hover:text-yellow mt-3 trucate  overflow-hidden">
+                    <h1> <TruncatedText title={title} maxLength={30} /></h1>
                 </a>
                 <p className="text-grey font-medium leading-6 h-[45px] overflow-hidden truncate">
                     {description}
                 </p>
                 <div className="mt-6 flex items-center justify-between">
                     <div className="flex items-center overflow-hidden">
-                        <p className="capitalize text-black py-1 px-3 inline-block font-extrabold rounded bg-strong ">
-                            {subject}
-                        </p>
+
+                        <TeckStackIcon iconName={subject} />
+
 
                         {/*
 						<div className="relative w-5 h-5 ">
@@ -126,7 +128,6 @@ export function BlogPostCard({
 }
 
 export function BlogPostCardList({ data }: PostListProp) {
-    console.log(data);
 
     if (!Array.isArray(data) || data.length === 0) {
         return <div>No blog posts available.</div>;

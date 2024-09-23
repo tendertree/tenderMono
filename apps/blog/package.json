@@ -1,5 +1,5 @@
 {
-	"name": "origin",
+	"name": "blog",
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
@@ -10,15 +10,16 @@
 	},
 	"dependencies": {
 		"@entity/blog": "workspace:*",
-		"@ui/base":"workspace:*",
-		"@ui/blog":"workspace:*",
-		"@feature/utils": "workspace:*",
 		"@feature/editor": "workspace:*",
 		"@feature/three": "workspace:*",
+		"@infra/file": "workspace:*",
 		"@infra/supabase": "workspace:*",
 		"@react-three/drei": "^9.105.5",
 		"@react-three/fiber": "^8.16.2",
 		"@studio-freight/react-lenis": "^0.0.47",
+		"@ui/base": "workspace:*",
+		"@ui/blog": "workspace:*",
+		"@vitejs/plugin-react": "^4.3.1",
 		"framer": "^2.4.1",
 		"framer-motion": "^11.5.4",
 		"next": "14.2.13",
@@ -26,9 +27,10 @@
 		"origin": "link:",
 		"react": "^18",
 		"react-dom": "^18",
+		"supertest": "^7.0.0",
 		"tailwind-merge": "^2.5.2",
 		"tailwindcss-animate": "^1.0.7",
-		"vitest": "^2.0.5"
+		"vitest": "^2.1.1"
 	},
 	"devDependencies": {
 		"@config/eslint-config": "workspace:*",

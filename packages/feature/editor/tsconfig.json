@@ -1,7 +1,8 @@
 {
 	"extends": "@config/typescript-config/shadcn.json",
 	"compilerOptions": {
-		"outDir": "dist"
+		"outDir": "dist",
+		"jsx": "react"
 	},
 	"include": [
 		"post/**/*",

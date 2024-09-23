@@ -9,7 +9,6 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@feature/utils": "workspace:*",
 		"@feature/editor": "workspace:*",
 		"@feature/three": "workspace:*",
 		"@infra/supabase": "workspace:*",

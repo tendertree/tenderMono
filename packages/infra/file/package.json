@@ -1,0 +1,26 @@
+{
+	"name": "@infra/file",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "echo 'Add dev script here'",
+		"build": "echo 'Add build script here'",
+		"test": "vitest",
+		"lint": "echo 'Add lint script here'"
+	},
+	"dependencies": {
+		"@entity/blog": "workspace:*",
+		"@types/node": "^22.5.5",
+		"fs": "0.0.1-security",
+		"next": "^14.2.13",
+		"path": "^0.12.7",
+		"react": "^18.3.1",
+		"supertest": "^7.0.0",
+		"vitest": "^2.1.1"
+	},
+	"exports": {
+		"./temp/*": "./temp/*",
+		"./blog/*": "./blog/*",
+		"./provider": "./provider.ts"
+	}
+}

@@ -1,5 +1,5 @@
 "use client"
-import BlogPostCard, { BlogPostCardList } from "@ui/blog/post/Post"
+import  { BlogPostCardList } from "@ui/blog/post/Post"
 
 import postMock from '@ui/blog/post/PostMock.json';
 import React, { useEffect } from 'react';
