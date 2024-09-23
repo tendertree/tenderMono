@@ -9,6 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@entity/todo":"workspace:*",
 		"@entity/blog": "workspace:*",
 		"@feature/editor": "workspace:*",
 		"@feature/three": "workspace:*",

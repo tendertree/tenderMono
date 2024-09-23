@@ -10,6 +10,7 @@
 	},
 	"dependencies": {
 		"@entity/blog": "workspace:*",
+		"@entity/todo": "workspace:*",
 		"@types/node": "^22.5.5",
 		"fs": "0.0.1-security",
 		"next": "^14.2.13",
@@ -20,6 +21,7 @@
 	},
 	"exports": {
 		"./temp/*": "./temp/*",
+		"./todo/*": "./todo/*",
 		"./blog/*": "./blog/*",
 		"./provider": "./provider.ts"
 	}
