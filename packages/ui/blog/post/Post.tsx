@@ -10,7 +10,7 @@ import TeckStackIcon from "@ui/base/info/icons/TechStack"
 
 export function BlogPostCardSquare({
     title,
-    subject,
+    type,
     imageUrl,
     date,
     description,
@@ -38,7 +38,7 @@ export function BlogPostCardSquare({
             </div>
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2 truncate">{title}</div>
-                <p className="text-muted-foreground text-sm mb-2">{subject}</p>
+                <p className="text-muted-foreground text-sm mb-2">{type}</p>
                 <p className="text-card-foreground text-base">{description}</p>
             </div>
             <div className="px-6 pt-4 pb-2 flex justify-between items-center mt-auto pb-4">
@@ -59,7 +59,7 @@ export function BlogPostCardSquare({
 
 export function BlogPostCard({
     title,
-    subject,
+    type,
     imageUrl,
     date,
     description,
@@ -95,7 +95,7 @@ export function BlogPostCard({
                 <div className="mt-6 flex items-center justify-between">
                     <div className="flex items-center overflow-hidden">
 
-                        <TeckStackIcon iconName={subject} />
+                        <TeckStackIcon iconName={type} />
 
 
                         {/*

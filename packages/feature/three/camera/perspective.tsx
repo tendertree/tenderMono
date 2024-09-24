@@ -1,7 +1,54 @@
+"use client"
 import React, { useRef, useEffect, useState } from 'react'
 import { useThree, useFrame, Camera } from '@react-three/fiber'
-import { Box, CameraControls, OrbitControls, OrthographicCamera, PerspectiveCamera } from '@react-three/drei'
+import { Box, CameraControls, OrbitControls, CameraShake, OrthographicCamera, PerspectiveCamera } from '@react-three/drei'
+import { OrbitControls as OrbitControlsImpl } from 'three-stdlib';
 import * as THREE from 'three'
+
+
+type CameraShakeImpl = {
+    getIntensity: () => number;
+    setIntensity: (intensity: number) => void;
+};
+
+export function WobbleCamera() {
+    const shakeRef = useRef<CameraShakeImpl>(null);
+    const orbitRef = useRef<OrbitControlsImpl>(null);
+    const timeRef = useRef(0);
+
+    useFrame((state, delta) => {
+        timeRef.current += delta;
+
+        // Directly manipulate the camera instead of using setIntensity
+        const camera = state.camera;
+        const t = timeRef.current;
+
+        // Apply a subtle, continuous shake
+        camera.position.x += Math.sin(t * 10) * 0.001;
+        camera.position.y += Math.sin(t * 15) * 0.001;
+        camera.position.z += Math.sin(t * 20) * 0.001;
+
+        camera.rotation.x += Math.sin(t * 5) * 0.0002;
+        camera.rotation.y += Math.sin(t * 7) * 0.0002;
+        camera.rotation.z += Math.sin(t * 9) * 0.0002;
+
+        // Ensure the camera is updated
+        camera.updateProjectionMatrix();
+    });
+    return (
+        <>
+            <OrbitControls ref={orbitRef} />
+            <CameraShake ref={shakeRef}
+                maxYaw={0.01}
+                maxPitch={0.01}
+                maxRoll={0.01}
+                yawFrequency={0.5}
+                pitchFrequency={0.5}
+                rollFrequency={0.5}
+            />
+        </>
+    );
+}
 
 export function WithMouseControl() {
 

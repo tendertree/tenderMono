@@ -8,6 +8,7 @@
 	},
 	"exports": {
 		"./examples/*": "./examples/*",
+		"./light/*": "./light/*",
 		"./ground/*": "./ground/*",
 		"./section/*": "./section/*",
 		"./scene/*": "./scene/*",
@@ -18,6 +19,7 @@
 		"./theater/*": "./theater/*",
 		"./types/*": "./types/*",
 		"./utils/*": "./utils/*",
+		"./gallery/*": "./gallery/*",
 		"./effector/*":"./effector/*"
 	},
 	"type": "module",

@@ -5,7 +5,6 @@ import { OrbitControls, PerspectiveCamera, CubeCamera, ScrollControls, Scroll } 
 import useCameraStore from '../util/CurrentCamera';
 import { ResponsiveCameraRigAround } from '../camera/CameraRig';
 import * as THREE from 'three';
-import Ground from '../objects/Ground';
 import { Scene } from 'three';
 export interface BasicSceneProps {
     children: ReactNode;

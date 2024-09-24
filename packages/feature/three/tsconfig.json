@@ -19,7 +19,8 @@
   "texture/**/*",
   "theater/**/*",
   "types/**/*",
-  "utils/**/*"
+  "utils/**/*",
+  "gallery/**/*"
  ],
  "exclude": ["node_modules", "dist"]
 }
