@@ -1,22 +1,23 @@
 {
-	"name": "@entity/blog",
-	"version": "1.0.0",
-	"description": "Blog entity definitions for the project",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
-	"scripts": {
-		"build": "tsc"
-	},
-	"exports": {
-		"./post": "./post.ts"
-	},
-	"dependencies": {
-		"next": "^14.2.13"
-	},
-	"devDependencies": {
-		"typescript": "^4.5.4"
-	},
-	"files": [
-		"dist"
-	]
+ "name": "@entity/blog",
+ "version": "1.0.0",
+ "description": "Blog entity definitions for the project",
+ "main": "dist/index.js",
+ "types": "dist/index.d.ts",
+ "scripts": {
+  "build": "tsc"
+ },
+ "exports": {
+  "./post": "./post.ts",
+  "./postContent": "./postContent.ts"
+ },
+ "dependencies": {
+  "next": "^14.2.13"
+ },
+ "devDependencies": {
+  "typescript": "^4.5.4"
+ },
+ "files": [
+  "dist"
+ ]
 }

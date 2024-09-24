@@ -1,15 +1,14 @@
 {
-	"extends": "@config/typescript-config/shadcn.json",
-	"compilerOptions": {
-		"outDir": "dist",
-		"jsx": "react"
-	},
-	"include": [
-		"post/**/*",
-		"src/**/*"
-	],
-	"exclude": [
-		"node_modules",
-		"dist"
-	]
+ "extends": "@config/typescript-config/shadcn.json",
+ "compilerOptions": {
+  "outDir": "dist",
+  "jsx": "react-jsx", // 또는 "react" (React 17 이하 버전에서는 "react" 사용)
+  "moduleResolution": "nodenext", // 또는 "node"
+  "module": "NodeNext", // 최신 모듈 시스템 사용
+  "esModuleInterop": true, // CommonJS 모듈을 원활하게 가져오기 위해 필요할 수 있음
+  "allowSyntheticDefaultImports": true // ES6 모듈 가져오기를 허용
+ },
+ "type": "module",
+ "include": ["post/**/*", "src/**/*"],
+ "exclude": ["node_modules", "dist"]
 }

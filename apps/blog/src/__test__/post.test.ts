@@ -1,67 +1,101 @@
-import { describe, it, expect, vi } from 'vitest';
-import { GET } from '../../app/api/post/route'; // Adjust to the location of your API
-import { PostCRUDImplFileSystem } from '@infra/file/blog/post'; // Adjust to your implementation
-import path from 'path';
+import { describe, it, expect, afterEach, beforeEach } from "vitest";
+import { PostProp, PostExample } from "@entity/blog/post";
+import { GET, POST, PUT, DELETE } from "../../app/api/post/route";
+import { NextRequest } from "next/server";
+import { data } from "autoprefixer";
 
-describe('PostCRUD Implementation', () => {
-  const mockDataFilePath = path.join(process.cwd(), '/src/data/posts_T.json');
-  const postCRUD = new PostCRUDImplFileSystem(mockDataFilePath);
-  
-  // Spy on the createPost method
-  const createPostSpy = vi.spyOn(postCRUD, 'createPost');
-
-  it('should call createPost with the correct data', async () => {
-    const mockRequest = {
-      body: {
-        title: 'New Post',
-        subject: 'Test Subject',
-      },
-    };
-
-    const mockResponse = {
-      status: vi.fn().mockReturnThis(),
-      json: vi.fn(),
-    };
-
-    // Call the GET function to trigger the handler
-    await GET(mockRequest as any, mockResponse as any);
-
-    // Assert that createPost was called
-    expect(createPostSpy).toHaveBeenCalledWith({
-      title: 'New Post',
-      subject: 'Test Subject',
-    });
-
-    // You can also assert the response
-    expect(mockResponse.status).toHaveBeenCalledWith(201);
-    expect(mockResponse.json).toHaveBeenCalledWith(expect.objectContaining({
-      title: 'New Post',
-      subject: 'Test Subject',
-      id: expect.any(String), // Assuming an ID is generated
-    }));
+export class MockNextRequest extends NextRequest {
+ constructor(body: any) {
+  // Create a Request object and pass the URL and method
+  super("http://localhost/api/post", {
+   method: "POST",
+   headers: {
+    "Content-Type": "application/json",
+   },
+   body: JSON.stringify(body),
   });
+ }
+}
 
-  it('should return 400 if post data is invalid', async () => {
-    const invalidRequest = {
-      body: {
-        title: '', // Invalid because title is empty
-      },
-    };
-
-    const mockResponse = {
-      status: vi.fn().mockReturnThis(),
-      json: vi.fn(),
-    };
-
-    // Call the GET function with invalid data
-    await GET(invalidRequest as any, mockResponse as any);
-
-    // Assert that createPost was not called
-    expect(createPostSpy).not.toHaveBeenCalled();
-
-    // Expect a 400 response
-    expect(mockResponse.status).toHaveBeenCalledWith(400);
-    expect(mockResponse.json).toHaveBeenCalledWith({ error: 'Invalid post data' });
-  });
+describe("GET /api/post", () => {
+ it("check the Get post is correct", async () => {
+  const response = await GET();
+  const data = await response.json();
+  expect(data).toBeInstanceOf(Object);
+  expect(data).not.toBeNull();
+ });
 });
 
+describe("POST /api/post", () => {
+ let postId;
+ it("should save a new post successfully", async () => {
+  const request = new MockNextRequest(PostExample);
+  const response = await POST(request);
+  const result: PostProp = await response.json();
+  postId = result.id;
+  expect(result.title).toEqual(PostExample.title);
+ });
+ afterEach(async () => {
+  // Cleanup after each test by deleting the created post
+  if (postId) {
+   const request = new MockNextRequest({ id: postId }); // Send an object with the id
+   await DELETE(request); // Call DELETE with the request
+   postId = null; // Clear postId to avoid repeated deletions in future tests
+  }
+ });
+});
+
+describe("PUT /api/post", () => {
+ let postId;
+
+ beforeEach(async () => {
+  const request = new MockNextRequest(PostExample);
+  const response = await POST(request);
+  const result: PostProp = await response.json();
+  postId = result.id; // Save the created post ID for updating
+ });
+
+ it("should update the post successfully", async () => {
+  const updatedData = { ...PostExample, title: "Updated Title" }; // Create updated post data
+  const request = new MockNextRequest({ id: postId, updatedPost: updatedData });
+  const response = await PUT(request);
+  const result: PostProp = await response.json();
+
+  expect(result.title).toEqual(updatedData.title);
+ });
+
+ afterEach(async () => {
+  // Cleanup after each test by deleting the created post
+  if (postId) {
+   const request = new MockNextRequest({ id: postId });
+   await DELETE(request);
+   postId = null;
+  }
+ });
+});
+
+describe("DELETE /api/post", () => {
+ let postId;
+
+ beforeEach(async () => {
+  const request = new MockNextRequest(PostExample);
+  const response = await POST(request);
+  const result: PostProp = await response.json();
+  postId = result.id; // Save the created post ID for deletion
+ });
+
+ it("should delete the post successfully", async () => {
+  const request = new MockNextRequest({ id: postId });
+  const response = await DELETE(request);
+  expect(response.status).toBe(200); // Assuming successful deletion returns 204 No Content
+ });
+
+ afterEach(async () => {
+  // Cleanup after each test by deleting the created post
+  if (postId) {
+   const request = new MockNextRequest({ id: postId });
+   await DELETE(request);
+   postId = null;
+  }
+ });
+});

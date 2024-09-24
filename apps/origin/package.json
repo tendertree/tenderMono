@@ -16,6 +16,8 @@
 		"@react-three/drei": "^9.105.5",
 		"@react-three/fiber": "^8.16.2",
 		"@studio-freight/react-lenis": "^0.0.47",
+		"@vitejs/plugin-react": "^4.3.1",
+		"autoprefixer": "^10.4.20",
 		"framer": "^2.4.1",
 		"framer-motion": "^11.5.4",
 		"next": "14.2.13",

@@ -13,6 +13,7 @@
 		"@entity/todo": "workspace:*",
 		"@types/node": "^22.5.5",
 		"fs": "0.0.1-security",
+		"nanoid": "^5.0.7",
 		"next": "^14.2.13",
 		"path": "^0.12.7",
 		"react": "^18.3.1",

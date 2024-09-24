@@ -1,24 +1,72 @@
-"use client";
-import { BlogPostCardList } from "@ui/blog/post/Post";
-import * as THREE from "three";
-import postMock from "@ui/blog/post/PostMock.json";
-import { Environment, useEnvironment } from "@react-three/drei";
-import React, { useEffect } from "react";
-import MinimalScene from "@feature/three/scene/minimal";
-import ReflectiveSphere from "@feature/three/object/ReflectiveSphere";
-import { useLoader, useThree } from "@react-three/fiber";
-import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader";
-import Envmap from "@feature/three/effector/Envmap";
-import Ring from "@feature/three/object/Ring"
-export default function Home() {
- return (
-  <div className="h-screen ">
-   <MinimalScene>
-    <ambientLight intensity={0.5} />
-    <pointLight position={[5, 5, 5]} />
-    <Ring />
-    <Envmap />
-   </MinimalScene>
-  </div>
- );
+import {
+ PostContentProp,
+ PostContentCRUD,
+} from "@entity/blog/post/postcontent";
+import { promises as fs } from "fs";
+import path from "path";
+
+export default class PostContentCRUDImplFile implements PostContentCRUD {
+ private dataPath: string;
+
+ constructor(dataPath: string) {
+  this.dataPath = dataPath;
+ }
+
+ private async readData(): Promise<PostContentProp[]> {
+  try {
+   const fileData = await fs.readFile(this.dataPath, "utf-8");
+   return JSON.parse(fileData);
+  } catch (error) {
+   console.error("Error reading data:", error);
+   return [];
+  }
+ }
+
+ private async writeData(posts: PostContentProp[]): Promise<void> {
+  try {
+   await fs.writeFile(this.dataPath, JSON.stringify(posts, null, 2), "utf-8");
+  } catch (error) {
+   console.error("Error writing data:", error);
+  }
+ }
+
+ public async createPostContent(
+  newContent: Omit<PostContentProp, "id">
+ ): Promise<PostContentProp> {
+  const posts = await this.readData();
+  const id = Date.now().toString();
+  const postContent: PostContentProp = { ...newContent, id };
+  posts.push(postContent);
+  await this.writeData(posts);
+  return postContent;
+ }
+
+ public async getPostContent(id: string): Promise<PostContentProp | null> {
+  const posts = await this.readData();
+  return posts.find((post) => post.id === id) || null;
+ }
+
+ public async updatePostContent(
+  id: string,
+  updatedContent: Partial<PostContentProp>
+ ): Promise<PostContentProp | null> {
+  const posts = await this.readData();
+  const index = posts.findIndex((post) => post.id === id);
+  if (index === -1) {
+   return null; // Post not found
+  }
+  posts[index] = { ...posts[index], ...updatedContent };
+  await this.writeData(posts);
+  return posts[index];
+ }
+
+ public async deletePostContent(id: string): Promise<boolean> {
+  const posts = await this.readData();
+  const newPosts = posts.filter((post) => post.id !== id);
+  if (newPosts.length === posts.length) {
+   return false; // No post was deleted
+  }
+  await this.writeData(newPosts);
+  return true;
+ }
 }
