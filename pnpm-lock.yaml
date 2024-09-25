@@ -29,6 +29,9 @@ importers:
       '@feature/editor':
         specifier: workspace:*
         version: link:../../packages/feature/editor
+      '@feature/konvas':
+        specifier: workspace:*
+        version: link:../../packages/feature/konvas
       '@feature/three':
         specifier: workspace:*
         version: link:../../packages/feature/three
@@ -62,6 +65,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.47)
+      canvas:
+        specifier: ^2.11.2
+        version: 2.11.2(encoding@0.1.13)
       framer:
         specifier: ^2.4.1
         version: 2.4.1(framer-motion@11.5.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -74,9 +80,6 @@ importers:
       next-themes:
         specifier: ^0.3.0
         version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      origin:
-        specifier: 'link:'
-        version: 'link:'
       react:
         specifier: ^18
         version: 18.3.1
@@ -177,9 +180,6 @@ importers:
       next-themes:
         specifier: ^0.3.0
         version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      origin:
-        specifier: 'link:'
-        version: 'link:'
       react:
         specifier: ^18
         version: 18.3.1
@@ -355,9 +355,6 @@ importers:
       '@entity/blog':
         specifier: workspace:*
         version: link:../../entity/blog
-      '@feature/editor':
-        specifier: 'link:'
-        version: 'link:'
       '@rehype-pretty/transformers':
         specifier: ^0.13.2
         version: 0.13.2
@@ -453,6 +450,37 @@ importers:
         specifier: workspace:*
         version: link:../../config/typescript-config
 
+  packages/feature/konvas:
+    dependencies:
+      canvas:
+        specifier: ^2.11.2
+        version: 2.11.2(encoding@0.1.13)
+      konva:
+        specifier: ^9.3.15
+        version: 9.3.15
+      next:
+        specifier: ^14.2.13
+        version: 14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-konva:
+        specifier: ^18.2.10
+        version: 18.2.10(konva@9.3.15)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      typescript:
+        specifier: ^5.4.5
+        version: 5.6.2
+      unified:
+        specifier: ^11.0.5
+        version: 11.0.5
+      vfile-reporter:
+        specifier: ^8.1.1
+        version: 8.1.1
+    devDependencies:
+      '@config/typescript-config':
+        specifier: workspace:*
+        version: link:../../config/typescript-config
+
   packages/feature/three:
     dependencies:
       '@react-three/drei':
@@ -528,6 +556,25 @@ importers:
       '@types/three':
         specifier: ^0.163.0
         version: 0.163.0
+
+  packages/feature/writer:
+    dependencies:
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      typescript:
+        specifier: ^5.4.5
+        version: 5.6.2
+      unified:
+        specifier: ^11.0.5
+        version: 11.0.5
+      vfile-reporter:
+        specifier: ^8.1.1
+        version: 8.1.1
+    devDependencies:
+      '@config/typescript-config':
+        specifier: workspace:*
+        version: link:../../config/typescript-config
 
   packages/infra/drizzle:
     dependencies:
@@ -969,7 +1016,7 @@ importers:
         version: 2.5.2
       tailwindcss-animate:
         specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.12(ts-node@10.9.2(@types/node@20.16.5)(typescript@5.6.2)))
+        version: 1.0.7(tailwindcss@3.4.12(ts-node@10.9.2(@types/node@22.5.5)(typescript@5.6.2)))
     devDependencies:
       '@config/eslint-config':
         specifier: workspace:*
@@ -5363,6 +5410,9 @@ packages:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
 
+  konva@9.3.15:
+    resolution: {integrity: sha512-6jceV1u75a41Fwky7HIg7Xr092sn9g+emE/F4KrkNey9j5IwM/No91z4g13P9kbh0NePzC20YvfyGVS5EzliUA==}
+
   kuler@2.0.0:
     resolution: {integrity: sha512-Xq9nH7KlWZmXAtodXDDRE7vs6DU1gTU8zYDHDiWLSip45Egwq3plLHzPn27NgvzL2r1LMPC1vdqh98sQxtqj4A==}
 
@@ -6361,11 +6411,24 @@ packages:
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
+  react-konva@18.2.10:
+    resolution: {integrity: sha512-ohcX1BJINL43m4ynjZ24MxFI1syjBdrXhqVxYVDw2rKgr3yuS0x/6m1Y2Z4sl4T/gKhfreBx8KHisd0XC6OT1g==}
+    peerDependencies:
+      konva: ^8.0.1 || ^7.2.5 || ^9.0.0
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+
   react-reconciler@0.27.0:
     resolution: {integrity: sha512-HmMDKciQjYmBRGuuhIaKA1ba/7a+UsM5FzOZsMO2JYHt9Jh8reCb7j1eDC95NOyUlKM9KRyvdx0flBuDvYSBoA==}
     engines: {node: '>=0.10.0'}
     peerDependencies:
       react: ^18.0.0
+
+  react-reconciler@0.29.2:
+    resolution: {integrity: sha512-zZQqIiYgDCTP/f1N/mAR10nJGrPD2ZR+jDSEsKWJHYC7Cm2wodlwbR3upZRdC3cjIjSlTLNVyO7Iu0Yy7t2AYg==}
+    engines: {node: '>=0.10.0'}
+    peerDependencies:
+      react: ^18.3.1
 
   react-refresh@0.14.2:
     resolution: {integrity: sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==}
@@ -8776,7 +8839,6 @@ snapshots:
     transitivePeerDependencies:
       - encoding
       - supports-color
-    optional: true
 
   '@mediapipe/tasks-vision@0.10.8': {}
 
@@ -10534,8 +10596,7 @@ snapshots:
       protobufjs: 7.4.0
       winston: 3.14.2
 
-  abbrev@1.1.1:
-    optional: true
+  abbrev@1.1.1: {}
 
   abort-controller-x@0.4.3: {}
 
@@ -10559,7 +10620,6 @@ snapshots:
       debug: 4.3.7
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   agent-base@7.1.1:
     dependencies:
@@ -10610,14 +10670,12 @@ snapshots:
       normalize-path: 3.0.0
       picomatch: 2.3.1
 
-  aproba@2.0.0:
-    optional: true
+  aproba@2.0.0: {}
 
   are-we-there-yet@2.0.0:
     dependencies:
       delegates: 1.0.0
       readable-stream: 3.6.2
-    optional: true
 
   arg@4.1.3:
     optional: true
@@ -10844,7 +10902,6 @@ snapshots:
     transitivePeerDependencies:
       - encoding
       - supports-color
-    optional: true
 
   ccount@2.0.1: {}
 
@@ -10887,8 +10944,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  chownr@2.0.0:
-    optional: true
+  chownr@2.0.0: {}
 
   chromadb@1.8.1(@google/generative-ai@0.12.0)(cohere-ai@7.13.0(@aws-sdk/client-sso-oidc@3.654.0(@aws-sdk/client-sts@3.654.0))(encoding@0.1.13))(encoding@0.1.13)(openai@4.63.0(encoding@0.1.13)(zod@3.23.8)):
     dependencies:
@@ -10971,8 +11027,7 @@ snapshots:
       color-name: 1.1.4
       simple-swizzle: 0.2.2
 
-  color-support@1.1.3:
-    optional: true
+  color-support@1.1.3: {}
 
   color@3.2.1:
     dependencies:
@@ -11003,8 +11058,7 @@ snapshots:
 
   concat-map@0.0.1: {}
 
-  console-control-strings@1.1.0:
-    optional: true
+  console-control-strings@1.1.0: {}
 
   convert-source-map@2.0.0: {}
 
@@ -11081,7 +11135,6 @@ snapshots:
   decompress-response@4.2.1:
     dependencies:
       mimic-response: 2.1.0
-    optional: true
 
   deep-eql@5.0.2: {}
 
@@ -11124,8 +11177,7 @@ snapshots:
 
   delayed-stream@1.0.0: {}
 
-  delegates@1.0.0:
-    optional: true
+  delegates@1.0.0: {}
 
   dequal@2.0.3: {}
 
@@ -11135,8 +11187,7 @@ snapshots:
 
   detect-indent@7.0.1: {}
 
-  detect-libc@2.0.3:
-    optional: true
+  detect-libc@2.0.3: {}
 
   detect-newline@4.0.1: {}
 
@@ -11975,7 +12026,6 @@ snapshots:
   fs-minipass@2.1.0:
     dependencies:
       minipass: 3.3.6
-    optional: true
 
   fs-promise@2.0.3:
     dependencies:
@@ -12013,7 +12063,6 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wide-align: 1.1.5
-    optional: true
 
   gaxios@6.7.1(encoding@0.1.13):
     dependencies:
@@ -12247,8 +12296,7 @@ snapshots:
     dependencies:
       has-symbols: 1.0.3
 
-  has-unicode@2.0.1:
-    optional: true
+  has-unicode@2.0.1: {}
 
   hasown@2.0.2:
     dependencies:
@@ -12423,7 +12471,6 @@ snapshots:
       debug: 4.3.7
     transitivePeerDependencies:
       - supports-color
-    optional: true
 
   https-proxy-agent@7.0.5:
     dependencies:
@@ -12787,6 +12834,8 @@ snapshots:
 
   kind-of@6.0.3: {}
 
+  konva@9.3.15: {}
+
   kuler@2.0.0: {}
 
   lamina@1.1.23(@react-three/fiber@8.17.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0))(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0):
@@ -13033,7 +13082,6 @@ snapshots:
   make-dir@3.1.0:
     dependencies:
       semver: 6.3.1
-    optional: true
 
   make-error@1.3.6:
     optional: true
@@ -13301,8 +13349,7 @@ snapshots:
 
   mime@2.6.0: {}
 
-  mimic-response@2.1.0:
-    optional: true
+  mimic-response@2.1.0: {}
 
   min-indent@1.0.1: {}
 
@@ -13327,10 +13374,8 @@ snapshots:
   minipass@3.3.6:
     dependencies:
       yallist: 4.0.0
-    optional: true
 
-  minipass@5.0.0:
-    optional: true
+  minipass@5.0.0: {}
 
   minipass@7.1.2: {}
 
@@ -13338,15 +13383,13 @@ snapshots:
     dependencies:
       minipass: 3.3.6
       yallist: 4.0.0
-    optional: true
 
   mixin-deep@1.3.2:
     dependencies:
       for-in: 1.0.2
       is-extendable: 1.0.1
 
-  mkdirp@1.0.4:
-    optional: true
+  mkdirp@1.0.4: {}
 
   mongodb-connection-string-url@3.0.1:
     dependencies:
@@ -13375,8 +13418,7 @@ snapshots:
       postprocessing: 6.36.2(three@0.163.0)
       three: 0.163.0
 
-  nan@2.20.0:
-    optional: true
+  nan@2.20.0: {}
 
   nanoevents@9.0.0: {}
 
@@ -13470,7 +13512,6 @@ snapshots:
   nopt@5.0.0:
     dependencies:
       abbrev: 1.1.1
-    optional: true
 
   normalize-package-data@2.5.0:
     dependencies:
@@ -13496,7 +13537,6 @@ snapshots:
       console-control-strings: 1.1.0
       gauge: 3.0.2
       set-blocking: 2.0.0
-    optional: true
 
   oauth4webapi@2.16.0: {}
 
@@ -13951,11 +13991,27 @@ snapshots:
 
   react-is@16.13.1: {}
 
+  react-konva@18.2.10(konva@9.3.15)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      '@types/react-reconciler': 0.28.8
+      its-fine: 1.2.5(react@18.3.1)
+      konva: 9.3.15
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-reconciler: 0.29.2(react@18.3.1)
+      scheduler: 0.23.2
+
   react-reconciler@0.27.0(react@18.3.1):
     dependencies:
       loose-envify: 1.4.0
       react: 18.3.1
       scheduler: 0.21.0
+
+  react-reconciler@0.29.2(react@18.3.1):
+    dependencies:
+      loose-envify: 1.4.0
+      react: 18.3.1
+      scheduler: 0.23.2
 
   react-refresh@0.14.2: {}
 
@@ -14303,8 +14359,7 @@ snapshots:
 
   semver@7.6.3: {}
 
-  set-blocking@2.0.0:
-    optional: true
+  set-blocking@2.0.0: {}
 
   set-function-length@1.2.2:
     dependencies:
@@ -14355,20 +14410,17 @@ snapshots:
 
   siginfo@2.0.0: {}
 
-  signal-exit@3.0.7:
-    optional: true
+  signal-exit@3.0.7: {}
 
   signal-exit@4.1.0: {}
 
-  simple-concat@1.0.1:
-    optional: true
+  simple-concat@1.0.1: {}
 
   simple-get@3.1.1:
     dependencies:
       decompress-response: 4.2.1
       once: 1.4.0
       simple-concat: 1.0.1
-    optional: true
 
   simple-swizzle@0.2.2:
     dependencies:
@@ -14711,7 +14763,6 @@ snapshots:
       minizlib: 2.1.2
       mkdirp: 1.0.4
       yallist: 4.0.0
-    optional: true
 
   terser@5.33.0:
     dependencies:
@@ -15375,7 +15426,6 @@ snapshots:
   wide-align@1.1.5:
     dependencies:
       string-width: 4.2.3
-    optional: true
 
   wikipedia@2.1.2:
     dependencies:
@@ -15434,8 +15484,7 @@ snapshots:
 
   yallist@3.1.1: {}
 
-  yallist@4.0.0:
-    optional: true
+  yallist@4.0.0: {}
 
   yaml@1.10.2: {}
 

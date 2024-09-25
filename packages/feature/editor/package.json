@@ -15,7 +15,6 @@
 	"license": "ISC",
 	"dependencies": {
 		"@entity/blog": "workspace:*",
-		"@feature/editor": "link:",
 		"@rehype-pretty/transformers": "^0.13.2",
 		"@types/node": "^20.12.7",
 		"@types/react": "^18.2.79",

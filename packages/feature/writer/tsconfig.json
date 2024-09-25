@@ -1,0 +1,14 @@
+{
+ "extends": "@config/typescript-config/shadcn.json",
+ "compilerOptions": {
+  "outDir": "dist",
+  "jsx": "react-jsx", 
+  "moduleResolution": "nodenext",
+  "module": "NodeNext", 
+  "esModuleInterop": true, 
+  "allowSyntheticDefaultImports": true 
+ },
+ "type": "module",
+ "include": ["post/**/*", "src/**/*"],
+ "exclude": ["node_modules", "dist"]
+}

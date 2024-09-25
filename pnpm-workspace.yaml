@@ -8,4 +8,4 @@ packages:
   - "packages/ui/*"
   - "packages/feature/*"
   - "packages/resource/*"
-
+  - "packages/service/*"

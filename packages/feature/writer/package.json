@@ -1,0 +1,25 @@
+{
+	"name": "@feature/writer",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"exports": {
+		"./src/*": "./src/*",
+		"./post/*": "./post/*"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+	"react": "^18.3.1",
+		"typescript": "^5.4.5",
+		"unified": "^11.0.5",
+		"vfile-reporter": "^8.1.1"
+	},
+	"devDependencies": {
+		"@config/typescript-config": "workspace:*"
+	}
+}
