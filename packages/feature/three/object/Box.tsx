@@ -3,6 +3,9 @@ import anime from 'animejs/lib/anime.es.js';
 import React, { useEffect, useRef, useState } from 'react'
 import { } from '@react-three/fiber'
 import { Canvas, useFrame } from '@react-three/fiber'
+import { useLoader } from '@react-three/fiber';
+import * as THREE from 'three';
+import loadTextureFromServer from "../util/loadTextureFromSever"
 
 export function BoundingBox(props: JSX.IntrinsicElements['mesh']) {
     const meshRef = useRef<Mesh>(null!)
@@ -18,7 +21,7 @@ export function BoundingBox(props: JSX.IntrinsicElements['mesh']) {
                 y: 1.5,
                 duration: 1000,
                 easing: 'easeOutElastic(1, .5)',
-               
+
             })
         } else {
             anime({
@@ -47,7 +50,7 @@ export function BoundingBox(props: JSX.IntrinsicElements['mesh']) {
 
 
 
-export default function MovingBox(): JSX.Element {
+export function MovingBox(): JSX.Element {
     const meshRef = useRef<Mesh>(null!)
     useEffect(() => {
         anime({
@@ -71,5 +74,27 @@ export default function MovingBox(): JSX.Element {
         </mesh>
     );
 }
+
+export function TextureBox() {
+    const [texturePath, setTexturePath] = useState(null);
+
+    useEffect(() => {
+        loadTextureFromServer('../texture/sky.jpg')
+            .then((path) => {
+                setTexturePath(path);
+            })
+            .catch((error) => {
+                console.error('Error loading texture:', error);
+            });
+    }, []);
+    return (
+        <mesh>
+            {/* 박스 기하학 추가 */}
+            <boxGeometry args={[1, 1, 1]} />
+            {/* 텍스처를 박스에 적용 */}
+            <meshStandardMaterial map={texturePath} />
+        </mesh>
+    );
+};
 
 

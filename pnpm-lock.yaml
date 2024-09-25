@@ -53,6 +53,9 @@ importers:
       '@ui/blog':
         specifier: workspace:*
         version: link:../../packages/ui/blog
+      '@ui/portfolio':
+        specifier: workspace:*
+        version: link:../../packages/ui/portfolio
       '@vitejs/plugin-react':
         specifier: ^4.3.1
         version: 4.3.1(vite@5.4.7(@types/node@20.16.5)(terser@5.33.0))
@@ -485,6 +488,9 @@ importers:
       animejs:
         specifier: ^3.2.2
         version: 3.2.2
+      fs:
+        specifier: 0.0.1-security
+        version: 0.0.1-security
       lamina:
         specifier: ^1.1.23
         version: 1.1.23(@react-three/fiber@8.17.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0))(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0)
@@ -703,6 +709,9 @@ importers:
       react-icons:
         specifier: ^5.3.0
         version: 5.3.0(react@18.3.1)
+      scrollarea:
+        specifier: ^1.0.0
+        version: 1.0.0
     devDependencies:
       '@types/node':
         specifier: ^20
@@ -6584,6 +6593,9 @@ packages:
 
   scheduler@0.23.2:
     resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
+
+  scrollarea@1.0.0:
+    resolution: {integrity: sha512-NYO8kJcQ7tpS3+92mqaeJXdpqiBq8J2MXTuzxzGWMAGrspJc1B4BiwSdiF39rXiCsdGeVANafG1REkZBZpczQw==}
 
   section-matter@1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==}
@@ -14277,6 +14289,8 @@ snapshots:
   scheduler@0.23.2:
     dependencies:
       loose-envify: 1.4.0
+
+  scrollarea@1.0.0: {}
 
   section-matter@1.0.0:
     dependencies:

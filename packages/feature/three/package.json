@@ -20,7 +20,7 @@
 		"./types/*": "./types/*",
 		"./utils/*": "./utils/*",
 		"./gallery/*": "./gallery/*",
-		"./effector/*":"./effector/*"
+		"./effector/*": "./effector/*"
 	},
 	"type": "module",
 	"module": "esnext",
@@ -39,6 +39,7 @@
 		"@types/react": "^18.2.79",
 		"@types/react-dom": "^18.2.24",
 		"animejs": "^3.2.2",
+		"fs": "0.0.1-security",
 		"lamina": "^1.1.23",
 		"lenis": "^1.1.13",
 		"next": "14.2.7",

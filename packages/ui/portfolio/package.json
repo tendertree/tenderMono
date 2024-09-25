@@ -9,9 +9,8 @@
 		"lint": "next lint"
 	},
 	"exports": {
-		"./history/*": "./history/*",
-		"./project/*": "./project/*",
-		"./config/*": "./config/*"
+		"./artwork/*": "./artwork/*",
+		"./career/*": "./career/*"
 	},
 	"dependencies": {
 		"@entity/blog": "workspace:*",
