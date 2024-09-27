@@ -10,3 +10,4 @@ It serves as a flexible and lightweight base that can be customized or extended 
 - next js 
 - react Three fiber 
 - shadcn ui 
+- framer
