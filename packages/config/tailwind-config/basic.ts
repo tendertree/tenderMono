@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss'
 const config: Config = {
-	darkMode: 'class', 
+    darkMode: 'class',
     content: [
         '../../packages/ui/**/**/*.{ts,tsx,astro}',
         './index.html',
@@ -25,6 +25,7 @@ const config: Config = {
 
         extend: {
             colors: {
+                cream: "#FAF9F6",
                 batang: "#F4E2DE",
                 strong: "#D94F04",
                 shine: "#F29325",

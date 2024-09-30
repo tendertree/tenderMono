@@ -5,7 +5,6 @@ import React from 'react'
 import Image from "next/image"
 import { Dialog, DialogContent, DialogTrigger } from "../../shadcn/dialog"
 import { cn } from "../../lib/utils"
-import RealitySemiCircle from "@feature/three/gallery/RealitySemiCircle";
 interface PicProp {
     src: string
     alt: string
@@ -68,11 +67,11 @@ export default function PicGallery({ images }: PicGalleryProp) {
 //     { src: "https://picsum.photos/seed/picsum/200/300", alt: "Gallery image 1", width: 200, height: 200  ,url:"/arst"},
 // ]
 
-export  function PicGirdGallery({images}: PicGalleryProp) {
+export function PicGirdGallery({ images }: PicGalleryProp) {
     return (
         <div className="container mx-auto px-4 py-8">
             <h2 className="text-2xl font-semibold mb-6 text-center text-muted-foreground">Minimalist Gallery</h2>
-			<div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+            <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
                 {images.map((image, index) => (
                     <Dialog key={index}>
                         <DialogTrigger asChild>
@@ -87,14 +86,52 @@ export  function PicGirdGallery({images}: PicGalleryProp) {
                             </div>
                         </DialogTrigger>
                         <DialogContent className="max-w-3xl h-[600px]">
-                           <div className='overflow-hidden'>
-                  <RealitySemiCircle/>              
+                            <div className='overflow-hidden'>
+                                <div> content should be here</div>
                             </div>
                         </DialogContent>
                     </Dialog>
                 ))}
-				</div>
+            </div>
         </div>
 
     )
 }
+
+export function DynamicSizePicGallery({ images }: PicGalleryProp) {
+    function getImageClass(index: number): string{
+        if (index === 0) {
+            return "col-span-2 row-span-2 md:col-start-3 md:row-start-1 aspect-square";
+        } else if (index === 9) {
+            return "col-span-2 row-span-2 md:col-start-1 md:row-start-3 aspect-square";
+        } else {
+            return "aspect-square";
+        }
+    };
+    return (
+        <section className="py-6 dark:bg-gray-100 dark:text-gray-900">
+            <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
+                {images.map((image, index) => (
+                    <a
+                        key={index}
+                        href={image.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={getImageClass(index)}
+                    >
+                        <Image
+                            src={image.src}
+                            alt={image.alt}
+                            width={image.width}
+                            height={image.height}
+                            className="rounded shadow-sm object-cover"
+                            layout="fill"
+                        />
+
+                    </a>
+                ))}
+            </div>
+        </section>
+    );
+};
+

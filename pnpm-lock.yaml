@@ -23,6 +23,9 @@ importers:
       '@entity/blog':
         specifier: workspace:*
         version: link:../../packages/entity/blog
+      '@entity/commerce':
+        specifier: workspace:*
+        version: link:../../packages/entity/commerce
       '@entity/todo':
         specifier: workspace:*
         version: link:../../packages/entity/todo
@@ -56,6 +59,9 @@ importers:
       '@ui/blog':
         specifier: workspace:*
         version: link:../../packages/ui/blog
+      '@ui/commerce':
+        specifier: workspace:*
+        version: link:../../packages/ui/commerce
       '@ui/portfolio':
         specifier: workspace:*
         version: link:../../packages/ui/portfolio
@@ -308,6 +314,56 @@ importers:
       typescript:
         specifier: ^4.5.4
         version: 4.9.5
+
+  packages/entity/commerce:
+    dependencies:
+      react:
+        specifier: ^18
+        version: 18.3.1
+      react-dom:
+        specifier: ^18
+        version: 18.3.1(react@18.3.1)
+      uuid:
+        specifier: ^10.0.0
+        version: 10.0.0
+    devDependencies:
+      '@config/eslint-config':
+        specifier: workspace:*
+        version: link:../../config/eslint-config
+      '@config/tailwind-config':
+        specifier: workspace:*
+        version: link:../../config/tailwind-config
+      '@config/typescript-config':
+        specifier: workspace:*
+        version: link:../../config/typescript-config
+      '@entity/menu':
+        specifier: workspace:*
+        version: link:../menu
+
+  packages/entity/menu:
+    dependencies:
+      next:
+        specifier: 14.2.7
+        version: 14.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18
+        version: 18.3.1(react@18.3.1)
+      uuid:
+        specifier: ^10.0.0
+        version: 10.0.0
+    devDependencies:
+      '@config/eslint-config':
+        specifier: workspace:*
+        version: link:../../config/eslint-config
+      '@config/tailwind-config':
+        specifier: workspace:*
+        version: link:../../config/tailwind-config
+      '@config/typescript-config':
+        specifier: workspace:*
+        version: link:../../config/typescript-config
 
   packages/entity/todo:
     dependencies:
@@ -735,6 +791,9 @@ importers:
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       framer-motion:
         specifier: ^11.5.4
         version: 11.5.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -759,7 +818,16 @@ importers:
       scrollarea:
         specifier: ^1.0.0
         version: 1.0.0
+      tailwind-merge:
+        specifier: ^2.5.2
+        version: 2.5.2
     devDependencies:
+      '@entity/commerce':
+        specifier: workspace:*
+        version: link:../../entity/commerce
+      '@entity/menu':
+        specifier: workspace:*
+        version: link:../../entity/menu
       '@types/node':
         specifier: ^20
         version: 20.16.5
@@ -786,6 +854,115 @@ importers:
         version: 5.6.2
 
   packages/ui/blog:
+    dependencies:
+      '@entity/blog':
+        specifier: workspace:*
+        version: link:../../entity/blog
+      '@hookform/resolvers':
+        specifier: ^3.9.0
+        version: 3.9.0(react-hook-form@7.53.0(react@18.3.1))
+      '@radix-ui/react-checkbox':
+        specifier: 1.1.1
+        version: 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-dialog':
+        specifier: ^1.1.1
+        version: 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-dismissable-layer':
+        specifier: ^1.1.0
+        version: 1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-dropdown-menu':
+        specifier: ^2.1.1
+        version: 2.1.1(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-focus-scope':
+        specifier: ^1.1.0
+        version: 1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-label':
+        specifier: 2.0.0
+        version: 2.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-navigation-menu':
+        specifier: 1.2.0
+        version: 1.2.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-popper':
+        specifier: ^1.2.0
+        version: 1.2.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-portal':
+        specifier: ^1.1.1
+        version: 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-primitive':
+        specifier: ^2.0.0
+        version: 2.0.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-scroll-area':
+        specifier: ^1.1.0
+        version: 1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-select':
+        specifier: 2.1.1
+        version: 2.1.1(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-slot':
+        specifier: ^1.1.0
+        version: 1.1.0(@types/react@18.3.8)(react@18.3.1)
+      '@radix-ui/react-switch':
+        specifier: ^1.1.0
+        version: 1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-tabs':
+        specifier: ^1.1.0
+        version: 1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-tooltip':
+        specifier: ^1.1.2
+        version: 1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@ui/base':
+        specifier: workspace:*
+        version: link:../base
+      class-variance-authority:
+        specifier: ^0.7.0
+        version: 0.7.0
+      framer-motion:
+        specifier: ^11.5.4
+        version: 11.5.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      lucide-react:
+        specifier: ^0.427.0
+        version: 0.427.0(react@18.3.1)
+      next:
+        specifier: 14.2.13
+        version: 14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next-themes:
+        specifier: ^0.3.0
+        version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18
+        version: 18.3.1(react@18.3.1)
+      react-icons:
+        specifier: ^5.3.0
+        version: 5.3.0(react@18.3.1)
+    devDependencies:
+      '@types/node':
+        specifier: ^20
+        version: 20.16.5
+      '@types/react':
+        specifier: ^18
+        version: 18.3.8
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.3.0
+      eslint:
+        specifier: ^8
+        version: 8.57.1
+      eslint-config-next:
+        specifier: 14.2.13
+        version: 14.2.13(eslint@8.57.1)(typescript@5.6.2)
+      postcss:
+        specifier: ^8
+        version: 8.4.47
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.12(ts-node@10.9.2(@types/node@20.16.5)(typescript@5.6.2))
+      typescript:
+        specifier: ^5
+        version: 5.6.2
+
+  packages/ui/commerce:
     dependencies:
       '@entity/blog':
         specifier: workspace:*
@@ -1016,7 +1193,7 @@ importers:
         version: 2.5.2
       tailwindcss-animate:
         specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.12(ts-node@10.9.2(@types/node@22.5.5)(typescript@5.6.2)))
+        version: 1.0.7(tailwindcss@3.4.12(ts-node@10.9.2(@types/node@20.16.5)(typescript@5.6.2)))
     devDependencies:
       '@config/eslint-config':
         specifier: workspace:*

@@ -1,3 +1,6 @@
+/**
+ * @module mobile nav button show bottom of the screen
+ */
 import Link from "next/link"
 import { Home, Info, BookOpen, GraduationCap, Mail } from "lucide-react"
 import { Button } from "../shadcn/button"

@@ -1,0 +1,21 @@
+{
+	"name": "@entity/commerce",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {},
+	"dependencies": {
+		"react": "^18",
+		"react-dom": "^18",
+		"uuid": "^10.0.0"
+	},
+	"devDependencies": {
+		"@entity/menu": "workspace:*",
+		"@config/eslint-config": "workspace:*",
+		"@config/tailwind-config": "workspace:*",
+		"@config/typescript-config": "workspace:*"
+	},
+	"exports": {
+		"./product/*": "./product/*",
+		"./components/*": "./components/*.tsx"
+	}
+}

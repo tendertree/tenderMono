@@ -4,7 +4,10 @@ import "./globals.css";
 import MaxWidthWrapper from "@ui/base/layout/wrapper/MaxWidthWrapper"
 import NavSimple from "@ui/base/menu/NavSimple"
 import NavMobileBottom from "@ui/base/menu/NavMobileBottom"
+import {DropDownBarCategoryList} from "@ui/base/menu/NavDropDown/DropDownBar"
 import { ThemeProvider } from "next-themes";
+import {ExampleProductCategoryList} from "@entity/commerce/product/category"
+
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
     variable: "--font-geist-sans",
@@ -61,22 +64,28 @@ const navlinks = [
 ]
 
 
-
 export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en"  suppressHydrationWarning>
+        <html lang="en" suppressHydrationWarning>
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased relative h-full`}
             >
                 <ThemeProvider attribute="class">
                     <MaxWidthWrapper>
+						{/*
                         <NavSimple navList={navlinks} />
-						<NavMobileBottom/>
-                        {children}
+						*/}
+                        <DropDownBarCategoryList data={ExampleProductCategoryList}/>
+                        <NavMobileBottom />
+                        <main className="relative flex flex-col min-h-screen ">
+                            <div className="flex-1 flex-grow">
+                                {children}
+                            </div>
+                        </main>
                     </MaxWidthWrapper>
                 </ThemeProvider>
             </body>

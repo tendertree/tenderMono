@@ -8,7 +8,7 @@ import NextClientLoader from "@feature/konvas/src/NextClientLoader";
 
 export default function Home() {
     return (
-        <div className="h-screen ">
+        <div className="h-screen bg-red-100 py-20 mx-auto text-center flex flex-col items-center ">
             <Earth/>
 			<NextClientLoader/>
 			<ArtWorkGallery artworks={ArtworkGalleryExample} />

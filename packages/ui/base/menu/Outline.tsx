@@ -1,3 +1,4 @@
+/** this outliner use for md files which show only h2 title to help move hosizontaly*/
 "use client"
 import React, { useEffect, useState, useRef } from 'react'
 import { cn } from '../lib/utils'

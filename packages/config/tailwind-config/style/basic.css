@@ -9,7 +9,7 @@
 
 	.lead {
 		@apply text-lg font-light;
-	
+
 
 	}
 }
@@ -83,7 +83,7 @@
 
 
 	body {
-		@apply  text-foreground font-primary leading-loose;
+		@apply text-foreground font-primary leading-loose;
 		font-feature-settings: "rlig" 1, "calt" 1;
 	}
 
@@ -114,6 +114,8 @@
 	.quill>.ql-toolbar:first-child {
 		display: none !important;
 	}
+
+
 
 }
 

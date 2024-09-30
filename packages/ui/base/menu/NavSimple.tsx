@@ -1,14 +1,12 @@
 "use client"
 import Link from 'next/link'
 import React from 'react'
-import { useTheme } from 'next-themes'
-import { buttonVariants } from '../shadcn/button'
-import ThemeToggleBtn from '../feature/ToggleTheme'
 import { Menu } from 'lucide-react'
 import { cn } from '../lib/utils'
 import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from '../shadcn/sheet'
 import LoginBtn from '../feature/login/LoginBtn'
+import ThemeToggleBtn from '../feature/ToggleTheme'
 
 // const links = [
 //     {
@@ -112,5 +110,21 @@ export default function NavSimple({ navList }: NavSimpleProps) {
                 </Sheet>
             </ul>
         </nav>
+    )
+}
+
+export function NavSimpleText({ navList }: NavSimpleProps) {
+    const pathname = usePathname()
+	
+    return (
+        <nav className='flex gap-8'>
+            {navList.map((link, idx) => (
+                <Link href={link.path} key={idx}
+                    className={`${link.path === pathname ? "text-white border-b-2 border-white" : "text-light"} capitalize font-medium hover:text-strong transition-all`}>
+                    {link.name}
+                </Link>
+            ))
+            }
+        </nav >
     )
 }
