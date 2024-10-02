@@ -7,7 +7,11 @@ import NavMobileBottom from "@ui/base/menu/NavMobileBottom"
 import {DropDownBarCategoryList} from "@ui/base/menu/NavDropDown/DropDownBar"
 import { ThemeProvider } from "next-themes";
 import {ExampleProductCategoryList} from "@entity/commerce/product/category"
-
+import ProductNavItem from "@ui/base/menu/NavDropDown/ProductNavItem";
+import LoginStat from "@ui/base/feature/login/LoginStat";
+import Cart from "@ui/commerce/product/Cart"
+import { CartImpl, useCart } from '@entity/commerce/product/cart'
+import { useMemo } from "react";
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
     variable: "--font-geist-sans",
@@ -69,6 +73,10 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+
+
+
+
     return (
         <html lang="en" suppressHydrationWarning>
             <body
@@ -79,8 +87,11 @@ export default function RootLayout({
 						{/*
                         <NavSimple navList={navlinks} />
 						*/}
-                        <DropDownBarCategoryList data={ExampleProductCategoryList}/>
+                        <DropDownBarCategoryList list={ExampleProductCategoryList} NavItemComponent={ProductNavItem} />
+						<LoginStat/>
+						<Cart />
                         <NavMobileBottom />
+
                         <main className="relative flex flex-col min-h-screen ">
                             <div className="flex-1 flex-grow">
                                 {children}
@@ -92,3 +103,7 @@ export default function RootLayout({
         </html>
     );
 }
+function CartImplZustand(): any {
+    throw new Error("Function not implemented.");
+}
+

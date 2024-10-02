@@ -32,7 +32,7 @@ export function DropDownBarCategoryList({ list, NavItemComponent }: DropDownBarP
 
     return (
         <div className='flex gap-4 h-full' ref={navRef}>
-            {list.list.map((category, i) => {
+            {list.map((category, i) => {
                 const handleOpen = () => {
                     if (activeIndex === i) {
                         setActiveIndex(null)

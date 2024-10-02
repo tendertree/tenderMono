@@ -1,10 +1,11 @@
+"use client"
 import { cn } from "../../lib/utils"
 import { Button } from "../../shadcn/button"
 import { DropDownNavItemProps } from "@entity/menu/nav/navItem.ts"
 import { ChevronDown } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-export function ProductNavItem({
+export default function ProductNavItem({
     isAnyOpen,
     category,
     handleOpen,

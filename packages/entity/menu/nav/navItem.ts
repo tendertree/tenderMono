@@ -14,6 +14,6 @@ export interface DropDownNavItemProps {
 }
 
 export interface DropDownBarProps {
-    list: CategoryList;
+    list: Category[];
     NavItemComponent: React.ComponentType<DropDownNavItemProps>; // Accepting a component as prop
 }

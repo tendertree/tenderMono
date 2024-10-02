@@ -1,4 +1,5 @@
 import {Item} from "@entity/menu/item/item.js"
+
 export type Category = {
   label: string;
   value: string; 
@@ -9,8 +10,7 @@ export type CategoryList={
 	list : Category[];
 }
 
-
-export const ExampleProductCategoryList = [
+export const ExampleProductCategoryList: Category[] = [
   {
     label: 'UI Kits',
     value: 'ui_kits' as const,

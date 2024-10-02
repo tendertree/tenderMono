@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../base/card';
-import { Label } from '../../base/label';
-import { Input } from '../../base/input';
-import { Button } from '../../base/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../shadcn/card';
+import { Label } from '../../shadcn/label';
+import { Input } from '../../shadcn/input';
+import { Button } from '../../shadcn/button';
 
 interface LoginFormProps {
     onSubmit: (email: string, password: string) => void;
@@ -13,7 +13,7 @@ export default function LoginForm<T extends LoginFormProps = LoginFormProps>(pro
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        onSubmit(email, password);
+        props.onSubmit(email, password);
     };
 
 
