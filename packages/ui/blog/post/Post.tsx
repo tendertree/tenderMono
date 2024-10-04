@@ -9,7 +9,7 @@ import UpperShowTransition from "@ui/base/layout/effect/UpperShowTransition"
 import TeckStackIcon from "@ui/base/info/icons/TechStack"
 
 export function BlogPostCardSquare({
-    title,
+       title,
     type,
     imageUrl,
     date,

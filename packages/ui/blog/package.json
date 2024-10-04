@@ -9,6 +9,7 @@
 		"lint": "next lint"
 	},
 	"exports": {
+				"./news/*": "./news/*",
 		"./post/*": "./post/*",
 		"./main/*": "./main/*",
 		"./config/*": "./config/*"
