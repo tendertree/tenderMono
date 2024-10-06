@@ -145,103 +145,6 @@ importers:
         specifier: ^5
         version: 5.6.2
 
-  apps/origin:
-    dependencies:
-      '@feature/editor':
-        specifier: workspace:*
-        version: link:../../packages/feature/editor
-      '@feature/three':
-        specifier: workspace:*
-        version: link:../../packages/feature/three
-      '@infra/file':
-        specifier: workspace:*
-        version: link:../../packages/infra/file
-      '@infra/supabase':
-        specifier: workspace:*
-        version: link:../../packages/infra/supabase
-      '@react-three/drei':
-        specifier: ^9.105.5
-        version: 9.112.1(@react-three/fiber@8.17.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0))(@types/react@18.3.8)(@types/three@0.163.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0)
-      '@react-three/fiber':
-        specifier: ^8.16.2
-        version: 8.17.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.163.0)
-      '@studio-freight/react-lenis':
-        specifier: ^0.0.47
-        version: 0.0.47(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@vitejs/plugin-react':
-        specifier: ^4.3.1
-        version: 4.3.1(vite@5.4.7(@types/node@20.16.5)(terser@5.33.0))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.20(postcss@8.4.47)
-      framer:
-        specifier: ^2.4.1
-        version: 2.4.1(framer-motion@11.5.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      framer-motion:
-        specifier: ^11.5.4
-        version: 11.5.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      next:
-        specifier: 14.2.13
-        version: 14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      next-themes:
-        specifier: ^0.3.0
-        version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react:
-        specifier: ^18
-        version: 18.3.1
-      react-dom:
-        specifier: ^18
-        version: 18.3.1(react@18.3.1)
-      tailwind-merge:
-        specifier: ^2.5.2
-        version: 2.5.2
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.12(ts-node@10.9.2(@types/node@20.16.5)(typescript@5.6.2)))
-      vitest:
-        specifier: ^2.0.5
-        version: 2.1.1(@types/node@20.16.5)(terser@5.33.0)
-    devDependencies:
-      '@config/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/config/eslint-config
-      '@config/tailwind-config':
-        specifier: workspace:*
-        version: link:../../packages/config/tailwind-config
-      '@config/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/config/typescript-config
-      '@types/node':
-        specifier: ^20
-        version: 20.16.5
-      '@types/quill':
-        specifier: ^2.0.14
-        version: 2.0.14
-      '@types/react':
-        specifier: ^18
-        version: 18.3.8
-      '@types/react-dom':
-        specifier: ^18
-        version: 18.3.0
-      '@types/three':
-        specifier: ^0.163.0
-        version: 0.163.0
-      eslint:
-        specifier: ^8
-        version: 8.57.1
-      eslint-config-next:
-        specifier: 14.2.13
-        version: 14.2.13(eslint@8.57.1)(typescript@5.6.2)
-      postcss:
-        specifier: ^8
-        version: 8.4.47
-      tailwindcss:
-        specifier: ^3.4.1
-        version: 3.4.12(ts-node@10.9.2(@types/node@20.16.5)(typescript@5.6.2))
-      typescript:
-        specifier: ^5
-        version: 5.6.2
-
   packages/ai/llamaindex:
     dependencies:
       llamaindex:
@@ -305,6 +208,52 @@ importers:
 
   packages/config/typescript-config: {}
 
+  packages/domain/dashboard:
+    dependencies:
+      '@tanstack/react-table':
+        specifier: ^8.20.5
+        version: 8.20.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@ui/base':
+        specifier: workspace:*
+        version: link:../../ui/base
+    devDependencies:
+      '@config/eslint-config':
+        specifier: workspace:*
+        version: link:../../config/eslint-config
+      '@config/tailwind-config':
+        specifier: workspace:*
+        version: link:../../config/tailwind-config
+      '@config/typescript-config':
+        specifier: workspace:*
+        version: link:../../config/typescript-config
+      '@types/node':
+        specifier: ^20
+        version: 20.16.5
+      '@types/react':
+        specifier: ^18
+        version: 18.3.8
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.3.0
+      '@types/three':
+        specifier: ^0.163.0
+        version: 0.163.0
+      eslint:
+        specifier: ^8
+        version: 8.57.1
+      eslint-config-next:
+        specifier: 14.2.13
+        version: 14.2.13(eslint@8.57.1)(typescript@5.6.2)
+      postcss:
+        specifier: ^8
+        version: 8.4.47
+      tailwindcss:
+        specifier: ^3.4.1
+        version: 3.4.12(ts-node@10.9.2(@types/node@20.16.5)(typescript@5.6.2))
+      typescript:
+        specifier: ^5
+        version: 5.6.2
+
   packages/entity/blog:
     dependencies:
       next:
@@ -339,6 +288,31 @@ importers:
       '@entity/menu':
         specifier: workspace:*
         version: link:../menu
+
+  packages/entity/dashboard:
+    dependencies:
+      next:
+        specifier: 14.2.7
+        version: 14.2.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18
+        version: 18.3.1(react@18.3.1)
+      uuid:
+        specifier: ^10.0.0
+        version: 10.0.0
+    devDependencies:
+      '@config/eslint-config':
+        specifier: workspace:*
+        version: link:../../config/eslint-config
+      '@config/tailwind-config':
+        specifier: workspace:*
+        version: link:../../config/tailwind-config
+      '@config/typescript-config':
+        specifier: workspace:*
+        version: link:../../config/typescript-config
 
   packages/entity/menu:
     dependencies:
@@ -3274,6 +3248,17 @@ packages:
     peerDependencies:
       react: ^18 || ^19
 
+  '@tanstack/react-table@8.20.5':
+    resolution: {integrity: sha512-WEHopKw3znbUZ61s9i0+i9g8drmDo6asTWbrQh8Us63DAk/M0FkmIqERew6P71HI75ksZ2Pxyuf4vvKh9rAkiA==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+
+  '@tanstack/table-core@8.20.5':
+    resolution: {integrity: sha512-P9dF7XbibHph2PFRz8gfBKEXEY/HJPOhym8CHmjF8y3q5mWpKx9xtZapXQUWCgkqvsK0R46Azuz+VaxD4Xl+Tg==}
+    engines: {node: '>=12'}
+
   '@theatre/core@0.5.1':
     resolution: {integrity: sha512-LV3LwHPWVm62bR6DUQ55t4kCaI1KGrz+rPLoA6pMJ57x+6vBpoSCI0b11gJPdA1mCXebcNWN+U5M3PP6jJaSSg==}
 
@@ -4693,6 +4678,7 @@ packages:
   eslint@8.57.1:
     resolution: {integrity: sha512-ypowyDxpVSYpkXr9WPv2PAZCtNip1Mv5KTW0SCurXv/9iOpcrH9PaqUElksqEB6pChqHGDRCFTyrZlGhnLNGiA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   esniff@2.0.1:
@@ -10260,6 +10246,14 @@ snapshots:
     dependencies:
       '@tanstack/query-core': 5.56.2
       react: 18.3.1
+
+  '@tanstack/react-table@8.20.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@tanstack/table-core': 8.20.5
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@tanstack/table-core@8.20.5': {}
 
   '@theatre/core@0.5.1':
     dependencies:

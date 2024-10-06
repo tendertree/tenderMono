@@ -6,12 +6,8 @@ import NavSimple from "@ui/base/menu/NavSimple"
 import NavMobileBottom from "@ui/base/menu/NavMobileBottom"
 import {DropDownBarCategoryList} from "@ui/base/menu/NavDropDown/DropDownBar"
 import { ThemeProvider } from "next-themes";
-import {ExampleProductCategoryList} from "@entity/commerce/product/category"
 import ProductNavItem from "@ui/base/menu/NavDropDown/ProductNavItem";
 import LoginStat from "@ui/base/feature/login/LoginStat";
-import Cart from "@ui/commerce/product/Cart"
-import { CartImpl, useCart } from '@entity/commerce/product/cart'
-import { useMemo } from "react";
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
     variable: "--font-geist-sans",

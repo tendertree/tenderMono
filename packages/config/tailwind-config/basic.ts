@@ -8,6 +8,7 @@ const config: Config = {
         './components/**/*.{ts,tsx,astro,md,mdx}',
         '../../app/**/*.{ts,tsx,astro,md,mdx}',
         '../../app/src/**/*.{ts,tsx,astro,md,mdx}',
+        '../../packages/domain/**/**/*.{ts,tsx}',
         '../../packages/ui/base/**/*.{ts,tsx}',
         '../../packages/ui/base/utils.ts',
     ], theme: {

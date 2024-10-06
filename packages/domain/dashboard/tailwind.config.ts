@@ -12,12 +12,11 @@ module.exports = {
             ...baseConfig.theme.extend,
             colors: {
                 ...baseConfig.theme.extend.colors,
-
-
                 bacgroundImage: {
                     body: "url('/bg.png')",
                 },
-           },
+             
+            },
         },
     },
     plugins: [

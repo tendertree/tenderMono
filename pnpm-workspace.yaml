@@ -4,6 +4,7 @@ packages:
   - "packages/ai/*"
   - "packages/config/*"
   - "packages/infra/*"
+  - "packages/domain/*"
   - "packages/entity/*"
   - "packages/ui/*"
   - "packages/feature/*"
