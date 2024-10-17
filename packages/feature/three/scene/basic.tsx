@@ -63,13 +63,13 @@ export function Scene({ children }: SceneProps) {
 
 }
 export function BasicScene({ children }: { children: React.ReactNode }) {
-	return (
-	<Canvas shadows camera={{position:[3,3,5],fov:30}}>
-			<color args={["#ececec"]} attach="background" />
-			{children}
-		</Canvas>
-	)
-	
+    return (
+        <Canvas shadows camera={{ position: [3, 3, 5], fov: 30 }}>
+            <color args={["#ececec"]} attach="background" />
+            {children}
+        </Canvas>
+    )
+
 }
 /*
  * scene with 3d sphere env map
@@ -89,8 +89,22 @@ export function withEnvmap({ children }: SceneProps) {
 }
 
 
-export default function basicGallery(): JSX.Element {
+/**
+ * basic scene for high performance
+ */
+export default function BasicHighPerformance({ children }: SceneProps): JSX.Element {
     return (
-        <div>data</div>
+        <Canvas
+            dpr={[1, 1.4]}
+            gl={{
+                powerPreference: 'high-performance',
+                alpha: false,
+                antialias: false,
+                stencil: false,
+                depth: false
+            }}
+        >
+            {children}
+        </Canvas>
     )
 }
