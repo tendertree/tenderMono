@@ -8,6 +8,11 @@ import * as THREE from "three"
 import { GetScrollWidth } from "../util/ScreenWidthStore"
 import { OrbitControls, CameraShake, Environment } from '@react-three/drei'
 
+
+
+/**
+ * follow mouse position smoothly
+ */
 export default function CameraRig() {
     const { camera, mouse } = useThree()
     const vec = new THREE.Vector3()
@@ -70,8 +75,8 @@ export function ResponsiveCameraRigAround({ vec = new THREE.Vector3() }: { vec?:
 
 
 /*
-* responsive camera it will chech the screen size. and modify camera position
-* not import this function but copy because it miss the canvas context when loaded other file
+* responsive camera it will check the screen size. and modify camera position
+* to use this component, do not import this function  but copy because it miss the canvas context when loaded other file
 */
 export function ResponsiveCameraInitialize() {
      const { camera } = useThree();

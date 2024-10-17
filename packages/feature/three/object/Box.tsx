@@ -1,7 +1,7 @@
 import { Mesh } from 'three'
 import anime from 'animejs/lib/anime.es.js';
 import React, { useEffect, useRef, useState } from 'react'
-import { } from '@react-three/fiber'
+import { useThree } from '@react-three/fiber'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useLoader } from '@react-three/fiber';
 import * as THREE from 'three';
@@ -96,5 +96,8 @@ export function TextureBox() {
         </mesh>
     );
 };
+
+
+
 
 
