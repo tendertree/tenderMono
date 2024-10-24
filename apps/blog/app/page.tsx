@@ -7,10 +7,9 @@ import NextClientLoader from "@feature/konvas/src/NextClientLoader";
 
 export default function Home() {
     return (
-        <div className="h-screen bg-red-100 py-20 mx-auto text-center flex flex-col items-center ">
+        <div className="h-screen py-20 mx-auto text-center flex flex-col items-center ">
+			<div className="nav_link">this is this..and link </div>
             <Earth/>
-			<NextClientLoader/>
-			<ArtWorkGallery artworks={ArtworkGalleryExample}  />
         </div>
     );
 }

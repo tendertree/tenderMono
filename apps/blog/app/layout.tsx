@@ -83,9 +83,7 @@ export default function RootLayout({
 						{/*
                         <NavSimple navList={navlinks} />
 						*/}
-                        <DropDownBarCategoryList list={ExampleProductCategoryList} NavItemComponent={ProductNavItem} />
 						<LoginStat/>
-						<Cart />
                         <NavMobileBottom />
 
                         <main className="relative flex flex-col min-h-screen ">

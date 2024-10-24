@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Menu } from 'lucide-react'
 import { cn } from '../lib/utils'
 import { usePathname } from "next/navigation";
@@ -115,7 +115,7 @@ export default function NavSimple({ navList }: NavSimpleProps) {
 
 export function NavSimpleText({ navList }: NavSimpleProps) {
     const pathname = usePathname()
-	
+
     return (
         <nav className='flex gap-8'>
             {navList.map((link, idx) => (
@@ -127,4 +127,28 @@ export function NavSimpleText({ navList }: NavSimpleProps) {
             }
         </nav >
     )
+}
+
+
+export function NaveHideBg({ navList }: NavSimpleProps) {
+    const [NavBg, setNavBg] = useState(true);
+    useEffect(() => {
+        const handler = () => {
+            if (window.scrollY > 90) {
+                setNavBg(true);
+            } else {
+                setNavBg(false);
+            }
+        };
+		window.addEventListener("scroll",handler)
+		return () => {
+			window.removeEventListener("scroll", handler);
+		};	
+
+    })
+
+	return(
+ <div className='fixed ${navBg? "bg-indigo-800":"fixed"}'> content</div>
+	)
+
 }
