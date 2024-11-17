@@ -28,11 +28,17 @@ export function Switcher({ items }: SwitcherProps) {
     const currentItem = list.find((item) => item.value === params.id);
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(currentItem?.value || "");
+    const [filtered, setFiltered] = useState<{label:string,value:string}>[];
 
     const selected = (store: { value: string; label: string }) => {
         setOpen(false);
         router.push(`/switcher/${store.value}`);
     };
+
+	const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const value = e.target.value;
+		setFiltered(list.filter((item) => item.label.toLowerCase().includes(value.toLowerCase())));
+	};
 
     return (
         <Popover open={open} onOpenChange={setOpen}>
@@ -46,7 +52,7 @@ export function Switcher({ items }: SwitcherProps) {
                 <Command>
                     <CommandInput placeholder="Search framework" />
                     <CommandEmpty>No framework found.</CommandEmpty>
-                    <CommandGroup>
+                    <CommandGroup heading="items">
                         {list.map((data) => (
                             <CommandItem
                                 key={data.value}
