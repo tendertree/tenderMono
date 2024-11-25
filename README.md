@@ -9,7 +9,6 @@ The repository is organized as follows:
 ```
 tendermono/
 ├── apps
-├── labs/
 ├── package/
 │   ├── ui/
 │   └── infra/
